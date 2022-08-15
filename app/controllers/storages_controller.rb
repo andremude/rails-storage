@@ -4,7 +4,7 @@ class StoragesController < ApplicationController
   # GET
   def index
     @storages = Storage.all
-    render json: @storages
+    # render json: @storages
   end
 
   # GET

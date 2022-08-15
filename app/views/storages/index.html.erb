@@ -1,0 +1,23 @@
+<%= form_tag storages_path, method: :get do %>
+  <div>
+    <%= text_field_tag :query,
+    params[:query],
+    placeholder: "Find a storage near you"
+    %>
+    <%= submit_tag "Search"%>
+  </div>
+<% end %>
+
+
+<% @storages.each do |storage| %>
+  <div class="">
+    <div class="">
+      <h3 class = ""><%=storage.title%> </h3>
+      <p class="">Publisher: <span class=""> <%=storage.user.first_name%> <%=storage.user.last_name%> </span></p>
+    </div>
+    <div class="">
+      <p> $<%= storage.price%> </p>
+      <%= link_to "See more",storage_path(storage)%>
+    </div>
+  </div>
+<% end %>
