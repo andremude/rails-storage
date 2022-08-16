@@ -8,8 +8,8 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/6e9f1023eb.js" crossorigin="anonymous"></script>
   </head>
-
   <body>
     <%= render 'shared/navbar' %>
     <% if notice %>
@@ -19,5 +19,6 @@
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
     <%= yield %>
+    <%= render 'shared/footer' %>
   </body>
 </html>
