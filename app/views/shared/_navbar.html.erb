@@ -27,6 +27,9 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
+        <li class="nav-item active">
+          <%= link_to "Sign Out", destroy_user_session_path, class: "nav-link", method: :delete %>
+        </li>
         <% else %>
           <li class="nav-item active">
             <%= link_to "Log In", new_user_session_path , class: "nav-link" %>

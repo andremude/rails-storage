@@ -29,3 +29,15 @@ en:
     # prompts:
     #   defaults:
     #     age: 'Select your age'
+
+en:
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'required'
+      mark: '*'
+    placeholders:
+      user:
+        email: 'Email'
+        password: 'Password'
