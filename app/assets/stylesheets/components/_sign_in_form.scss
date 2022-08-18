@@ -1,4 +1,4 @@
-.signup-form {
+.signin-form {
   margin: 20px auto;
   border-radius: 25px;
   display: flex;
@@ -8,7 +8,7 @@
   color: white;
 }
 
-.signup-form h2 {
+.signin-form h2 {
   text-align: center;
   margin: 15px;
 }
@@ -22,7 +22,7 @@
   font-size: 1.20rem;
 }
 
-.signup-btn {
+.signin-btn {
   background-color: #212529;
   width: 150px;
   padding: 8px 2px;
@@ -31,7 +31,7 @@
   color: white;
 }
 
-.signup-btn:hover {
+.signin-btn:hover {
   background-color: white;
   color: black;
 }
@@ -50,4 +50,22 @@
   background-color: white;
   padding-left: 10px;
   border: none
+}
+
+.rememberable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.15rem;
+  // padding-left: 15px;
+}
+
+.rememberable input {
+  margin-right: 5px;
+}
+
+.recover-password {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

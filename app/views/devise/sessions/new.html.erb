@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row d-flex justify-content-center align-items-center">
     <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-      <div class="container py-5 h-100 signup-form">
+      <div class="container py-5 h-100 signin-form">
         <div class="row d-flex justify-content-center align-items-center h-100">
         <h2>LOG IN</h2>
         <p class="text-white-50 text-center">Please enter an email and password</p>
@@ -12,14 +12,14 @@
                           autofocus: true,
                           input_html: { autocomplete: "email", :style=> 'width: 300px'},
                           label: false,
-                          class: 'signup-input' %>
+                          class: 'signin-input' %>
               <br>
               <%= f.input :password,
                           required: true,
                           input_html: { autocomplete: "current-password", :style=> 'width: 300px'},
                           label: false,
                           class: "form-input",
-                          class: 'signup-input' %>
+                          class: 'signin-input' %>
               <br>
             </div>
             <div class="rememberable">
@@ -27,7 +27,7 @@
             </div>
 
             <div class="form-actions-btn">
-              <%= f.button :submit, "Log In", class: "signup-btn" %>
+              <%= f.button :submit, "Log In", class: "signin-btn" %>
             </div>
             <div class="recover-password">
               <%= link_to "Forgot your password?", new_user_password_path , class: "link-info" %>
