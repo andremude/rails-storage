@@ -1,3 +1,50 @@
+<div class="container">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+      <div class="container py-5 h-100 signup-form">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+        <h2>SIGN UP</h2>
+          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), class: "signup-form-child") do |f| %>
+            <div class="form-inputs">
+              <%= f.input :email,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "email", :style=> 'width: 300px'},
+                          label: false,
+                          class: 'signup-input' %>
+              <br>
+              <%= f.input :password,
+                          required: true,
+                          input_html: { autocomplete: "current-password", :style=> 'width: 300px'},
+                          label: false,
+                          class: "form-input",
+                          class: 'signup-input' %>
+              <br>
+              <%= f.input :password_confirmation,
+                          required: true,
+                          label: false,
+                          input_html: {:style=> 'width: 300px'},
+                          class: "form-input",
+                          class: 'signup-input'%>
+              <br>
+            </div>
+            <div>
+              <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+            </div>
+            <div class="form-actions-btn">
+              <%= f.button :submit, "Sign Up", class: "signup-btn" %>
+            </div>
+            <%= render "devise/shared/links" %>
+          <% end %>
+        </div>
+      </div>
+
+      <br>
+    </div>
+  </div>
+</div>
+
+
 <section class="vh-100 gradient-custom">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">

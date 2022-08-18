@@ -10,6 +10,11 @@ en:
       # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: "Please review the problems below:"
+    placeholders:
+      user:
+        email: 'Email'
+        password: 'Password'
+        password_confirmation: 'Password Confirmation'
     # Examples
     # labels:
     #   defaults:
@@ -29,15 +34,3 @@ en:
     # prompts:
     #   defaults:
     #     age: 'Select your age'
-
-en:
-  simple_form:
-    "yes": 'Yes'
-    "no": 'No'
-    required:
-      text: 'required'
-      mark: '*'
-    placeholders:
-      user:
-        email: 'Email'
-        password: 'Password'
