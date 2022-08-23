@@ -70,4 +70,17 @@
 
 .card-img-top {
   border-radius: 15px;
+  height: 200px;
+  width: 200px;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.why-storage img {
+  height: 100px;
 }

@@ -1,78 +1,102 @@
 <div>
 <%# --------- HERO ----------- %>
-<div class="home-hero">
-  <div class="hero-container">
-    <div>
-      <h2 class="hero-header">Easiest way to find a perfect storage</h2>
-    </div>
-    <%# --------- SEARCH BAR ----------- %>
-    <%= form_tag storages_path, method: :get, class: 'home-search-container' do %>
+  <div class="home-hero">
+    <div class="hero-container">
       <div>
-        <%= text_field_tag :query,
-        params[:query],
-        placeholder: "Find a storage near you",
-        class: 'home-search-bar'
-        %>
-        <%= submit_tag("Search", :class=>"home-search-btn") %>
+        <h2 class="hero-header">Easiest way to find the perfect storage</h2>
       </div>
-    <% end %>
+      <%# --------- SEARCH BAR ----------- %>
+      <%= form_tag storages_path, method: :get, class: 'home-search-container' do %>
+        <div>
+          <%= text_field_tag :query,
+          params[:query],
+          placeholder: "Find a storage near you",
+          class: 'home-search-bar'
+          %>
+          <%= submit_tag("Search", :class=>"home-search-btn") %>
+        </div>
+      <% end %>
+    </div>
   </div>
-</div>
 
 <%# ---------- STORAGES ------------  %>
-<div class="items-container">
-  <div class="row d-flex justify-content-center align-items-center">
-    <div class="col-lg-3 col-md-6 col-sm-12 p-4">
-      <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text">Example</p>
+  <div class="items-container">
+  <h2>There is storage for everything...</h2>
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="card-container col-lg-4 col-md-4 col-sm-12 p-4">
+        <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Example</p>
+        </div>
+      </div>
+      <div class="card-container col-lg-4 col-md-4 col-sm-12 p-4">
+        <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Example</p>
+        </div>
+      </div>
+      <div class="card-container col-lg-4 col-md-4 col-sm-12 p-4">
+        <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Example</p>
+        </div>
       </div>
     </div>
-    <div class="col-lg-3 col-md-6 col-sm-12 p-4">
-      <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text">Example</p>
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="card-container col-lg-4 col-md-4 col-sm-12 p-4">
+        <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Example</p>
+        </div>
       </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-12 p-4">
-      <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text">Example</p>
+      <div class="card-container col-lg-4 col-md-4 col-sm-12 p-4">
+        <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Example</p>
+        </div>
       </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-12 p-4">
-      <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text">Example</p>
-      </div>
-    </div>
-  </div>
-  <div class="row d-flex justify-content-center align-items-center">
-    <div class="col-lg-3 col-md-6 col-sm-12 p-4">
-      <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text">Example</p>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-12 p-4">
-      <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text">Example</p>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-12 p-4">
-      <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text">Example</p>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-12 p-4">
-      <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text">Example</p>
+      <div class="card-container col-lg-4 col-md-4 col-sm-12 p-4">
+        <img src="https://images.unsplash.com/photo-1504600770771-fb03a6961d33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Example</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-</div
+<%#--------WHY CHOOSE US----------%>
+  <div class="container mt-5 mb-4 text-center"  >
+    <p class="mb-5" style="font-size:3rem"> Why rent a storage with us? </p>
+    <div class="row">
+      <div class="col-6 col-md-3 why-storage">
+        <img src="open-box.png" alt="" class="mb-2">
+        <h4 class="title">Lorem Ipsum</h4>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+      </div>
+      <div class="col-6 col-md-3 why-storage">
+        <img src="warehouses.png" alt="" class="mb-2">
+        <h4 class="title">Lorem Ipsum</h4>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+      </div>
+      <div class="col-6 col-md-3 why-storage">
+        <img src="warehouse.png" alt="" class="mb-2">
+        <h4 class="title">Lorem Ipsum</h4>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. </p>
+      </div>
+      <div class="col-6 col-md-3 why-storage">
+        <img src="garage.png" alt="" class="mb-2">
+        <h4 class="title">Lorem Ipsum</h4>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+      </div>
+    </div>
+  </div>
+
+<%#--------STORAGES NEAR YOU-------------%>
+
+  <h2>Storages near you</h2>
+
+<%#--------BECOME A HOST-----------%>
+<h2>Become a host</h2>
+
+
+</div>
