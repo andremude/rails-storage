@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :storages do
     resources :reservations, only: %i[create new]
   end
+  get '/how_it_works', to: 'pages#about'
 end
