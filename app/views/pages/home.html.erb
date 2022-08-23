@@ -1,18 +1,25 @@
-HOME
-<%# --------- SEARCH BAR ----------- %>
-
-<%= form_tag storages_path, method: :get do %>
-  <div>
-    <%= text_field_tag :query,
-    params[:query],
-    placeholder: "Find a storage near you"
-    %>
-    <%= submit_tag "Search"%>
+<div>
+<%# --------- HERO ----------- %>
+<div class="home-hero">
+  <div class="hero-container">
+    <div>
+      <h2 class="hero-header">Easiest way to find a perfect storage</h2>
+    </div>
+    <%# --------- SEARCH BAR ----------- %>
+    <%= form_tag storages_path, method: :get, class: 'home-search-container' do %>
+      <div>
+        <%= text_field_tag :query,
+        params[:query],
+        placeholder: "Find a storage near you",
+        class: 'home-search-bar'
+        %>
+        <%= submit_tag("Search", :class=>"home-search-btn") %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
 
-
-<%# ---------- STORAGE ------------  %>
+<%# ---------- STORAGES ------------  %>
 <div class="items-container">
   <div class="row d-flex justify-content-center align-items-center">
     <div class="col-lg-3 col-md-6 col-sm-12 p-4">
@@ -67,3 +74,5 @@ HOME
     </div>
   </div>
 </div>
+
+</div

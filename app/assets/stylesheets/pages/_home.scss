@@ -1,3 +1,55 @@
+.home-hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(boxes.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-header {
+  color: white;
+  font-size: 2em;
+}
+
+.home-search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.home-search-bar {
+  width: 500px;
+  height: 60px;
+  border-radius: 15px 0px 0px 15px;
+  border: none;
+  outline-style: none;
+  padding-left: 15px;
+  margin-right: -2px;
+  font-size: 1.20em;
+}
+
+.home-search-btn {
+  border-radius: 0 15px 15px 0;
+  width: 100px;
+  height: 60px;
+  border: none;
+  background-color: #059862;
+  color: white;
+  font-size: 1.20em;
+  font-weight: bold;
+  margin-left: -2px;
+}
+
 .items-container {
   display: flex;
   justify-content: center;
@@ -8,4 +60,14 @@
 .items-container .card {
   width: 16rem;
   margin: 15px 20px;
+}
+
+.card-text {
+  text-align: center;
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.card-img-top {
+  border-radius: 15px;
 }
