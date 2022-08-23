@@ -3,6 +3,6 @@ class PagesController < ApplicationController
       # @storages = Storage.all
   end
 
-  def about
+  def how_it_works
   end
 end
