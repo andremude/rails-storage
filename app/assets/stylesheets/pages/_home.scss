@@ -70,8 +70,9 @@
 
 .card-img-top {
   border-radius: 15px;
-  height: 200px;
-  width: 200px;
+  height: 220px;
+  width: 220px;
+  object-fit: cover;
 }
 
 .card-container {
@@ -81,6 +82,30 @@
   flex-direction: column;
 }
 
+.why-storage-container {
+  background-color: #F2F4F6;
+  padding: 25px;
+}
+
+.why-storage {
+  border: 5px solid white;
+  padding: 25px;
+}
+
 .why-storage img {
   height: 100px;
+}
+
+.host-container {
+  text-align: center;
+}
+
+.host-btn {
+  background-color: #059862;
+  width: 400px;
+  height: 60px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-weight: bold;
 }
