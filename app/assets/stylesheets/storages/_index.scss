@@ -1,0 +1,51 @@
+// Place all the styles related to the Storages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.storage-card {
+  width:60%;
+  margin: 25px 5px;
+  border: 1px solid black;
+  padding: 10px 5px;
+}
+
+.storage-title {
+
+}
+
+.storage-body {
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+}
+
+.storage-img {
+  height: 150px;
+  border-radius: 15px;
+  margin-right: 10px;
+}
+
+.storage-publisher-city {
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  padding-right: 50px;
+}
+
+.storage-price-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.storage-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b4b1b1;
+  border: 1px solid black;
+  border-radius: 2px;
+  width: 80px;
+  height: 50px;
+}
