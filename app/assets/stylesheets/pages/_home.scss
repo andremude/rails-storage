@@ -96,6 +96,89 @@
   height: 100px;
 }
 
+
+.near-you-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 25px;
+}
+
+.near-you-header {
+  text-align: center;
+  margin: 10px;
+  font-size: 3rem;
+}
+
+.storages-near-cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.storage-near-card {
+  width: 150px;
+}
+
+.storage-near-img {
+  width: 200px;
+  height: 150px;
+  background-image: url("https://images.unsplash.com/photo-1426122402199-be02db90eb90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-size: cover;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.storage-near-price {
+  background-color: #5a5b5c;
+  color: white;
+  font-size: 1.25em;
+  border-radius: 25px;
+  width: 60px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.storage-near-user {
+  margin: 0
+}
+
+.storage-near-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  height: 100px;
+  border-radius: 0 0 15px 15px;
+  background-color: #F2F4F6;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.storage-near-type {
+  margin: 0;
+}
+
+.storage-near-city {
+
+}
+
+.see-more-container {
+  text-align: center;
+}
+
+.see-more-btn {
+  background-color: #059862;
+  width: 400px;
+  height: 60px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
 .host-container {
   text-align: center;
 }
@@ -108,4 +191,12 @@
   border: none;
   color: white;
   font-weight: bold;
+}
+
+.become-host-container {
+  text-align: center;
+}
+
+.become-host-header {
+  font-size: 3rem;
 }

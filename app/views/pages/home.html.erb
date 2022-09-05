@@ -93,12 +93,43 @@
 
 <%#--------STORAGES NEAR YOU-------------%>
 
-  <h2>Storages near you</h2>
+<div class="near-you-container mt-5 mb-4 text-center">
+  <h2 class="near-you-header">Storages near you</h2>
+  <div class="storages-near-cards">
+    <% Storage.all.sample(4).each do |storage| %>
+      <div class="storage-near-card">
+        <div class="storage-near-img">
+          <p class="storage-near-price">$50</p>
+        </div>
+        <div class="storage-near-details">
+          <p class="storage-near-type">Garage -
+            <%=storage.meters%>m<sup>2</sup>
+          </p>
+          <p class="storage-near-user">
+            <i class="fa-solid fa-user"></i>
+            <%=storage.user.first_name%>
+            <%=storage.user.last_name.first%>.
+          </p>
+          <p class="storage-near-city">
+            <i class="fa-solid fa-location-dot"></i>
+            <%= storage.city%>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="see-more-container">
+    <%= link_to "See More", storages_path %>
+  </div>
+</div>
+
 
 <%#--------BECOME A HOST-----------%>
-<h2>Become a host</h2>
-<div class="host-container">
-  <button class="host-btn"> Become Host </button>
+<div class="become-host-container mt-5 mb-4 text-center">
+  <h2 class="become-host-header">Become a host</h2>
+  <div class="host-container">
+    <button class="host-btn"> Become Host </button>
+  </div>
 </div>
 
 </div>
