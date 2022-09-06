@@ -1,0 +1,117 @@
+
+<h1><%=@storage.title%></h1>
+<span class="">
+  <%=@storage.user.first_name %>
+  <%=@storage.user.last_name %>
+</span>
+<p class="">
+  <i class="fa-solid fa-location-dot"></i>
+  <%= @storage.city%>
+</p>
+<p class="">
+  $<%= @storage.price %>
+</p>
+
+
+<%# <div class="lightbox">
+  <div class="row">
+    <div class="col-lg-6">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/1.webp"
+        data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
+        alt="Table Full of Spices"
+        class="w-100 mb-2 mb-md-4 shadow-1-strong rounded"
+      />
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Square/1.webp"
+        data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Square/1.webp"
+        alt="Coconut with Strawberries"
+        class="w-100 shadow-1-strong rounded"
+      />
+    </div>
+    <div class="col-lg-6">
+      <img
+        src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Vertical/1.webp"
+        data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Vertical/1.webp"
+        alt="Dark Roast Iced Coffee"
+        class="w-100 shadow-1-strong rounded"
+      />
+    </div>
+  </div>
+</div> %>
+
+<div class="products">
+  <div class="container">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title" id="myModalLabel">Demo Site</h4>
+          </div>
+          <div class="modal-body">This is a Demo E-Commerce site powered by Built.io Contentstack</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="single-page">
+      <div class="single-page-row" id="detail-21">
+        <div class="col-md-6 single-top-left vcenter">
+          <div class="thumb-image detail_images flexslider">
+            <ul class="slides">
+              <% @storage.get('product_images').each do |image| %>
+                <li data-thumb="<%= image[:url] %>">
+                  <img src="<%= image[:url] %>" />
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 single-top-right vcenter">
+          <h3 class="item_name"><%= @storage.title %></h3>
+          <div class="actual-price"><del>$<%= @storage.price %></del></div>
+          <p class="single-price-text"><%= @storage.price %></p>
+          <%# AQUI IBA FORM + BUTTON %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="col-md-3 order-md-2 mb-4">
+    <div class="">
+      <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Subtotal</h6>
+          </div>
+          <span class="text-muted d-flex align-items-center" id="PrecioUnitario"><%= @storage.price %></span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div class="service-fee">
+            <h6 class="my-0">Service Fee</h6>
+            <i class="fa-solid fa-circle-info" id="toolTip" title="Lorem Ipsum Lorem Ipsum Lorem Ipsum"></i>
+          </div>
+          <span class="text-muted d-flex align-items-center cant-traveres"> <%= (@storage.price*0.10) %> </span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between bg-light" >
+          <div class="text-success">
+            <h6 class="my-0">Discount</h6>
+            <small>First Month Discount (20%)</small>
+          </div>
+          <span class="text-success d-flex align-items-center">-<%= (@storage.price*0.20) %></span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between mt-2">
+          <span><b>Total $</b></span>
+          <span class="text-success d-flex align-items-center">
+          <b> -<%= @storage.price-(@storage.price*0.20) + (@storage.price*0.10) %> </b>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>

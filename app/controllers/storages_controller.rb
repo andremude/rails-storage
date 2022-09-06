@@ -4,12 +4,11 @@ class StoragesController < ApplicationController
   # GET
   def index
     @storages = Storage.all
-    # render json: @storages
   end
 
   # GET
   def show
-    render json: @storage
+    @storage = Storage.find(params[:id])
   end
 
   # POST
