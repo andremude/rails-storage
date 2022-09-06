@@ -55,7 +55,8 @@ class StoragesController < ApplicationController
       :city,
       :latitude,
       :longitude,
-      :price
+      :price,
+      photos: []
     )
   end
 end

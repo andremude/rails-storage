@@ -4,4 +4,5 @@ class Storage < ApplicationRecord
   validates :title, presence: true
   validates :address, presence: true
   validates :meters, presence: true
+  has_many_attached :photos
 end
