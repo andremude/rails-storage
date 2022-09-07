@@ -119,7 +119,7 @@
     <% end %>
   </div>
   <div class="see-more-container">
-    <%= link_to "See More", storages_path %>
+    <%= link_to "See More", storages_path, :class => "btn btn-success py-2 px-3" %>
   </div>
 </div>
 
@@ -128,7 +128,8 @@
 <div class="become-host-container mt-5 mb-4 text-center">
   <h2 class="become-host-header">Become a host</h2>
   <div class="host-container">
-    <button class="host-btn"> Become Host </button>
+    <%# <button class="host-btn", storages_path> Become Host </button> %>
+    <%= link_to "Become Host", new_storage_path, :class => "btn btn-success py-2 px-3" %>
   </div>
 </div>
 

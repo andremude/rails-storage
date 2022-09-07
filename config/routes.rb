@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     resources :reservations, only: %i[create new]
   end
   get '/how_it_works', to: 'pages#how_it_works'
+  get '/user_page', to: 'pages#user_page'
 end

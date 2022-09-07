@@ -4,7 +4,7 @@
       <div class="col-12 col-md-6 offset-lg-3">
         <div class="bg-white rounded p-3 shadow">
           <p>Let's create a post for your storage </p>
-          <%= simple_form_for(Storage.new) do |f| %>
+          <%= simple_form_for(Storage.update) do |f| %>
           <%= f.error_notification %>
           <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
             <%= f.input :title, label: "Title", placeholder: "Title" %>
@@ -14,7 +14,7 @@
             <%= f.input :meters, label: "Meters", placeholder: "Meters" %>
             <%= f.input :price, label: "Price", placeholder: "Price" %>
             <%#= f.input :photos,label: 'Fotos', as: :file, input_html: { multiple: true } %>
-            <%= f.button :submit, 'Create Post', class: "btn btn-success p-3 w-100 rounded",style:"font-size:18px;" %>
+            <%= f.button :submit, 'Edit Post', class: "btn btn-success p-3 w-100 rounded",style:"font-size:18px;" %>
           <% end %>
         </div>
       </div>

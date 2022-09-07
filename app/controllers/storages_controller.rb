@@ -25,9 +25,9 @@ class StoragesController < ApplicationController
     @storage.user = current_user
 
     if @storage.save
-      render json: @storage, status: :created, location: storage_path(@storage)
+      redirect_to storages_path
     else
-      render json: @storage.errors, status: :unprocessable_entity
+      render :new
     end
   end
 
