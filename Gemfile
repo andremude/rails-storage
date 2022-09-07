@@ -35,6 +35,7 @@ gem "active_model_serializers"
 gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
 gem 'simple_form'
+gem "geocoder"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

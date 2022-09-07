@@ -4,6 +4,14 @@ class StoragesController < ApplicationController
   # GET
   def index
     @storages = Storage.all
+
+    @markers = @storages.geocoded.map do |storage|
+      {
+        lat: storage.latitude,
+        lng: storage.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { storage: storage })
+      }
+    end
   end
 
   # GET
