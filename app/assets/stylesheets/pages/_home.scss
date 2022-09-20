@@ -50,11 +50,27 @@
   margin-left: -2px;
 }
 
+// .home-storages-container {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+.storages-header {
+  text-align: center;
+  margin: 30px;
+}
+
 .items-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.items-container .row {
+  background-color: #a0a1a3;
+  // margin: 5px;
 }
 
 .items-container .card {
@@ -80,6 +96,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border: 5px solid white;
 }
 
 .why-storage-container {
@@ -159,10 +176,6 @@
 
 .storage-near-type {
   margin: 0;
-}
-
-.storage-near-city {
-
 }
 
 .see-more-container {

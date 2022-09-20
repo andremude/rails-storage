@@ -34,7 +34,6 @@ gem 'simple_form'
 gem "active_model_serializers"
 gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
-gem 'simple_form'
 gem "geocoder"
 
 group :development, :test do

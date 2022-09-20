@@ -1,117 +1,166 @@
-
-<h1><%=@storage.title%></h1>
-<span class="">
-  <%=@storage.user.first_name %>
-  <%=@storage.user.last_name %>
-</span>
-<p class="">
-  <i class="fa-solid fa-location-dot"></i>
-  <%= @storage.city%>
-</p>
-<p class="">
-  $<%= @storage.price %>
-</p>
-
-
-<%# <div class="lightbox">
-  <div class="row">
-    <div class="col-lg-6">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Slides/1.webp"
-        data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Slides/1.webp"
-        alt="Table Full of Spices"
-        class="w-100 mb-2 mb-md-4 shadow-1-strong rounded"
-      />
-      <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Square/1.webp"
-        data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Square/1.webp"
-        alt="Coconut with Strawberries"
-        class="w-100 shadow-1-strong rounded"
-      />
-    </div>
-    <div class="col-lg-6">
-      <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Thumbnails/Vertical/1.webp"
-        data-mdb-img="https://mdbcdn.b-cdn.net/img/Photos/Vertical/1.webp"
-        alt="Dark Roast Iced Coffee"
-        class="w-100 shadow-1-strong rounded"
-      />
-    </div>
-  </div>
-</div> %>
-
-<div class="products">
-  <div class="container">
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 class="modal-title" id="myModalLabel">Demo Site</h4>
-          </div>
-          <div class="modal-body">This is a Demo E-Commerce site powered by Built.io Contentstack</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <%# <div class="single-page">
-      <div class="single-page-row" id="detail-21">
-        <div class="col-md-6 single-top-left vcenter">
-          <div class="thumb-image detail_images flexslider">
-            <ul class="slides"> %>
-              <%# @storage.get('product_images').each do |image| %>
-                <li data-thumb="<%#= image[:url] %>">
-                  <img src="<%#= image[:url] %>" />
-                </li>
-              <%# end %>
-            <%# </ul>
-          </div>
-        </div> %>
-
-        <div class="col-md-6 single-top-right vcenter">
-          <h3 class="item_name"><%= @storage.title %></h3>
-          <div class="actual-price"><del>$<%= @storage.price %></del></div>
-          <p class="single-price-text"><%= @storage.price %></p>
-          <%# AQUI IBA FORM + BUTTON %>
-        </div>
-      </div>
-    </div>
+<div class="show-top-container">
+  <h1><%=@storage.title%></h1>
+  <div class="show-tc-details">
+    <span class="tc-details city">
+      <i class="fa-solid fa-location-dot"></i>
+      <%= @storage.city%>
+    </span>
+    <span class="tc-details user">
+      <%=@storage.user.first_name %>
+      <%=@storage.user.last_name %>
+    </span>
+    <span class="tc-details price">
+      $<%= @storage.price %>
+    </span>
   </div>
 </div>
 
+  <div class="row">
+    <div class="col-8">
+      <div class="lightbox">
+        <div class="row">
+          <div class="column">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=150" onclick="openModal();currentSlide(1)" class="hover-shadow">
+          </div>
+          <div class="column">
+            <img src="https://lipsum.app/id/47/200x150" onclick="openModal();currentSlide(2)" class="hover-shadow">
+          </div>
+        </div>
 
-  <div class="col-md-3 order-md-2 mb-4">
-    <div class="">
-      <ul class="list-group mb-3">
-        <li class="list-group-item d-flex justify-content-between lh-condensed">
-          <div>
-            <h6 class="my-0">Subtotal</h6>
+        <div class="row">
+          <div class="column">
+            <img src="https://lipsum.app/id/48/200x150" onclick="openModal();currentSlide(3)" class="hover-shadow">
           </div>
-          <span class="text-muted d-flex align-items-center" id="PrecioUnitario"><%= @storage.price %></span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between lh-condensed">
-          <div class="service-fee">
-            <h6 class="my-0">Service Fee</h6>
-            <i class="fa-solid fa-circle-info" id="toolTip" title="Lorem Ipsum Lorem Ipsum Lorem Ipsum"></i>
+          <div class="column">
+            <img src="https://lipsum.app/id/51/200x150" onclick="openModal();currentSlide(4)" class="hover-shadow">
           </div>
-          <span class="text-muted d-flex align-items-center cant-traveres"> <%= (@storage.price*0.10) %> </span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between bg-light" >
-          <div class="text-success">
-            <h6 class="my-0">Discount</h6>
-            <small>First Month Discount (20%)</small>
-          </div>
-          <span class="text-success d-flex align-items-center">-<%= (@storage.price*0.20) %></span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between mt-2">
-          <span><b>Total $</b></span>
-          <span class="text-success d-flex align-items-center">
-          <b> -<%= @storage.price-(@storage.price*0.20) + (@storage.price*0.10) %> </b>
-          </span>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
+
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="https://lipsum.app/id/47/" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="https://lipsum.app/id/48/" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="https://lipsum.app/id/51/" style="width:100%">
+      </div>
+
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <!-- Caption text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <!-- Thumbnail image controls -->
+      <div class="column">
+        <img class="demo" src="https://lipsum.app/id/46/200x150" onclick="currentSlide(1)" alt="Nature">
+      </div>
+
+      <div class="column">
+        <img class="demo" src="https://lipsum.app/id/47/200x150" onclick="currentSlide(2)" alt="Snow">
+      </div>
+
+      <div class="column">
+        <img class="demo" src="https://lipsum.app/id/48/200x150" onclick="currentSlide(3)" alt="Mountains">
+      </div>
+
+      <div class="column">
+        <img class="demo" src="https://lipsum.app/id/51/200x150" onclick="currentSlide(4)" alt="Lights">
+      </div>
+    </div>
+  </div>
+
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+    <div class="col-3 order-md-2 mb-4">
+      <div class="">
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Subtotal</h6>
+            </div>
+            <span class="text-muted d-flex align-items-center" id="PrecioUnitario"><%= @storage.price %></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div class="service-fee">
+              <h6 class="my-0">Service Fee</h6>
+              <i class="fa-solid fa-circle-info" id="toolTip" title="Lorem Ipsum Lorem Ipsum Lorem Ipsum"></i>
+            </div>
+            <span class="text-muted d-flex align-items-center cant-traveres"> <%= (@storage.price*0.10) %> </span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light" >
+            <div class="text-success">
+              <h6 class="my-0">Discount</h6>
+              <small>First Month Discount (20%)</small>
+            </div>
+            <span class="text-success d-flex align-items-center">-<%= (@storage.price*0.20) %></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between mt-2">
+            <span><b>Total $</b></span>
+            <span class="text-success d-flex align-items-center">
+            <b> -<%= @storage.price-(@storage.price*0.20) + (@storage.price*0.10) %> </b>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
   </div>

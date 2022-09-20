@@ -20,8 +20,9 @@
   </div>
 
 <%# ---------- STORAGES ------------  %>
+<div class="home-storages-container">
+  <h2 class="storages-header">There is a storage for everything...</h2>
   <div class="items-container">
-  <h2>There is storage for everything...</h2>
     <div class="row d-flex justify-content-center align-items-center">
       <div class="card-container col-lg-4 col-md-4 col-sm-12 p-4">
         <img src="inventory.jpg" class="card-img-top" alt="...">
@@ -63,6 +64,7 @@
       </div>
     </div>
   </div>
+</div>
 
 <%#--------WHY CHOOSE US----------%>
   <div class="container mt-5 mb-4 text-center"  >
@@ -93,44 +95,44 @@
 
 <%#--------STORAGES NEAR YOU-------------%>
 
-<div class="near-you-container mt-5 mb-4 text-center">
-  <h2 class="near-you-header">Storages near you</h2>
-  <div class="storages-near-cards">
-    <% Storage.all.sample(4).each do |storage| %>
-      <div class="storage-near-card">
-        <div class="storage-near-img">
-          <p class="storage-near-price">$50</p>
+  <div class="near-you-container mt-5 mb-4 text-center">
+    <h2 class="near-you-header">Storages near you</h2>
+    <div class="storages-near-cards">
+      <% Storage.all.sample(4).each do |storage| %>
+        <div class="storage-near-card">
+          <div class="storage-near-img">
+            <p class="storage-near-price">$50</p>
+          </div>
+          <div class="storage-near-details">
+            <p class="storage-near-type">Garage -
+              <%=storage.meters%>m<sup>2</sup>
+            </p>
+            <p class="storage-near-user">
+              <i class="fa-solid fa-user"></i>
+              <%=storage.user.first_name%>
+              <%=storage.user.last_name.first%>.
+            </p>
+            <p class="storage-near-city">
+              <i class="fa-solid fa-location-dot"></i>
+              <%= storage.city%>
+            </p>
+          </div>
         </div>
-        <div class="storage-near-details">
-          <p class="storage-near-type">Garage -
-            <%=storage.meters%>m<sup>2</sup>
-          </p>
-          <p class="storage-near-user">
-            <i class="fa-solid fa-user"></i>
-            <%=storage.user.first_name%>
-            <%=storage.user.last_name.first%>.
-          </p>
-          <p class="storage-near-city">
-            <i class="fa-solid fa-location-dot"></i>
-            <%= storage.city%>
-          </p>
-        </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
+    <div class="see-more-container">
+      <%= link_to "See More", storages_path, :class => "btn btn-success py-2 px-3" %>
+    </div>
   </div>
-  <div class="see-more-container">
-    <%= link_to "See More", storages_path, :class => "btn btn-success py-2 px-3" %>
-  </div>
-</div>
 
 
 <%#--------BECOME A HOST-----------%>
-<div class="become-host-container mt-5 mb-4 text-center">
-  <h2 class="become-host-header">Become a host</h2>
-  <div class="host-container">
-    <%# <button class="host-btn", storages_path> Become Host </button> %>
-    <%= link_to "Become Host", new_storage_path, :class => "btn btn-success py-2 px-3" %>
+  <div class="become-host-container mt-5 mb-4 text-center">
+    <h2 class="become-host-header">Become a host</h2>
+    <div class="host-container">
+      <%# <button class="host-btn", storages_path> Become Host </button> %>
+      <%= link_to "Become Host", new_storage_path, :class => "btn btn-success py-2 px-3" %>
+    </div>
   </div>
-</div>
 
 </div>
