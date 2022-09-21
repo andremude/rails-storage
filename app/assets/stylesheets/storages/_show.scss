@@ -27,6 +27,24 @@
   color: #79797c
 }
 
+.reserve-btn {
+  width: 100%;
+  height: 50px;
+  background-color: #059862;
+  color: white;
+  font-size: 1.5em;
+  border-radius: 15px;
+  border: none;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reserve-btn:hover {
+  color: black;
+}
+
 // .lightbox {
 //   display: flex;
 //   justify-content: space-around;
@@ -47,6 +65,11 @@
 //   padding: 0 8px;
 // }
 
+.lightbox {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .lightbox:after {
   content: "";
   display: table;
@@ -57,6 +80,34 @@
 .column {
   // float: left;
   width: 50%;
+}
+
+.column.one {
+  text-align: right;
+}
+
+.column.two {
+  text-align: left;
+}
+
+.row.two {
+  margin-top: 15px;
+}
+
+.img-one {
+  border-radius: 25px 0 0 0;
+}
+
+.img-two {
+  border-radius: 0 25px 0 0;
+}
+
+.img-three {
+ border-radius: 0 0 0 25px;
+}
+
+.img-four {
+ border-radius: 0 0 25px 0;
 }
 
 /* The Modal (background) */
@@ -154,6 +205,8 @@
 
 img.demo {
   opacity: 0.6;
+  width: 200px;
+  height: 150px;
 }
 
 .active,
@@ -166,9 +219,78 @@ img.hover-shadow {
   cursor: pointer;
   width: 350px;
   height: 250px;
-  margin: 20px 0px;
 }
 
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.thumbnail-container {
+  display: flex;
+}
+
+
+
+.show-details {
+  padding: 0 30px;
+}
+
+.show-about {
+  background-color: lightblue;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.about-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  padding: 30px 60px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.about-item {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+
+.show-example {
+  background-color: red;
+}
+
+.show-map {
+  margin-top: 50px;
+  background-color: yellow;
+}
+
+.show-features {
+  margin-top: 50px;
+  background-color: pink;
+}
+
+.features-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 5px 60px;
+}
+
+.feature-item {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+.storages-near-bottom {
+  margin-top: 50px;
+  padding: 0 30px;
+}
+
+.storages-near-container {
+  background-color: #eb591f;
 }
