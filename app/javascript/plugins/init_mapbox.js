@@ -18,7 +18,6 @@ const addMarkersToMap = (map, markers) => {
   });
 };
 
-
 const initMapbox = () => {
   const mapElement = document.getElementById('map');
 

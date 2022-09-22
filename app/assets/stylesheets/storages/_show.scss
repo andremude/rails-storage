@@ -264,7 +264,13 @@ img.hover-shadow {
 
 .show-map {
   margin-top: 50px;
-  background-color: yellow;
+  // background-color: yellow;
+}
+
+#showMap {
+  height: 400px;
+  position: sticky;
+  top: 0;
 }
 
 .show-features {
