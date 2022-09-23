@@ -1,6 +1,10 @@
 class PagesController < ApplicationController
   def home
-      # @storages = Storage.all
+    if params[:query].present?
+      @storages = Storage.where("city ILIKE ?", "%#{params[:query]}%")
+    else
+      @storages = Storage.all
+    end
   end
 
   def how_it_works

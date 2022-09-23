@@ -10,7 +10,7 @@
         <div>
           <%= text_field_tag :query,
           params[:query],
-          placeholder: "Find a storage near you",
+          placeholder: "Search for a city",
           class: 'home-search-bar'
           %>
           <%= submit_tag("Search", :class=>"home-search-btn") %>
@@ -18,6 +18,8 @@
       <% end %>
     </div>
   </div>
+
+
 
 <%# ---------- STORAGES ------------  %>
 <div class="home-storages-container">
