@@ -12,38 +12,26 @@
   <div class="index-storages">
     <% @storages.each do |storage| %>
       <div class="storage-card">
-        <h3 class = "storage-title">
-          <%=link_to storage.title, storage_path(storage)%>
-        </h3>
-        <div class="storage-body">
-          <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="storage" class="storage-img">
-          <div class="storage-details">
-            <p class="storage-info">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a est diam. Mauris id purus ex. Duis vel quam maximus, vulputate turpis sit amet, molestie.
-            </p>
-            <%# <p class="storage-info"> %>
-              <%#= storage.description.first(20) %>
-            <%# </p> %>
-            <div class="storage-publisher-city">
-              <p class="storage-publisher">
-                <i class="fa-solid fa-user"></i>
-                <span class="">
-                  <%=storage.user.first_name%>
-                  <%=storage.user.last_name%>
-                </span>
-              </p>
-              <p class="storage-city">
-                <i class="fa-solid fa-location-dot"></i>
-                <%= storage.city%>
-              </p>
-            </div>
-            <div class=storage-price-container>
-              <p class="storage-price">
-                $<%= storage.price%>
-              </p>
-            </div>
-            <%#= link_to "See more",storage_path(storage)%>
-          </div>
+        <div class="storage-card-top">
+          <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="storage-img">
+          <p class="storage-price">
+            $<%= storage.price%>
+          </p>
+        </div>
+        <div class = "storage-details">
+          <h4 class="storage-title"><%=link_to storage.title.truncate(30), storage_path(storage)%></h4>
+          <p class="storage-publisher-container">
+            <i class="fa-solid fa-user"></i>
+            <span class="storage-publisher">
+              <%=storage.user.first_name%>
+              <%=storage.user.last_name%>
+            </span>
+          </p>
+          <p class="storage-city">
+            <i class="fa-solid fa-location-dot"></i>
+            <%= storage.city%>
+          </p>
+          <p><%= storage.meters %>m<sup>2</sup></p>
         </div>
       </div>
     <% end %>

@@ -4,45 +4,35 @@
   border: 1px solid black;
   padding: 10px;
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
-.storage-body {
-  display: flex;
-  align-items: center;
-  justify-content:flex-start;
+.storage-card-top {
+  position: relative;
 }
 
 .storage-img {
-  height: 150px;
+  height: 300px;
   border-radius: 15px;
-  margin-right: 10px;
-}
-
-.storage-publisher-city {
-  display: flex;
-  align-items:center;
-  justify-content: space-between;
-  padding-right: 50px;
-}
-
-.storage-price-container {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
 }
 
 .storage-price {
+  color: white;
+  background-color: #696666;
+  border: 1px solid black;
+  border-radius: 25px;
+  width: 120px;
+  height: 40px;
+  position: absolute;
+  right: 30px;
+  bottom:5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #b4b1b1;
-  border: 1px solid black;
-  border-radius: 2px;
-  width: 80px;
-  height: 50px;
+  font-weight: bold;
+  font-size: 1.25em;
 }
-
 
 #map {
   height: 100vh;
@@ -58,8 +48,15 @@
 
 .index-storages {
   width: 60%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
   align-items: center;
   justify-content: center;
+}
+
+.storage-title a {
+  text-decoration: none;
+  color: black;
+  font-size: 0.90em;
 }
