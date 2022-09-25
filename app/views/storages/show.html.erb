@@ -213,8 +213,33 @@
 <div class="row storages-near-bottom">
   <div class="storages-near-container">
     <h1>Storages near <%= @storage.city %></h1>
-    <div>
-      Mauris consequat nec orci malesuada egestas. Suspendisse pellentesque idneque eget consequat. Mauris tincidunt rutrum placerat. Nulla rhoncuseleifend nulla, in gravida diam. Sed eu purus quis urna tempus lacinia idvel quam. Integer nec sem eget ex finibus interdum. Pellentesque egetlectus a mi lobortis interdum in vel diam. Fusce finibus, lectus bibendumaliquam commodo, metus mauris ultrices dolor, a malesuada ligula maurisquis nisi. In sit amet luctus purus. Etiam iaculis erat sit amet nuncplacerat, eu feugiat augue ultrices.
+    <div class="near-you-container mt-5 mb-4 text-center">
+      <div class="storages-near-cards">
+        <% Storage.all.sample(4).each do |storage| %>
+          <div class="storage-near-card">
+            <div class="storage-near-img">
+              <p class="storage-near-price">$50</p>
+            </div>
+            <div class="storage-near-details">
+              <p class="storage-near-type">Garage -
+                <%=storage.meters%>m<sup>2</sup>
+              </p>
+              <p class="storage-near-user">
+                <i class="fa-solid fa-user"></i>
+                <%=storage.user.first_name%>
+                <%=storage.user.last_name.first%>.
+              </p>
+              <p class="storage-near-city">
+                <i class="fa-solid fa-location-dot"></i>
+                <%= storage.city%>
+              </p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="see-more-container">
+        <%= link_to "See More", storages_path, :class => "btn btn-success py-2 px-3" %>
+      </div>
     </div>
   </div>
 </div>
