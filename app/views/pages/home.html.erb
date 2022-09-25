@@ -8,10 +8,10 @@
       </div>
       <%# --------- SEARCH BAR ----------- %>
       <%= form_tag storages_path, method: :get, class: 'home-search-container' do %>
-        <div>
+        <div class="home-search-form">
           <%= text_field_tag :query,
           params[:query],
-          placeholder: "Search for a city",
+          placeholder: "Search for a city...",
           class: 'home-search-bar'
           %>
           <%= submit_tag("Search", :class=>"home-search-btn") %>
