@@ -123,76 +123,85 @@
   height: 100px;
 }
 
+.home-storages-near-container {
+  background-color: #eb591f;
+}
 
-.near-you-container {
+.home-near-you-container {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 25px;
 }
 
-.near-you-header {
-  text-align: center;
-  margin: 10px;
-  font-size: 3rem;
-}
-
-.storages-near-cards {
+.home-storages-near-cards {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 25px;
 }
 
-.storage-near-card {
-  width: 150px;
+.home-storage-near-card {
+  width: 250px;
 }
 
-.storage-near-img {
-  width: 200px;
-  height: 150px;
-  background-image: url("https://images.unsplash.com/photo-1426122402199-be02db90eb90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-  background-size: cover;
+.home-storage-near-img {
+  width: 250px;
+  height: 180px;
+  // background-image: url("https://images.unsplash.com/photo-1426122402199-be02db90eb90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  // background-size: cover;
   border-radius: 15px 15px 0 0;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  position: relative;
 }
 
-.storage-near-price {
+.home-storage-near-price {
   background-color: #5a5b5c;
   color: white;
   font-size: 1.25em;
   border-radius: 25px;
-  width: 60px;
   text-align: center;
-  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
 }
 
-.storage-near-user {
+.home-storage-near-user {
   margin: 0
 }
 
-.storage-near-details {
+.home-storage-near-details {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 200px;
-  height: 100px;
+  width: 250px;
+  height: 150px;
   border-radius: 0 0 15px 15px;
   background-color: #F2F4F6;
   text-align: left;
   padding-left: 15px;
 }
 
-.storage-near-type {
+.home-storage-near-title {
   margin: 0;
 }
 
-.see-more-container {
+.home-storage-near-type {
+  margin: 0;
+}
+
+.home-see-more-container {
   text-align: center;
 }
 
-.see-more-btn {
+.home-see-more-btn {
   background-color: #059862;
   width: 400px;
   height: 60px;

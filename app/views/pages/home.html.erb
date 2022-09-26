@@ -98,32 +98,32 @@
 
 <%#--------STORAGES NEAR YOU-------------%>
 
-  <div class="near-you-container mt-5 mb-4 text-center">
-    <h2 class="near-you-header">Storages near you</h2>
-    <div class="storages-near-cards">
+  <div class="home-near-you-container mt-5 mb-4 text-center">
+    <h2 class="home-near-you-header">Discover storages</h2>
+    <div class="home-storages-near-cards">
       <% Storage.all.sample(4).each do |storage| %>
-        <div class="storage-near-card">
-          <div class="storage-near-img">
-            <p class="storage-near-price">$50</p>
-          </div>
-          <div class="storage-near-details">
-            <p class="storage-near-type">Garage -
-              <%=storage.meters%>m<sup>2</sup>
-            </p>
-            <p class="storage-near-user">
-              <i class="fa-solid fa-user"></i>
-              <%=storage.user.first_name%>
-              <%=storage.user.last_name.first%>.
-            </p>
-            <p class="storage-near-city">
-              <i class="fa-solid fa-location-dot"></i>
-              <%= storage.city%>
-            </p>
-          </div>
+      <div class="home-storage-near-card">
+        <div class="home-storage-near-img">
+          <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="show-storage-near-img ">
+          <p class="home-storage-near-price">$<%= storage.price %></p>
         </div>
-      <% end %>
+        <div class="home-storage-near-details">
+          <p class="home-storage-near-title"><%= link_to storage.title.truncate(24), storage_path(storage) %></p>
+          <p class="home-storage-near-type">Garage - <%=storage.meters%>m<sup>2</sup></p>
+          <p class="home-storage-near-user">
+            <i class="fa-solid fa-user"></i>
+            <%=storage.user.first_name%>
+            <%=storage.user.last_name.first%>.
+          </p>
+          <p class="home-storage-near-city">
+            <i class="fa-solid fa-location-dot"></i>
+            <%= storage.city%>
+          </p>
+        </div>
+      </div>
+    <% end %>
     </div>
-    <div class="see-more-container">
+    <div class="home-see-more-container">
       <%= link_to "See More", storages_path, :class => "btn btn-success py-2 px-3" %>
     </div>
   </div>
