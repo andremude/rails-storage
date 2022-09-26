@@ -6,6 +6,7 @@
       <%= @storage.city%>
     </span>
     <span class="tc-details user">
+      <i class="fa-solid fa-user"></i>
       <%=@storage.user.first_name %>
       <%=@storage.user.last_name %>
     </span>
@@ -15,8 +16,8 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-8">
+<div class="show-body">
+  <div class="show-left">
     <div class="lightbox">
       <div class="row one">
         <div class="column one">
@@ -36,170 +37,172 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <div id="myModal" class="modal">
-    <span class="close cursor" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
 
-      <div class="mySlides">
-        <div class="numbertext">1 / 4</div>
-        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">2 / 4</div>
-        <img src="https://lipsum.app/id/47/200x150" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">3 / 4</div>
-        <img src="https://lipsum.app/id/48/200x150" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">4 / 4</div>
-        <img src="https://lipsum.app/id/51/200x150" style="width:100%">
-      </div>
-
-      <!-- Next/previous controls -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-      <!-- Caption text -->
-      <div class="caption-container">
-        <p id="caption"></p>
-      </div>
-
-      <!-- Thumbnail image controls -->
-      <div class="thumbnail-container">
-        <div class="column">
-          <img class="demo" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop" onclick="currentSlide(1)" alt="Nature">
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop" style="width:100%">
         </div>
 
-        <div class="column">
-          <img class="demo" src="https://lipsum.app/id/47/200x150" onclick="currentSlide(2)" alt="Snow">
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img src="https://lipsum.app/id/47/200x150" style="width:100%">
         </div>
 
-        <div class="column">
-          <img class="demo" src="https://lipsum.app/id/48/200x150" onclick="currentSlide(3)" alt="Mountains">
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img src="https://lipsum.app/id/48/200x150" style="width:100%">
         </div>
 
-        <div class="column">
-          <img class="demo" src="https://lipsum.app/id/51/200x150" onclick="currentSlide(4)" alt="Lights">
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="https://lipsum.app/id/51/200x150" style="width:100%">
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Caption text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail image controls -->
+        <div class="thumbnail-container">
+          <div class="column">
+            <img class="demo" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop" onclick="currentSlide(1)" alt="Nature">
+          </div>
+
+          <div class="column">
+            <img class="demo" src="https://lipsum.app/id/47/200x150" onclick="currentSlide(2)" alt="Snow">
+          </div>
+
+          <div class="column">
+            <img class="demo" src="https://lipsum.app/id/48/200x150" onclick="currentSlide(3)" alt="Mountains">
+          </div>
+
+          <div class="column">
+            <img class="demo" src="https://lipsum.app/id/51/200x150" onclick="currentSlide(4)" alt="Lights">
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script>
-    function openModal() {
-      document.getElementById("myModal").style.display = "block";
-    }
-
-    function closeModal() {
-      document.getElementById("myModal").style.display = "none";
-    }
-
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
-      var captionText = document.getElementById("caption");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
+    <script>
+      function openModal() {
+        document.getElementById("myModal").style.display = "block";
       }
-      for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
+
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
       }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-      captionText.innerHTML = dots[slideIndex-1].alt;
-    }
-  </script>
 
-  <div class="col-4 order-md-2 mb-4 reserve-box">
-    <div class="">
-      <ul class="list-group mb-3">
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
-            <div>
-              <h6 class="my-0">Subtotal</h6>
-            </div>
-            <span class="text-muted d-flex align-items-center" id="PrecioUnitario"><%= @storage.price %></span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-condensed">
-            <div class="service-fee">
-              <h6 class="my-0">Service Fee</h6>
-              <i class="fa-solid fa-circle-info" id="toolTip" title="Lorem Ipsum Lorem Ipsum Lorem Ipsum"></i>
-            </div>
-            <span class="text-muted d-flex align-items-center cant-traveres"> <%= (@storage.price*0.10) %> </span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between bg-light" >
-            <div class="text-success">
-              <h6 class="my-0">Discount</h6>
-              <small>First Month Discount (20%)</small>
-            </div>
-            <span class="text-success d-flex align-items-center">-<%= (@storage.price*0.20) %></span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between mt-2">
-            <span><b>Total $</b></span>
-            <span class="text-success d-flex align-items-center">
-            <b> -<%= @storage.price-(@storage.price*0.20) + (@storage.price*0.10) %> </b>
-            </span>
-          </li>
-      </ul>
-    </div>
-    <button class="reserve-btn">
-      Reserve Storage
-    </button>
-  </div>
-</div>
+      var slideIndex = 1;
+      showSlides(slideIndex);
 
-<div class="row col-8 show-details">
-  <div class="show-about">
-    <h1>About</h1>
-    <div class="about-items">
-      <div class="about-item">Security Camera</div>
-      <div class="about-item">Smoke Detector</div>
-      <div class="about-item">Pet Free</div>
-      <div class="about-item">Locked Area</div>
-      <div class="about-item">Smoke Free</div>
-      <div class="about-item">Climate Controlled</div>
-    </div>
-    <div class="about-text">
-      <p><%= @storage.description%></p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet nibh sapien, vel malesuada augue cursus vel. Pellentesque fermentum, turpis non hendrerit interdum, risus felis laoreet libero, vel rhoncus turpis ex molestie ligula. Proin volutpat mollis velit, sed maximus ligula eleifend ut. Fusce maximus laoreet nisi, sed convallis diam interdum in. Maecenas vel nisi id neque molestie consectetur nec bibendum urna. Proin ut lectus tortor. Vestibulum elementum aliquam mi, vel mattis nibh vehicula et. Pellentesque et ipsum vehicula, semper sapien quis, maximus leo. Morbi pellentesque convallis dui, sed faucibus ipsum tincidunt sit amet.
-      </p>
-    </div>
-  </div>
-  <div class="show-example">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet nibh sapien, vel malesuada augue cursus vel. Pellentesque fermentum, turpis non hendrerit interdum, risus felis laoreet libero, vel rhoncus turpis ex molestie ligula. Proin volutpat mollis velit, sed maximus ligula eleifend ut. Fusce maximus laoreet nisi, sed convallis diam interdum in. Maecenas vel nisi id neque molestie consectetur nec bibendum urna. Proin ut lectus tortor. Vestibulum elementum aliquam mi, vel mattis nibh vehicula et. Pellentesque et ipsum vehicula, semper sapien quis, maximus leo. Morbi pellentesque convallis dui, sed faucibus ipsum tincidunt sit amet.
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
 
-    Mauris consequat nec orci malesuada egestas. Suspendisse pellentesque id neque eget consequat. Mauris tincidunt rutrum placerat. Nulla rhoncus eleifend nulla, in gravida diam. Sed eu purus quis urna tempus lacinia id vel quam. Integer nec sem eget ex finibus interdum. Pellentesque eget lectus a mi lobortis interdum in vel diam. Fusce finibus, lectus bibendum aliquam commodo, metus mauris ultrices dolor, a malesuada ligula mauris quis nisi. In sit amet luctus purus. Etiam iaculis erat sit amet nunc placerat, eu feugiat augue ultrices.
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+    </script>
+
+    <div class="show-details">
+        <div class="show-about">
+          <h1>About</h1>
+          <div class="about-items">
+            <div class="about-item">Security Camera</div>
+            <div class="about-item">Smoke Detector</div>
+            <div class="about-item">Pet Free</div>
+            <div class="about-item">Locked Area</div>
+            <div class="about-item">Smoke Free</div>
+            <div class="about-item">Climate Controlled</div>
+          </div>
+          <div class="about-text">
+            <p><%= @storage.description%></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet nibh sapien, vel malesuada augue cursus vel. Pellentesque fermentum, turpis non hendrerit interdum, risus felis laoreet libero, vel rhoncus turpis ex molestie ligula. Proin volutpat mollis velit, sed maximus ligula eleifend ut. Fusce maximus laoreet nisi, sed convallis diam interdum in. Maecenas vel nisi id neque molestie consectetur nec bibendum urna. Proin ut lectus tortor. Vestibulum elementum aliquam mi, vel mattis nibh vehicula et. Pellentesque et ipsum vehicula, semper sapien quis, maximus leo. Morbi pellentesque convallis dui, sed faucibus ipsum tincidunt sit amet.
+            </p>
+          </div>
+        </div>
+        <div class="show-example">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet nibh sapien, vel malesuada augue cursus vel. Pellentesque fermentum, turpis non hendrerit interdum, risus felis laoreet libero, vel rhoncus turpis ex molestie ligula. Proin volutpat mollis velit, sed maximus ligula eleifend ut. Fusce maximus laoreet nisi, sed convallis diam interdum in. Maecenas vel nisi id neque molestie consectetur nec bibendum urna. Proin ut lectus tortor. Vestibulum elementum aliquam mi, vel mattis nibh vehicula et. Pellentesque et ipsum vehicula, semper sapien quis, maximus leo. Morbi pellentesque convallis dui, sed faucibus ipsum tincidunt sit amet.
+
+          Mauris consequat nec orci malesuada egestas. Suspendisse pellentesque id neque eget consequat. Mauris tincidunt rutrum placerat. Nulla rhoncus eleifend nulla, in gravida diam. Sed eu purus quis urna tempus lacinia id vel quam. Integer nec sem eget ex finibus interdum. Pellentesque eget lectus a mi lobortis interdum in vel diam. Fusce finibus, lectus bibendum aliquam commodo, metus mauris ultrices dolor, a malesuada ligula mauris quis nisi. In sit amet luctus purus. Etiam iaculis erat sit amet nunc placerat, eu feugiat augue ultrices.
+        </div>
+        <div class="show-features">
+            <h1>Features</h1>
+            <div class="features-items">
+              <div class="feature-item">Security Camera</div>
+              <div class="feature-item">Smoke Detector</div>
+              <div class="feature-item">Pet Free</div>
+              <div class="feature-item">Locked Area</div>
+              <div class="feature-item">Smoke Free</div>
+              <div class="feature-item">Climate Controlled</div>
+            </div>
+        </div>
+    </div>
   </div>
-  <div class="show-features">
-      <h1>Features</h1>
-      <div class="features-items">
-        <div class="feature-item">Security Camera</div>
-        <div class="feature-item">Smoke Detector</div>
-        <div class="feature-item">Pet Free</div>
-        <div class="feature-item">Locked Area</div>
-        <div class="feature-item">Smoke Free</div>
-        <div class="feature-item">Climate Controlled</div>
+
+  <div class="reserve-container">
+    <div class="reserve-box">
+      <div class="">
+          <ul class="list-group mb-3">
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0">Subtotal</h6>
+                </div>
+                <span class="text-muted d-flex align-items-center" id="PrecioUnitario"><%= @storage.price %></span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div class="service-fee">
+                  <h6 class="my-0">Service Fee</h6>
+                  <i class="fa-solid fa-circle-info" id="toolTip" title="Lorem Ipsum Lorem Ipsum Lorem Ipsum"></i>
+                </div>
+                <span class="text-muted d-flex align-items-center cant-traveres"> <%= (@storage.price*0.10) %> </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between bg-light" >
+                <div class="text-success">
+                  <h6 class="my-0">Discount</h6>
+                  <small>First Month Discount (20%)</small>
+                </div>
+                <span class="text-success d-flex align-items-center">-<%= (@storage.price*0.20) %></span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between mt-2">
+                <span><b>Total $</b></span>
+                <span class="text-success d-flex align-items-center">
+                <b> -<%= @storage.price-(@storage.price*0.20) + (@storage.price*0.10) %> </b>
+                </span>
+              </li>
+          </ul>
       </div>
+      <button class="reserve-btn">
+        Reserve Storage
+      </button>
+    </div>
   </div>
 </div>
 

@@ -1,3 +1,23 @@
+// ----------- SHOW CONTAINER ------------
+
+.show-body {
+  display: flex;
+}
+
+.show-left {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// ----------- DETAILS NAV ------------
+
+.show-details {
+  padding: 0 30px;
+}
 .show-top-container {
   padding: 0 20px;
 }
@@ -17,57 +37,13 @@
   border-radius: 25px;
 }
 
-.service-fee {
-  display: flex;
-  align-items: center;
-}
 
-.service-fee i {
-  margin-left: 4px;
-  color: #79797c
-}
-
-.reserve-btn {
-  width: 100%;
-  height: 50px;
-  background-color: #059862;
-  color: white;
-  font-size: 1.5em;
-  border-radius: 15px;
-  border: none;
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.reserve-btn:hover {
-  color: black;
-}
-
-// .lightbox {
-//   display: flex;
-//   justify-content: space-around;
-//   align-items: center;
-// }
-
-// .lightbox-left img {
-//   margin: 10px 0px;
-// }
-
-// .lightbox-right img {
-//   margin: 10px 0px;
-// }
-
-// --------LIGHTBOX--------------
-
-// .lightbox>.column {
-//   padding: 0 8px;
-// }
+// ------- LIGHTBOX -----------
 
 .lightbox {
   padding-top: 20px;
   padding-bottom: 20px;
+  width: 100%;
 }
 
 .lightbox:after {
@@ -76,9 +52,7 @@
   clear: both;
 }
 
-/* Create four equal columns that floats next to eachother */
 .column {
-  // float: left;
   width: 50%;
 }
 
@@ -90,7 +64,13 @@
   text-align: left;
 }
 
+.row.one {
+  width: 100%;
+  margin-top: 15px;
+}
+
 .row.two {
+  width: 100%;
   margin-top: 15px;
 }
 
@@ -103,14 +83,14 @@
 }
 
 .img-three {
- border-radius: 0 0 0 25px;
+  border-radius: 0 0 0 25px;
 }
 
 .img-four {
  border-radius: 0 0 25px 0;
 }
 
-/* The Modal (background) */
+// -------- LIGHTBOX MODAL ------------
 .modal {
   display: none;
   position: fixed;
@@ -124,7 +104,6 @@
   background-color: black;
 }
 
-/* Modal Content */
 .modal-content {
   position: relative;
   background-color: #fefefe;
@@ -134,7 +113,6 @@
   max-width: 1200px;
 }
 
-/* The Close Button */
 .close {
   color: white;
   position: absolute;
@@ -151,12 +129,10 @@
   cursor: pointer;
 }
 
-/* Hide the slides by default */
 .mySlides {
   display: none;
 }
 
-/* Next & previous buttons */
 .prev,
 .next {
   cursor: pointer;
@@ -174,19 +150,16 @@
   -webkit-user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -195,7 +168,6 @@
   top: 0;
 }
 
-/* Caption text */
 .caption-container {
   text-align: center;
   background-color: black;
@@ -229,14 +201,9 @@ img.hover-shadow {
   display: flex;
 }
 
-.reserve-box {
-  position: sticky;
-  height: 100%;
-}
 
-.show-details {
-  padding: 0 30px;
-}
+
+// ---------- ABOUT CONTAINER ------------
 
 .show-about {
   background-color: lightblue;
@@ -260,10 +227,14 @@ img.hover-shadow {
   text-align: center;
 }
 
+// ----------- EXAMPLE CONTAINER ------------
 
 .show-example {
   background-color: red;
 }
+
+
+// ------------ FEATURES CONTAINER ----------
 
 .show-features {
   margin-top: 50px;
@@ -283,6 +254,47 @@ img.hover-shadow {
   padding: 5px;
   text-align: center;
 }
+
+// -------- RESERVE CONTAINER ----------
+
+.reserve-container {
+  width: 30%
+}
+
+.reserve-box {
+  position: sticky;
+  top: 20px;
+}
+
+.service-fee {
+  display: flex;
+  align-items: center;
+}
+
+.service-fee i {
+  margin-left: 4px;
+  color: #79797c
+}
+
+.reserve-btn {
+  width: 100%;
+  height: 50px;
+  background-color: #059862;
+  color: white;
+  font-size: 1.5em;
+  border-radius: 15px;
+  border: none;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reserve-btn:hover {
+  color: black;
+}
+
+// ----------- STORAGES NEAR -------------
 
 .storages-near-bottom {
   margin-top: 50px;
