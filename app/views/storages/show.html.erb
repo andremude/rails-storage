@@ -240,7 +240,7 @@
       <%# </div> %>
 
       <div class="show-storages-near-cards">
-        <% Storage.near([@storage.latitude, @storage.longitude], 500).each do |nearby| %>
+        <% Storage.limit(4).near([@storage.latitude, @storage.longitude], 500).each do |nearby| %>
           <div class="show-storage-near-card">
             <div class="show-storage-near-img">
               <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="show-storage-near-img ">
