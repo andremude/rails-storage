@@ -131,7 +131,7 @@
     }
   </script>
 
-  <div class="col-4 order-md-2 mb-4">
+  <div class="col-4 order-md-2 mb-4 reserve-box">
     <div class="">
       <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -200,13 +200,6 @@
         <div class="feature-item">Smoke Free</div>
         <div class="feature-item">Climate Controlled</div>
       </div>
-  </div>
-
-  <div class="show-map">
-    <div id="showMap"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
   </div>
 </div>
 

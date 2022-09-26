@@ -229,7 +229,10 @@ img.hover-shadow {
   display: flex;
 }
 
-
+.reserve-box {
+  position: sticky;
+  height: 100%;
+}
 
 .show-details {
   padding: 0 30px;
@@ -260,17 +263,6 @@ img.hover-shadow {
 
 .show-example {
   background-color: red;
-}
-
-.show-map {
-  margin-top: 50px;
-  // background-color: yellow;
-}
-
-#showMap {
-  height: 400px;
-  position: sticky;
-  top: 0;
 }
 
 .show-features {
