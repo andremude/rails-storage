@@ -304,3 +304,87 @@ img.hover-shadow {
 .storages-near-container {
   background-color: #eb591f;
 }
+
+.show-near-you-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 25px;
+}
+
+.show-storages-near-cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.show-storage-near-card {
+  width: 250px;
+}
+
+.show-storage-near-img {
+  width: 250px;
+  height: 180px;
+  // background-image: url("https://images.unsplash.com/photo-1426122402199-be02db90eb90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  // background-size: cover;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.show-storage-near-price {
+  background-color: #5a5b5c;
+  color: white;
+  font-size: 1.25em;
+  border-radius: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+}
+
+.show-storage-near-user {
+  margin: 0
+}
+
+.show-storage-near-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 250px;
+  height: 150px;
+  border-radius: 0 0 15px 15px;
+  background-color: #F2F4F6;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.show-storage-near-title {
+  margin: 0;
+}
+
+.show-storage-near-type {
+  margin: 0;
+}
+
+.show-see-more-container {
+  text-align: center;
+}
+
+.show-see-more-btn {
+  background-color: #059862;
+  width: 400px;
+  height: 60px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
