@@ -12,18 +12,21 @@
                           autofocus: true,
                           input_html: { autocomplete: "email", :style=> 'width: 300px'},
                           label: false,
+                          placeholder: "Email",
                           class: 'signin-input' %>
               <br>
               <%= f.input :password,
                           required: true,
                           input_html: { autocomplete: "current-password", :style=> 'width: 300px'},
                           label: false,
+                          placeholder: "Password",
                           class: "form-input",
                           class: 'signin-input' %>
               <br>
             </div>
             <div class="rememberable">
-               <%= f.check_box :remember_me, :inline_label => 'Remember me', as: :boolean if devise_mapping.rememberable? %>
+              <%= f.check_box :remember_me, as: :boolean if devise_mapping.rememberable? %>
+              <%= f.label :remember_me %>
             </div>
 
             <div class="form-actions-btn">

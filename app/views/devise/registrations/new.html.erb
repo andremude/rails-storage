@@ -12,18 +12,21 @@
                           autofocus: true,
                           input_html: { autocomplete: "email", :style=> 'width: 300px'},
                           label: false,
+                          placeholder: "Email",
                           class: 'signup-input' %>
               <br>
               <%= f.input :password,
                           required: true,
                           input_html: { autocomplete: "current-password", :style=> 'width: 300px'},
                           label: false,
+                          placeholder: "Password",
                           class: "form-input",
                           class: 'signup-input' %>
               <br>
               <%= f.input :password_confirmation,
                           required: true,
                           label: false,
+                          placeholder: "Confirm Password",
                           input_html: {:style=> 'width: 300px'},
                           class: "form-input",
                           class: 'signup-input'%>
