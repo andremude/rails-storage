@@ -15,6 +15,8 @@
             <%= f.select :country, [["United States", "US"], ["United Kingdom", "GB"], ["Spain", "ES"],["Germany", "DE"], ["Netherlands", "NL"], ["Portugal", "PT"], ["Belgium", "BE"], ["France", "FR"]], include_blank: "Select Country" %>
             <%#= f.country_select :country, {priority_countries: ["SG", "US"], include_blank: "select country"} %>
             <%= f.input :meters, label: "Meters", placeholder: "Meters" %>
+            <%= f.label :type %>
+            <%= f.select :type, ["Business inventory", "Car parking", "Boats", "RV parking", "Personal storage", "Furniture"], include_blank: "Select Type" %>
             <%= f.input :price, label: "Price", placeholder: "Price" %>
             <%#= f.input :photos,label: 'Fotos', as: :file, input_html: { multiple: true } %>
             <%= f.button :submit, 'Create Post', class: "btn btn-success p-3 w-100 rounded",style:"font-size:18px;" %>
