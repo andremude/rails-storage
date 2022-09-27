@@ -1,3 +1,14 @@
+.index-container {
+  width: 100%;
+  display: flex;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
 .search-bar-form {
   width: 100%;
 }
@@ -28,29 +39,49 @@
   width: 100%
 }
 
-.storage-card {
+
+.index-storages-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.index-storage-title a {
+  text-decoration: none;
+  color: black;
+}
+
+.index-storage-card {
   width:90%;
+  width: 300px;
   margin: 25px 5px;
-  border: 1px solid black;
-  padding: 10px;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
 }
 
-.storage-card-top {
+.index-storage-card-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
   position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px 15px 0 0;
 }
 
-.storage-img {
+.index-storage-img {
   height: 300px;
   border-radius: 15px;
+  border-radius: 15px 15px 0 0;
 }
 
-.storage-price {
+.index-storage-price {
   color: white;
   background-color: #696666;
-  border: 1px solid black;
   border-radius: 25px;
   width: 120px;
   height: 40px;
@@ -64,34 +95,39 @@
   font-size: 1.25em;
 }
 
+.index-storage-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  height: 150px;
+  border-radius: 0 0 15px 15px;
+  background-color: #F2F4F6;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.index-storage-title {
+  margin: 0;
+  font-size: 1.25em;
+}
+
+.index-storage-type {
+  margin: 0;
+}
+
+.index-storage-user{
+  margin: 0;
+}
+
+.index-storage-city{
+  margin: 0;
+}
+
+
 #map {
   height: 100vh;
   position: sticky;
   width: 40%;
   top: 0;
-}
-
-.index-container {
-  width: 100%;
-  display: flex;
-}
-
-.left-container {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-}
-
-.index-storages {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
-  align-items: center;
-  justify-content: center;
-}
-
-.storage-title a {
-  text-decoration: none;
-  color: black;
-  font-size: 0.90em;
 }

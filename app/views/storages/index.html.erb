@@ -12,29 +12,27 @@
         </div>
       <% end %>
     </div>
-    <div class="index-storages">
+    <div class="index-storages-cards">
       <% @storages.each do |storage| %>
-        <div class="storage-card">
-          <div class="storage-card-top">
-            <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="storage-img">
-            <p class="storage-price">
-              $<%= storage.price%>
+        <div class="index-storage-card">
+          <div class="index-storage-card-top">
+            <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="index-storage-img">
+            <p class="index-storage-price">
+              $<%= storage.price.to_i%>
             </p>
           </div>
-          <div class = "storage-details">
-            <h4 class="storage-title"><%=link_to storage.title.truncate(30), storage_path(storage)%></h4>
-            <p class="storage-publisher-container">
+          <div class = "index-storage-details">
+            <p class="index-storage-title"><%=link_to storage.title.truncate(30), storage_path(storage)%></p>
+            <p class="index-storage-type"> Garage -<%= storage.meters %>m<sup>2</sup></p>
+            <p class="index-storage-user">
               <i class="fa-solid fa-user"></i>
-              <span class="storage-publisher">
-                <%=storage.user.first_name%>
-                <%=storage.user.last_name.first%>.
-              </span>
+              <%=storage.user.first_name%>
+              <%=storage.user.last_name.first%>.
             </p>
-            <p class="storage-city">
+            <p class="index-storage-city">
               <i class="fa-solid fa-location-dot"></i>
               <%= storage.city%>
             </p>
-            <p><%= storage.meters %>m<sup>2</sup></p>
           </div>
         </div>
       <% end %>
