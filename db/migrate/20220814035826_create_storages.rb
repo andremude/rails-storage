@@ -6,9 +6,11 @@ class CreateStorages < ActiveRecord::Migration[6.1]
       t.string :meters
       t.string :address
       t.string :city
+      t.string :country
       t.float :latitude
       t.float :longitude
-      t.float :price
+      t.integer :price
+      t.string :type
       t.references :user, null: false, foreign_key: true
 
       t.timestamps

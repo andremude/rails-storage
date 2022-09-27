@@ -32,9 +32,11 @@ ActiveRecord::Schema.define(version: 2022_08_14_041353) do
     t.string "meters"
     t.string "address"
     t.string "city"
+    t.string "country"
     t.float "latitude"
     t.float "longitude"
-    t.float "price"
+    t.integer "price"
+    t.string "type"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

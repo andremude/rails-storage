@@ -39,20 +39,16 @@
   width: 100%
 }
 
-
 .index-storages-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 30px;
+  grid-gap: 20px;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
   margin: 0 auto;
+  width: 100%;
 }
 
-.index-storage-title a {
-  text-decoration: none;
-  color: black;
-}
 
 .index-storage-card {
   width:90%;
@@ -98,7 +94,7 @@
 .index-storage-details {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   width: 300px;
   height: 150px;
   border-radius: 0 0 15px 15px;
@@ -110,6 +106,15 @@
 .index-storage-title {
   margin: 0;
   font-size: 1.25em;
+}
+
+.index-storage-title a {
+  text-decoration: none;
+  color: black;
+}
+
+.index-storage-title a:hover {
+  color: rgb(53, 51, 223);
 }
 
 .index-storage-type {

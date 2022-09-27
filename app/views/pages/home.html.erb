@@ -102,25 +102,27 @@
     <h2 class="home-near-you-header">Discover storages</h2>
     <div class="home-storages-near-cards">
       <% Storage.all.sample(4).each do |storage| %>
-      <div class="home-storage-near-card">
-        <div class="home-storage-near-img">
-          <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="show-storage-near-img ">
-          <p class="home-storage-near-price">$<%= storage.price.to_i %></p>
+        <%= link_to storage_path(storage) do %>
+        <div class="home-storage-near-card" >
+          <div class="home-storage-near-img">
+            <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="show-storage-near-img ">
+            <p class="home-storage-near-price">$<%= storage.price.to_i %></p>
+          </div>
+          <div class="home-storage-near-details">
+            <p class="home-storage-near-title"><%= link_to storage.title.truncate(24).capitalize, storage_path(storage) %></p>
+            <p class="home-storage-near-type">Garage - <%=storage.meters%>m<sup>2</sup></p>
+            <p class="home-storage-near-user">
+              <i class="fa-solid fa-user"></i>
+              <%=storage.user.first_name%>
+              <%=storage.user.last_name.first%>.
+            </p>
+            <p class="home-storage-near-city">
+              <i class="fa-solid fa-location-dot"></i>
+              <%= storage.city%>
+            </p>
+          </div>
         </div>
-        <div class="home-storage-near-details">
-          <p class="home-storage-near-title"><%= link_to storage.title.truncate(24), storage_path(storage) %></p>
-          <p class="home-storage-near-type">Garage - <%=storage.meters%>m<sup>2</sup></p>
-          <p class="home-storage-near-user">
-            <i class="fa-solid fa-user"></i>
-            <%=storage.user.first_name%>
-            <%=storage.user.last_name.first%>.
-          </p>
-          <p class="home-storage-near-city">
-            <i class="fa-solid fa-location-dot"></i>
-            <%= storage.city%>
-          </p>
-        </div>
-      </div>
+      <% end %>
     <% end %>
     </div>
     <div class="home-see-more-container">

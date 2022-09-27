@@ -15,27 +15,29 @@
     <div class="index-storages-cards">
       <% @storages.each do |storage| %>
         <div class="index-storage-card">
-          <div class="index-storage-card-top">
-            <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="index-storage-img">
-            <p class="index-storage-price">
-              $<%= storage.price.to_i%>
-            </p>
-          </div>
-          <div class = "index-storage-details">
-            <p class="index-storage-title"><%=link_to storage.title.truncate(30), storage_path(storage)%></p>
-            <p class="index-storage-type"> Garage -<%= storage.meters %>m<sup>2</sup></p>
-            <p class="index-storage-user">
-              <i class="fa-solid fa-user"></i>
-              <%=storage.user.first_name%>
-              <%=storage.user.last_name.first%>.
-            </p>
-            <p class="index-storage-city">
-              <i class="fa-solid fa-location-dot"></i>
-              <%= storage.city%>
-            </p>
-          </div>
+          <%= link_to storage_path(storage) do %>
+            <div class="index-storage-card-top">
+              <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="index-storage-img">
+              <p class="index-storage-price">
+                $<%= storage.price.to_i%>
+              </p>
+            </div>
+            <div class = "index-storage-details">
+              <p class="index-storage-title"><%=link_to storage.title.truncate(30).capitalize, storage_path(storage)%></p>
+              <p class="index-storage-type"> Garage -<%= storage.meters %>m<sup>2</sup></p>
+              <p class="index-storage-user">
+                <i class="fa-solid fa-user"></i>
+                <%=storage.user.first_name%>
+                <%=storage.user.last_name.first%>.
+              </p>
+              <p class="index-storage-city">
+                <i class="fa-solid fa-location-dot"></i>
+                <%= storage.city%>
+              </p>
+            </div>
+          <% end %>
         </div>
-      <% end %>
+      <% end  %>
     </div>
   </div>
   <div

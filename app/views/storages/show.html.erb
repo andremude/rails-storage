@@ -1,5 +1,5 @@
 <div class="show-top-container">
-  <h1><%=@storage.title%></h1>
+  <h1><%=@storage.title.capitalize%></h1>
   <div class="show-tc-details">
     <span class="tc-details city">
       <i class="fa-solid fa-location-dot"></i>
@@ -9,7 +9,7 @@
       <i class="fa-solid fa-user"></i>
       <%=@storage.user.first_name %>
       <%=@storage.user.last_name %>
-    </span>
+    </span><>
     <span class="tc-details price">
       $<%= @storage.price %>
     </span>
@@ -210,56 +210,29 @@
   <div class="storages-near-container">
     <h1>Storages near <%= @storage.city %></h1>
     <div class="show-near-you-container mt-5 mb-4 text-center">
-      <%# <div class="show-storages-near-cards"> %>
-        <%# Storage.all.sample(4).each do |storage| %>
-          <%# <div class="show-storage-near-card">
-            <div class="show-storage-near-img">
-              <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="show-storage-near-img ">
-              <p class="show-storage-near-price">$50</p>
-            </div>
-            <div class="show-storage-near-details"> %>
-              <%# <p class="show-storage-near-title">  %>
-                <%#= link_to storage.title.truncate(24), storage_path(storage) %>
-              <%# </p> %>
-              <%# <p class="show-storage-near-type">Garage -  %>
-                <%#=storage.meters%>
-                <%# m<sup>2</sup> %>
-              <%# </p> %>
-              <%# <p class="show-storage-near-user">
-                <i class="fa-solid fa-user"></i> %>
-                <%#=storage.user.first_name%>
-                <%#=storage.user.last_name.first%>.
-              <%# </p>
-              <p class="show-storage-near-city">
-                <i class="fa-solid fa-location-dot"></i> %>
-                <%#= storage.city%>
-              <%# </p>
-            </div>
-          </div> %>
-        <%# end %>
-      <%# </div> %>
-
       <div class="show-storages-near-cards">
         <% Storage.limit(4).near([@storage.latitude, @storage.longitude], 500).each do |nearby| %>
-          <div class="show-storage-near-card">
-            <div class="show-storage-near-img">
-              <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="show-storage-near-img ">
-              <p class="show-storage-near-price">$<%= nearby.price %></p>
+          <%= link_to storage_path(nearby) do %>
+            <div class="show-storage-near-card">
+              <div class="show-storage-near-img">
+                <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="show-storage-near-img ">
+                <p class="show-storage-near-price">$<%= nearby.price %></p>
+              </div>
+              <div class="show-storage-near-details">
+                <p class="show-storage-near-title"><%= link_to nearby.title.truncate(24).capitalize, storage_path(nearby) %></p>
+                <p class="show-storage-near-type">Garage - <%=nearby.meters%>m<sup>2</sup></p>
+                <p class="show-storage-near-user">
+                  <i class="fa-solid fa-user"></i>
+                  <%=nearby.user.first_name%>
+                  <%=nearby.user.last_name.first%>.
+                </p>
+                <p class="show-storage-near-city">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <%= nearby.city%>
+                </p>
+              </div>
             </div>
-            <div class="show-storage-near-details">
-              <p class="show-storage-near-title"><%= link_to nearby.title.truncate(24), storage_path(nearby) %></p>
-              <p class="show-storage-near-type">Garage - <%=nearby.meters%>m<sup>2</sup></p>
-              <p class="show-storage-near-user">
-                <i class="fa-solid fa-user"></i>
-                <%=nearby.user.first_name%>
-                <%=nearby.user.last_name.first%>.
-              </p>
-              <p class="show-storage-near-city">
-                <i class="fa-solid fa-location-dot"></i>
-                <%= nearby.city%>
-              </p>
-            </div>
-          </div>
+          <% end %>
         <% end %>
       </div>
 

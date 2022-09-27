@@ -11,6 +11,9 @@
             <%= f.input :description, label: "Description", placeholder: "Description" %>
             <%= f.input :address, label: "Address", placeholder: "Address" %>
             <%= f.input :city, label: "City", placeholder: "City" %>
+            <%= f.label :country %>
+            <%= f.select :country, [["United States", "US"], ["United Kingdom", "GB"], ["Spain", "ES"],["Germany", "DE"], ["Netherlands", "NL"], ["Portugal", "PT"], ["Belgium", "BE"], ["France", "FR"]], include_blank: "Select Country" %>
+            <%#= f.country_select :country, {priority_countries: ["SG", "US"], include_blank: "select country"} %>
             <%= f.input :meters, label: "Meters", placeholder: "Meters" %>
             <%= f.input :price, label: "Price", placeholder: "Price" %>
             <%#= f.input :photos,label: 'Fotos', as: :file, input_html: { multiple: true } %>
