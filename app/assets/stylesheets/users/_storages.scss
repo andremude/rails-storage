@@ -1,0 +1,38 @@
+.user-right-container {
+  background-color: yellow;
+  width: 85%;
+  height: 100vh;
+  padding: 80px;
+}
+
+.my-storages-card {
+  display: flex;
+  border: 1px solid black;
+  margin: 20px 5px;
+  width: 100%;
+}
+
+.my-storages-items {
+  margin-left: 10px;
+  width: 100%;
+}
+
+.my-storages-item {
+  display: flex;
+  width: 100%;
+}
+
+.item-input {
+background-color: white;
+width: 100%;
+margin-left: 5px;
+padding-left: 5px;
+border-radius: 5px;
+}
+
+.my-storages-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  width: 100%;
+}

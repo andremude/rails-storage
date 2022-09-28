@@ -1,5 +1,13 @@
 .user-dashboard {
   display: flex;
+  height: 100vh;
+}
+
+.user-right-container {
+  background-color: yellow;
+  width: 85%;
+  height: 100vh;
+  padding: 80px;
 }
 
 .user-information-container {

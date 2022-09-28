@@ -6,6 +6,10 @@ Rails.application.routes.draw do
     resources :reservations, only: %i[create new]
   end
 
+  # resources :users do
+  #   resources :storages
+  # end
+
   resources :reservations, only: %i[index show edit destroy update]
 
   get '/how_it_works', to: 'pages#how_it_works'
