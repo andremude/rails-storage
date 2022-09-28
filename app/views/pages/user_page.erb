@@ -1,1 +1,40 @@
-THIS IS MY USER PAGE
+<div class="user-dashboard">
+  <div class="user-left-container">
+    <h3>My Account</h3>
+    <ul class="dashboard-list">
+      <li>Personal Information</li>
+      <li>My Storages</li>
+      <li><%= link_to "My Reservations", reservations_path %> </li>
+      <li>Example</li>
+      <li>Example</li>
+    </ul>
+  </div>
+
+  <div class="user-right-container">
+  <div class="user-information-container">
+    <div class="avatar-container">
+      <img src="avatar.png" alt="avatar" class="account-avatar">
+      <a href="#"> Change Image </a>
+    </div>
+    <div class="personal-information">
+      <div class="personal-info-header">
+        <h1>Personal Information</h1>
+        <%= link_to edit_user_registration_path do %>
+          <i class="fa-solid fa-pen-to-square"></i>
+        <% end %>
+      </div>
+      <div>First Name: <%= current_user.first_name %></div>
+      <div>Last Name: <%= current_user.last_name %></div>
+      <div>Email: <%= current_user.email %></div>
+      <div>Document Number: <%= current_user.document_number %></div>
+      <div>User since: CHANGE</div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  </div>
+
+</div>

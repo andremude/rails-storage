@@ -35,8 +35,8 @@ storages = [{ title: "accessible storage in city center", meters: '20', address:
         ]
 
 
-reservations = [{ start_date: "15/10/2022", end_date: "15/11/2022", user_id: 1, storage_id: 1},
-                { start_date: "18/09/2022", end_date: "03/10/2022", user_id: 2, storage_id: 2}]
+reservations = [{ start_date: "15/10/2022", end_date: "15/11/2022", user_id: 1, storage_id: 2},
+                { start_date: "18/09/2022", end_date: "03/10/2022", user_id: 2, storage_id: 1}]
 
 
 puts '------------Users------------'

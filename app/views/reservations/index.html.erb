@@ -1,0 +1,17 @@
+<div class="user-dashboard">
+  <%= render 'shared/sidebar' %>
+
+  <div class="user-right-container">
+    <div>
+      <h1>My Reservations</h1>
+      <div>
+        <% @reservations.each do |reservation| %>
+        <div>
+            <h1><%= reservation.storage.title %></h1>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+</div>

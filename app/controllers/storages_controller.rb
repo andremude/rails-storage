@@ -23,6 +23,11 @@ class StoragesController < ApplicationController
         }
       end
     end
+    # if params[:user_id]
+    #   @storages = User.find(params[:user_id]).storages
+    # else
+    #   @storages = Storage.all
+    # end
   end
 
   # GET
@@ -75,6 +80,7 @@ class StoragesController < ApplicationController
       :latitude,
       :longitude,
       :price,
+      :user_id,
       photos: []
     )
   end

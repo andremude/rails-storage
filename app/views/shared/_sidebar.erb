@@ -1,0 +1,11 @@
+  <div class="user-left-container">
+    <h3>My Account</h3>
+    <ul class="dashboard-list">
+      <li><%= link_to "Personal Information", user_page_path %></li>
+      <li><%#= link_to "My Storages", user_storages_path %></li>
+      <li><%= link_to "My Storages", user_storages_path(current_user) %></li>
+      <li><%= link_to "My Reservations", reservations_path %> </li>
+      <li>Example</li>
+      <li>Example</li>
+    </ul>
+  </div>
