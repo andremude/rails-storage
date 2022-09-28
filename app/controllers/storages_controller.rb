@@ -23,11 +23,6 @@ class StoragesController < ApplicationController
         }
       end
     end
-    # if params[:user_id]
-    #   @storages = User.find(params[:user_id]).storages
-    # else
-    #   @storages = Storage.all
-    # end
   end
 
   # GET

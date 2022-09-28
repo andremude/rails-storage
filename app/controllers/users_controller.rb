@@ -1,7 +1,3 @@
-  # def my_tours
-  #   @agency = Agency.find(params[:id])
-  #   @tours = Tour.where(agency_id: @agency.id)
-  # end
 class UsersController < ApplicationController
   def storages
     if params[:user_id]

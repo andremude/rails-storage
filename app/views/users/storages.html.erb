@@ -1,1 +1,18 @@
-THESE ARE MY STORAGES
+<div class="user-dashboard">
+
+  <%= render "shared/sidebar" %>
+
+  <div class="user-right-container">
+    <div>
+      <h1>My Storages</h1>
+      <div>
+        <% current_user.storages.each do |storage| %>
+        <div>
+            <h1><%= storage.title %></h1>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+</div>

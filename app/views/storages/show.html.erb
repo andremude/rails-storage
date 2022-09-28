@@ -9,7 +9,10 @@
       <i class="fa-solid fa-user"></i>
       <%=@storage.user.first_name %>
       <%=@storage.user.last_name %>
-    </span><>
+    </span>
+    <span class="tc-details meters">
+      <%= @storage.meters %>m<sup>2</sup>
+    </span>
     <span class="tc-details price">
       $<%= @storage.price %>
     </span>
