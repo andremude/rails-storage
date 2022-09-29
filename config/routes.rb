@@ -14,6 +14,6 @@ Rails.application.routes.draw do
 
   get '/how_it_works', to: 'pages#how_it_works'
   get '/user_page', to: 'pages#user_page'
-  # get 'users/:id/storages', to: 'users#storages', :as => :user_storages
   get 'users/:id/storages', to: 'storages#user_storages', :as => :user_storages
+
 end

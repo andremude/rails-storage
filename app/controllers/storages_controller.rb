@@ -43,15 +43,18 @@ class StoragesController < ApplicationController
   end
 
   def edit
+    # @storage.user = current_user
     @storage = Storage.find(params[:id])
   end
 
   # PATCH/PUT
   def update
+    # @storage.user = current_user
+    @storage = Storage.find(params[:id])
     if @storage.update(storage_params)
-      render json: @storage
+      redirect_to user_storages_path(current_user)
     else
-      render json: @storage.errors, status: :unprocessable_entity
+      redirect_to user_storages_path(current_user), notice: "There was an error."
     end
   end
 
@@ -62,7 +65,6 @@ class StoragesController < ApplicationController
       @storage.destroy
       redirect_to user_storages_path(current_user)
     else
-      # render json: @storage.errors, status: :unprocessable_entity
       redirect_to user_storages_path(current_user), notice: "Storage can't be deleted, it has reservations related to it."
     end
   end
@@ -84,12 +86,15 @@ class StoragesController < ApplicationController
   def storage_params
     params.require(:storage).permit(
       :title,
-      :meters,
+      :description,
       :address,
+      :type,
       :city,
+      :country;
       :latitude,
       :longitude,
       :price,
+      :meters,
       :user_id,
       photos: []
     )
