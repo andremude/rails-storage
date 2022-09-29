@@ -26,8 +26,8 @@
                 <p class="item-input"><%= storage.address %></p>
               </div>
               <div class="my-storages-item">
-                <p>Meters:</p>
-                <p class="item-input"><%= storage.meters %>m<sup>2</sup></p>
+                <p>Type:</p>
+                <p class="item-input"><%= storage.type %></p>
               </div>
               <div class="my-storages-bottom">
                 <div class="my-storages-item">
@@ -43,13 +43,13 @@
                   <p class="item-input">$<%= storage.price %></p>
                 </div>
                 <div class="my-storages-item">
-                  <p>Type:</p>
-                  <p class="item-input"><%= storage.type %></p>
+                  <p>Meters:</p>
+                  <p class="item-input"><%= storage.meters %>m<sup>2</sup></p>
                 </div>
               </div>
               <div class="my-storages-controls">
                 <p><%= link_to "Edit", edit_storage_path %></p>
-                <p><%= link_to 'Delete', storage_path(@storages),style:"font-size:15px;", method: :delete, data: {confirm: "Are you sure you want to delete this storage?"}%></p>
+                <p><%= link_to 'Delete', storage_path(storage),style:"font-size:15px;", method: :delete, data: {confirm: "Are you sure you want to delete this storage?"}%></p>
               </div>
             </div>
           </div>

@@ -36,3 +36,10 @@ border-radius: 5px;
   grid-gap: 20px;
   width: 100%;
 }
+
+.my-storages-controls {
+  display: flex;
+  justify-content: space-around;
+  justify-items:center;
+  align-items: center;
+}

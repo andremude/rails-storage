@@ -1,5 +1,5 @@
 class StoragesController < ApplicationController
-  before_action :set_storage, only: [:show, :update, :destroy]
+  before_action :set_storage, only: [:update, :destroy]
 
   # GET
   def index
@@ -42,6 +42,10 @@ class StoragesController < ApplicationController
     end
   end
 
+  def edit
+    @storage = Storage.find(params[:id])
+  end
+
   # PATCH/PUT
   def update
     if @storage.update(storage_params)
@@ -54,9 +58,20 @@ class StoragesController < ApplicationController
   # DELETE
   def destroy
     if current_user == @storage.user
+      @storage.reservations.empty?
       @storage.destroy
+      redirect_to user_storages_path(current_user)
     else
-      render json: @storage.errors, status: :unprocessable_entity
+      # render json: @storage.errors, status: :unprocessable_entity
+      redirect_to user_storages_path(current_user), notice: "Storage can't be deleted, it has reservations related to it."
+    end
+  end
+
+  def user_storages
+    if params[:user_id]
+      @storages = User.find(params[:user_id]).storages
+    else
+      @storages = Storage.all
     end
   end
 
