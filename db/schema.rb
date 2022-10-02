@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2022_08_14_041353) do
     t.float "longitude"
     t.integer "price"
     t.string "type"
+    t.string "features"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

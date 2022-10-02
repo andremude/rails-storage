@@ -90,11 +90,12 @@ class StoragesController < ApplicationController
       :address,
       :type,
       :city,
-      :country;
+      :country,
       :latitude,
       :longitude,
       :price,
       :meters,
+      :features,
       :user_id,
       photos: []
     )

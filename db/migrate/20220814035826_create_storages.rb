@@ -11,6 +11,7 @@ class CreateStorages < ActiveRecord::Migration[6.1]
       t.float :longitude
       t.integer :price
       t.string :type
+      t.string :features
       t.references :user, null: false, foreign_key: true
 
       t.timestamps

@@ -19,6 +19,16 @@
             <%= f.select :type, ["Business inventory", "Car parking", "Boats", "RV parking", "Personal storage", "Furniture"], include_blank: "Select Type" %>
             <%= f.input :price, label: "Price", placeholder: "Price" %>
             <%#= f.input :photos,label: 'Fotos', as: :file, input_html: { multiple: true } %>
+            <%= f.label :features %>
+            <%#= f.select :features,  ["Pet Free","Security Camera","Smoke Detector","Climate Controlled","Locked Area","Easy Access","Independent Space"], :multiple => true, :size => 5, class: "selectpicker" %>
+            <div class="features-select-container">
+            <% FeaturesData::Features.each do |feature| %>
+              <div class="feature-select-item">
+                <%= f.check_box :features, { multiple: true } %>
+                <%= f.label feature %>
+              </div>
+            <% end %>
+            </div>
             <%= f.button :submit, 'Create Post', class: "btn btn-success p-3 w-100 rounded",style:"font-size:18px;" %>
           <% end %>
         </div>

@@ -1,0 +1,11 @@
+.features-select-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.feature-select-item {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
