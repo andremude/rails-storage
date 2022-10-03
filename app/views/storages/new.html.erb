@@ -15,16 +15,16 @@
             <%= f.select :country, [["United States", "US"], ["United Kingdom", "GB"], ["Spain", "ES"],["Germany", "DE"], ["Netherlands", "NL"], ["Portugal", "PT"], ["Belgium", "BE"], ["France", "FR"]], include_blank: "Select Country" %>
             <%#= f.country_select :country, {priority_countries: ["SG", "US"], include_blank: "select country"} %>
             <%= f.input :meters, label: "Meters", placeholder: "Meters" %>
-            <%= f.label :type %>
-            <%= f.select :type, ["Business inventory", "Car parking", "Boats", "RV parking", "Personal storage", "Furniture"], include_blank: "Select Type" %>
+            <%= f.label :storage_type %>
+            <%= f.select :storage_type, ["Business inventory", "Car parking", "Boats", "RV parking", "Personal storage", "Furniture"], include_blank: "Select Type" %>
             <%= f.input :price, label: "Price", placeholder: "Price" %>
             <%#= f.input :photos,label: 'Fotos', as: :file, input_html: { multiple: true } %>
             <%= f.label :features %>
             <%#= f.select :features,  ["Pet Free","Security Camera","Smoke Detector","Climate Controlled","Locked Area","Easy Access","Independent Space"], :multiple => true, :size => 5, class: "selectpicker" %>
             <div class="features-select-container">
             <% FeaturesData::Features.each do |feature| %>
-              <div class="feature-select-item">
-                <%= f.check_box :features, { multiple: true } %>
+              <div class="feature-cb-item">
+                <%= f.check_box :features, { multiple: true }, feature, nil %>
                 <%= f.label feature %>
               </div>
             <% end %>

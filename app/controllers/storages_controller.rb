@@ -88,15 +88,15 @@ class StoragesController < ApplicationController
       :title,
       :description,
       :address,
-      :type,
+      :storage_type,
       :city,
       :country,
       :latitude,
       :longitude,
       :price,
       :meters,
-      :features,
       :user_id,
+      features: [],
       photos: []
     )
   end

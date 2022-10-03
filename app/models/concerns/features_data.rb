@@ -2,7 +2,7 @@ module FeaturesData
   Features = [
     "Pet Free",
     "Security Camera",
-    "Detector",
+    "Smoke Detector",
     "Climate Controlled",
     "Locked Area",
     "Easy Access",

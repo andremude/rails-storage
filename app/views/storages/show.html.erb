@@ -138,12 +138,22 @@
         <div class="show-about">
           <h1>About</h1>
           <div class="about-items">
-            <div class="about-item">Security Camera</div>
+            <%# <div class="about-item">Security Camera</div>
             <div class="about-item">Smoke Detector</div>
             <div class="about-item">Pet Free</div>
             <div class="about-item">Locked Area</div>
             <div class="about-item">Smoke Free</div>
-            <div class="about-item">Climate Controlled</div>
+            <div class="about-item">Climate Controlled</div> %>
+              <%# <div class="feature-select-item"> %>
+                <%#= @storage.features %>
+              <%# </div> %>
+
+              <% @storage.features.each do |feature| %>
+                <div class="about-item">
+                  <%= feature %>
+                </div>
+              <% end %>
+
           </div>
           <div class="about-text">
             <p><%= @storage.description%></p>
@@ -159,12 +169,11 @@
         <div class="show-features">
             <h1>Features</h1>
             <div class="features-items">
-              <div class="feature-item">Security Camera</div>
-              <div class="feature-item">Smoke Detector</div>
-              <div class="feature-item">Pet Free</div>
-              <div class="feature-item">Locked Area</div>
-              <div class="feature-item">Smoke Free</div>
-              <div class="feature-item">Climate Controlled</div>
+              <% @storage.features.each do |feature| %>
+                <div class="feature-item">
+                  <%= feature %>
+                </div>
+              <% end %>
             </div>
         </div>
     </div>
@@ -197,7 +206,7 @@
               <li class="list-group-item d-flex justify-content-between mt-2">
                 <span><b>Total $</b></span>
                 <span class="text-success d-flex align-items-center">
-                <b> -<%= @storage.price-(@storage.price*0.20) + (@storage.price*0.10) %> </b>
+                <b> -<%= (@storage.price-(@storage.price*0.20) + (@storage.price*0.10)).round(2) %> </b>
                 </span>
               </li>
           </ul>
