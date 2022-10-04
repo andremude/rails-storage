@@ -32,6 +32,7 @@ storages = [{ title: "accessible storage in city center", meters: '20', address:
             { title: "Lorem Ipsum", meters: '25', address: "1325 Valencia St", city: "San Francisco", price: 50.00, user_id: 3 },
             { title: "Lorem Ipsum", meters: '35', address: "100 Av. de la République", city: "Paris", price: 50.00, user_id: 4 },
             { title: "Lorem Ipsum", meters: '45', address: "Stephensonstraat 33", city: "Amsterdam", price: 50.00, user_id: 5 },
+            { title: "Features Test", meters: '45', address: "20 Old Montague St", city: "London", price: 50.00, features: ["Pet Free", "Security Camera", "Smoke Detector", "Climate Controlled"], user_id: 2 }
         ]
 
 

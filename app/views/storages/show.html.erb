@@ -147,13 +147,6 @@
               <%# <div class="feature-select-item"> %>
                 <%#= @storage.features %>
               <%# </div> %>
-
-              <% @storage.features.each do |feature| %>
-                <div class="about-item">
-                  <%= feature %>
-                </div>
-              <% end %>
-
           </div>
           <div class="about-text">
             <p><%= @storage.description%></p>
@@ -166,16 +159,21 @@
 
           Mauris consequat nec orci malesuada egestas. Suspendisse pellentesque id neque eget consequat. Mauris tincidunt rutrum placerat. Nulla rhoncus eleifend nulla, in gravida diam. Sed eu purus quis urna tempus lacinia id vel quam. Integer nec sem eget ex finibus interdum. Pellentesque eget lectus a mi lobortis interdum in vel diam. Fusce finibus, lectus bibendum aliquam commodo, metus mauris ultrices dolor, a malesuada ligula mauris quis nisi. In sit amet luctus purus. Etiam iaculis erat sit amet nunc placerat, eu feugiat augue ultrices.
         </div>
-        <div class="show-features">
+
+        <%# <div class="show-features"> %>
+        <div class="<%= @storage.features.nil? ? "d-none" : "show-features" %>">
             <h1>Features</h1>
             <div class="features-items">
-              <% @storage.features.each do |feature| %>
+              <%# @storage.features.each do |feature| %>
+              <% @storage.features.try(:each) do |feature| %>
                 <div class="feature-item">
                   <%= feature %>
                 </div>
               <% end %>
             </div>
         </div>
+
+
     </div>
   </div>
 
