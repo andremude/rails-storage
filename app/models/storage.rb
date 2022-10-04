@@ -5,6 +5,9 @@ class Storage < ApplicationRecord
   validates :title, presence: true
   validates :address, presence: true
   validates :meters, presence: true
+  validates :city, presence: true
+  validates :country, presence: true
+  validates :storage_type, presence: true
   # validates :features, presence: true
   # has_many_attached :photos
   has_many :reservations
