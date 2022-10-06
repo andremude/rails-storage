@@ -16,7 +16,6 @@
 
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome";
-
 @import "components/sign_up_form";
 @import "components/sign_in_form";
 @import "components/sidebar";
@@ -26,4 +25,4 @@
 @import "storages/index";
 @import "storages/show";
 @import "users/storages";
-@import "reservations/new.scss"
+@import "reservations/new.scss";
