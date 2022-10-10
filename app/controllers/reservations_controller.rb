@@ -12,7 +12,8 @@ class ReservationsController < ApplicationController
     @reservation.storage = Storage.find(params[:storage_id])
 
     if @reservation.save
-      redirect_to reservations_path
+      # redirect_to reservations_path
+      redirect_to new_storage_reservation_path(@storage)
     else
       render :new
     end
@@ -51,7 +52,7 @@ class ReservationsController < ApplicationController
   def find_params
     params.require(:reservation).permit(
       :start_date,
-      :end_date
+      :end_date,
     )
   end
 end

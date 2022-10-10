@@ -35,8 +35,6 @@ gem "active_model_serializers"
 gem "dotenv-rails", groups: [:development, :test]
 gem "cloudinary"
 gem "geocoder"
-gem "bootstrap-datepicker-rails"
-
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

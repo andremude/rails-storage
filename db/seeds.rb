@@ -18,21 +18,21 @@ users = [{ email: "johng@example.com", first_name: "John", last_name: "Gibson", 
          { email: "pauld@example.com", first_name: "Paul", last_name: "Davis", document_number: "7004789", password: "123456" }
         ]
 
-storages = [{ title: "accessible storage in city center", meters: '20', address: "133 Victoria St", city: "London", price: 20.00, user_id: 1 },
-            { title: "Spaceous storage", meters: '45', address: "Rue du Béguinage 28", city: "Brussels", price: 50.00, user_id: 2 },
-            { title: "Lorem Ipsum", meters: '45', address: "Wilhelminastraat 152", city: "Amsterdam", price: 50.00, user_id: 3 },
-            { title: "Lorem Ipsum", meters: '55', address: "C. de Alcalá 35", city: "Madrid", price: 50.00, user_id: 4 },
-            { title: "Lorem Ipsum", meters: '65', address: "Av. del Carrilet 179", city: "Barcelona", price: 50.00, user_id: 5 },
-            { title: "Lorem Ipsum", meters: '15', address: "6001 Vermont Ave", city: "Los Angeles", price: 50.00, user_id: 6 },
-            { title: "Lorem Ipsum", meters: '25', address: "1905 Curry Ford Rd", city: "Orlando", price: 50.00, user_id: 7 },
-            { title: "Lorem Ipsum", meters: '35', address: "25 Walton St", city: "London", price: 50.00, user_id: 8 },
-            { title: "Lorem Ipsum", meters: '45', address: "Av. da Liberdade 93", city: "Lisbon", price: 50.00, user_id: 9 },
-            { title: "Lorem Ipsum", meters: '55', address: "51 Waterford Rd", city: "London", price: 50.00, user_id: 1 },
-            { title: "Lorem Ipsum", meters: '15', address: "Rue de la Blanchisserie 31", city: "Brussels", price: 50.00, user_id: 2 },
-            { title: "Lorem Ipsum", meters: '25', address: "1325 Valencia St", city: "San Francisco", price: 50.00, user_id: 3 },
-            { title: "Lorem Ipsum", meters: '35', address: "100 Av. de la République", city: "Paris", price: 50.00, user_id: 4 },
-            { title: "Lorem Ipsum", meters: '45', address: "Stephensonstraat 33", city: "Amsterdam", price: 50.00, user_id: 5 },
-            { title: "Features Test", meters: '45', address: "20 Old Montague St", city: "London", price: 50.00, features: ["Pet Free", "Security Camera", "Smoke Detector", "Climate Controlled"], user_id: 2 }
+storages = [{ title: "accessible storage in city center", meters: '20', address: "133 Victoria St", city: "London", country: "United Kingdom", price: 20.00, storage_type: "garage", user_id: 1 },
+            { title: "Spaceous storage", meters: '45', address: "Rue du Béguinage 28", city: "Brussels", country: "Belgium", price: 50.00, storage_type: "garage", user_id: 2 },
+            { title: "Lorem Ipsum", meters: '45', address: "Wilhelminastraat 152", city: "Amsterdam", country: "The Netherlands", price: 50.00, storage_type: "garage", user_id: 3 },
+            { title: "Lorem Ipsum", meters: '55', address: "C. de Alcalá 35", city: "Madrid", country: "Spain", price: 50.00, storage_type: "garage", user_id: 4 },
+            { title: "Lorem Ipsum", meters: '65', address: "Av. del Carrilet 179", city: "Barcelona", country: "Spain", price: 50.00, storage_type: "garage", user_id: 5 },
+            { title: "Lorem Ipsum", meters: '15', address: "6001 Vermont Ave", city: "Los Angeles", country: "United States", price: 50.00, storage_type: "garage", user_id: 6 },
+            { title: "Lorem Ipsum", meters: '25', address: "1905 Curry Ford Rd", city: "Orlando", country: "United States", price: 50.00, storage_type: "garage", user_id: 7 },
+            { title: "Lorem Ipsum", meters: '35', address: "25 Walton St", city: "London", country: "United Kingdom", price: 50.00, storage_type: "garage", user_id: 8 },
+            { title: "Lorem Ipsum", meters: '45', address: "Av. da Liberdade 93", city: "Lisbon", country: "Portugal", price: 50.00, storage_type: "garage", user_id: 9 },
+            { title: "Lorem Ipsum", meters: '55', address: "51 Waterford Rd", city: "London", country: "United Kingdom", price: 50.00, storage_type: "garage", user_id: 1 },
+            { title: "Lorem Ipsum", meters: '15', address: "Rue de la Blanchisserie 31", city: "Brussels", country: "Belgium", price: 50.00, storage_type: "garage", user_id: 2 },
+            { title: "Lorem Ipsum", meters: '25', address: "1325 Valencia St", city: "San Francisco", country: "United States", price: 50.00, storage_type: "garage", user_id: 3 },
+            { title: "Lorem Ipsum", meters: '35', address: "100 Av. de la République", city: "Paris", country: "France", price: 50.00, storage_type: "garage", user_id: 4 },
+            { title: "Lorem Ipsum", meters: '45', address: "Stephensonstraat 33", city: "Amsterdam", country: "The Netherlands", price: 50.00, storage_type: "garage", user_id: 5 },
+            { title: "Features Test", meters: '45', address: "20 Old Montague St", city: "London", country: "United Kingdom", price: 50.00, storage_type: "garage", features: ["Pet Free", "Security Camera", "Smoke Detector", "Climate Controlled"], user_id: 2 }
         ]
 
 

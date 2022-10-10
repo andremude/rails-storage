@@ -37,7 +37,6 @@
   border-radius: 25px;
 }
 
-
 // ------- LIGHTBOX -----------
 
 .lightbox {
@@ -52,6 +51,19 @@
   clear: both;
 }
 
+.lightbox-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.lightbox-row > div {
+  display: flex;
+  justify-content: center;
+  margin: 5px auto;
+}
+
 .column {
   width: 50%;
 }
@@ -64,15 +76,15 @@
   text-align: left;
 }
 
-.row.one {
-  width: 100%;
-  margin-top: 15px;
-}
+// .row.one {
+//   width: 100%;
+//   margin-top: 15px;
+// }
 
-.row.two {
-  width: 100%;
-  margin-top: 15px;
-}
+// .row.two {
+//   width: 100%;
+//   margin-top: 15px;
+// }
 
 .img-one {
   border-radius: 25px 0 0 0;
@@ -194,7 +206,8 @@ img.hover-shadow {
 }
 
 .hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.05);
 }
 
 .thumbnail-container {
@@ -296,6 +309,41 @@ img.hover-shadow {
 
 .reserve-btn a:hover {
   font-size: 1.6em;
+}
+
+.date-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+
+.date-form-container > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-self: center;
+  width: 100%;
+}
+
+.flatpickr-input {
+  width: 45%;
+  justify-self: center;
+  margin: 5px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+}
+
+.input-group-append {
+  display: flex;
+}
+
+.date-input-container {
+  display: flex;
+  width: 300px;
 }
 
 // ----------- STORAGES NEAR -------------
