@@ -1,5 +1,5 @@
 .user-right-container {
-  background-color: yellow;
+  // background-color: yellow;
   width: 85%;
   padding: 80px;
   overflow: auto;
@@ -7,9 +7,18 @@
 
 .my-storages-card {
   display: flex;
-  border: 1px solid black;
+  // border: 1px solid black;
   margin: 20px 5px;
   width: 100%;
+  padding: 10px;
+  // background-color: rgb(223, 222, 221);
+  border-radius: 25px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.my-storages-img {
+  border-radius: 25px;
+  height: 300px;
 }
 
 .my-storages-items {
@@ -24,16 +33,19 @@
 
 .item-input {
 background-color: white;
+border: 1px solid black;
 width: 100%;
 margin-left: 5px;
-padding-left: 5px;
-border-radius: 5px;
+padding-left: 10px;
+// padding: 5px;
+border-radius: 25px;
 }
 
 .my-storages-bottom {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  // grid-gap: 10px;
+  grid-column-gap: 10px;
   width: 100%;
 }
 
