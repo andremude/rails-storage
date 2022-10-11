@@ -346,6 +346,13 @@ img.hover-shadow {
   width: 300px;
 }
 
+.input-group-text {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  align-self: center;
+}
+
 // ----------- STORAGES NEAR -------------
 
 .storages-near-bottom {
