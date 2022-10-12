@@ -19,7 +19,7 @@
       <div>Last Name: <%= current_user.last_name %></div>
       <div>Email: <%= current_user.email %></div>
       <div>Document Number: <%= current_user.document_number %></div>
-      <div>User since: CHANGE</div>
+      <div>User since: <%= current_user.created_at.to_formatted_s(:long_ordinal) %></div>
       <div></div>
       <div></div>
       <div></div>

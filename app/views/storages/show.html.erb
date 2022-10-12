@@ -23,21 +23,12 @@
   <div class="show-left">
     <div class="lightbox">
       <div class="lightbox-row row one">
-        <%# <div class="show-img-container container-one"> %>
           <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=150" onclick="openModal();currentSlide(1)" class="hover-shadow img-one">
-        <%# </div> %>
-        <%# <div class="show-img-container container-two"> %>
           <img src="https://lipsum.app/id/47/200x150" onclick="openModal();currentSlide(2)" class="hover-shadow img-two">
-        <%# </div> %>
       </div>
-
       <div class="lightbox-row row two">
-        <%# <div class="column one"> %>
           <img src="https://lipsum.app/id/48/200x150" onclick="openModal();currentSlide(3)" class="hover-shadow img-three">
-        <%# </div> %>
-        <%# <div class="column two"> %>
           <img src="https://lipsum.app/id/51/200x150" onclick="openModal();currentSlide(4)" class="hover-shadow img-four">
-        <%# </div> %>
       </div>
     </div>
 
@@ -211,7 +202,7 @@
       </div>
       <div class="date-form-container">
         <%= form_for([@storage, @storage.reservations.new]) do |f| %>
-        <div>
+        <div class="flatpickr-container">
           <div class="d-flex">
             <%= f.text_field :start_date,
               data: {
@@ -224,7 +215,7 @@
               <i class="fa fa-calendar"></i>
             </span>
           </div>
-          <div class="d-flex">
+          <div class="d-flex flatpickr-row">
             <%= f.text_field :end_date,
               data: {
                 controller: "flatpickr",
@@ -239,33 +230,54 @@
             </span>
           </div>
         </div>
-          <%= f.submit "Reserve Storage", class: "btn btn-primary btn-lg btn-block btn-reservation" %>
-        <% end %>
-      </div>
-        <button class="reserve-btn">
-          <%= link_to "Reserve Storage", new_storage_reservation_path(@storage) %>
+          <%#= f.submit "Reserve Storage", class: "btn btn-primary btn-lg btn-block btn-reservation" %>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg btn-block btn-reservation" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Reserve Storage
         </button>
+      </div>
     </div>
+        <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Payment Information</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <%= render 'reservations/card_payment' %>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <%# <button type="button" class="btn btn-primary">Understood</button> %>
+                  <%= f.submit "Reserve Storage", class: "btn btn-primary btn-lg btn-block btn-reservation" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
 
     <script>
-    $(document).ready(function() {
-    var startDate;
-    var endDate;
-    $( "#datepicker1" ).datepicker({
-    dateFormat: 'dd-mm-yy'
-    })
-    $( "#datepicker2" ).datepicker({
-    dateFormat: 'dd-mm-yy'
-    });
-    $('#datepicker1').change(function() {
-    startDate = $(this).datepicker('getDate');
-    $("#datepicker2").datepicker("option", "minDate", startDate );
-    })
-    $('#datepicker2').change(function() {
-    endDate = $(this).datepicker('getDate');
-    $("#datepicker1").datepicker("option", "maxDate", endDate );
-    })
-    })
+      $(document).ready(function() {
+      var startDate;
+      var endDate;
+      $( "#datepicker1" ).datepicker({
+      dateFormat: 'dd-mm-yy'
+      })
+      $( "#datepicker2" ).datepicker({
+      dateFormat: 'dd-mm-yy'
+      });
+      $('#datepicker1').change(function() {
+      startDate = $(this).datepicker('getDate');
+      $("#datepicker2").datepicker("option", "minDate", startDate );
+      })
+      $('#datepicker2').change(function() {
+      endDate = $(this).datepicker('getDate');
+      $("#datepicker1").datepicker("option", "maxDate", endDate );
+      })
+      })
     </script>
   </div>
 </div>

@@ -45,11 +45,11 @@
                 </div>
               <div class="my-storages-item">
                   <p>From:</p>
-                  <p class="item-input"><%= reservation.start_date %></p>
+                  <p class="item-input"><%= reservation.start_date.to_formatted_s(:rfc822) %></p>
                 </div>
                 <div class="my-storages-item">
                   <p>To:</p>
-                  <p class="item-input"><%= reservation.end_date %></p>
+                  <p class="item-input"><%= reservation.end_date.to_formatted_s(:rfc822) %></p>
                 </div>
               </div>
               <div class="my-storages-controls">

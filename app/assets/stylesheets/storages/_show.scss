@@ -64,17 +64,17 @@
   margin: 5px auto;
 }
 
-.column {
-  width: 50%;
-}
+// .column {
+//   width: 50%;
+// }
 
-.column.one {
-  text-align: right;
-}
+// .column.one {
+//   text-align: right;
+// }
 
-.column.two {
-  text-align: left;
-}
+// .column.two {
+//   text-align: left;
+// }
 
 // .row.one {
 //   width: 100%;
@@ -118,7 +118,8 @@
 
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  // background-color: #fefefe;
+  background-color: #5a5b5c;
   margin: auto;
   padding: 0;
   width: 90%;
@@ -143,6 +144,10 @@
 
 .mySlides {
   display: none;
+  width: 60%;
+  height: 60%;
+  margin: 0 auto;
+  background-color: #5a5b5c;
 }
 
 .prev,
@@ -160,6 +165,7 @@
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .next {
@@ -212,6 +218,7 @@ img.hover-shadow {
 
 .thumbnail-container {
   display: flex;
+  justify-content: space-around;
 }
 
 
@@ -321,15 +328,27 @@ img.hover-shadow {
 .date-form-container > form {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   justify-self: center;
   width: 100%;
 }
 
+.flatpickr-container {
+  // display: flex;
+  // justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .flatpickr-input {
-  width: 45%;
+  width: 70%;
   justify-self: center;
   margin: 5px;
+  padding-left: 5px;
 }
 
 .input-group {
@@ -351,6 +370,14 @@ img.hover-shadow {
   height: 30px;
   align-items: center;
   align-self: center;
+}
+
+.btn-reservation {
+  margin: 10px 0px;
+}
+
+.modal-body {
+  margin: 0 auto;
 }
 
 // ----------- STORAGES NEAR -------------

@@ -33,18 +33,16 @@
 
 .item-input {
 background-color: white;
-border: 1px solid black;
+border: 1px solid rgb(180, 178, 178);
 width: 100%;
 margin-left: 5px;
 padding-left: 10px;
-// padding: 5px;
 border-radius: 25px;
 }
 
 .my-storages-bottom {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  // grid-gap: 10px;
   grid-column-gap: 10px;
   width: 100%;
 }
