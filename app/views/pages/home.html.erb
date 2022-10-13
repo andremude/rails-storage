@@ -5,6 +5,15 @@
       <div class="hero-header">
         <h2>Find the perfect place</h2>
         <h2>to store your <span class="typewriter"> </span></h2>
+        <script>
+          var typed = new Typed(".typewriter",{
+          strings: ["car","boat","boxes", "inventory", "furniture", "RV"] ,
+          typeSpeed: 100,
+          backSpeed: 100,
+          loop: true,
+          showCursor: false
+          })
+      </script>
       </div>
       <%# --------- SEARCH BAR ----------- %>
       <%= form_tag storages_path, method: :get, class: 'home-search-container' do %>
