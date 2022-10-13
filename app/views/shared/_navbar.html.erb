@@ -20,9 +20,15 @@
         </li>
       </ul>
 
+      <% if current_user %>
       <div>
         <%= link_to "Become Host", new_storage_path, :class => "btn btn-success py-2 px-3" %>
       </div>
+      <% else %>
+      <div>
+        <%= link_to "Become Host", new_user_session_path, :class => "btn btn-success py-2 px-3" %>
+      </div>
+      <% end  %>
 
       <div>
         <% if current_user %>
