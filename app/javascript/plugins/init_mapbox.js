@@ -1,6 +1,24 @@
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
+const initMapbox = () => {
+  const mapElement = document.getElementById('map');
+  if (mapElement) { // only build a map if there's a div#map to inject into
+    mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v10',
+      center: [45.67, 1.77],
+      zoom: 10,
+      boxZoom: true
+    });
+
+    const markers = JSON.parse(mapElement.dataset.markers);
+      addMarkersToMap(map, markers);
+      fitMapToMarkers(map, markers);
+  }
+};
+
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
   markers.forEach(marker => bounds.extend([marker.lng, marker.lat]));
@@ -16,22 +34,6 @@ const addMarkersToMap = (map, markers) => {
       .setPopup(popup)
       .addTo(map);
   });
-};
-
-const initMapbox = () => {
-  const mapElement = document.getElementById('map');
-
-  if (mapElement) { // only build a map if there's a div#map to inject into
-    mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
-    const map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v10'
-    });
-
-    const markers = JSON.parse(mapElement.dataset.markers);
-      addMarkersToMap(map, markers);
-      fitMapToMarkers(map, markers);
-  }
 };
 
 export { initMapbox };
