@@ -232,10 +232,16 @@
           </div>
         </div>
           <%#= f.submit "Reserve Storage", class: "btn btn-primary btn-lg btn-block btn-reservation" %>
+
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary btn-lg btn-block btn-reservation" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-          Reserve Storage
-        </button>
+        <% if current_user.id != @storage.user_id %>
+          <button type="button" class="btn btn-primary btn-lg btn-block btn-reservation" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Reserve Storage
+          </button>
+        <% else %>
+          <button class="btn btn-danger btn-lg btn-block btn-reservation disabled">This is your own storage</button>
+        <% end %>
+
       </div>
     </div>
         <!-- Modal -->
