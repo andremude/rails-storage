@@ -69,21 +69,67 @@
   border: none;
 }
 
+
+// ------------ STORAGES TYPES --------------
 .storages-header {
   text-align: center;
-  margin: 30px;
 }
 
-.items-container {
+.home-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+// @media(max-width: 1200px) {
+//   .container {
+//     width: 700px;
+//   }
+// }
+
+// @media(max-width: 992px) {
+//   .container {
+//     width: 700px;
+//   }
+// }
+
+@media (max-width: 768px) {
+  .home-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+// @media (max-width: 576px) {
+// .home-cards-grid {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     grid-gap: 10px;
+//     justify-content: center;
+//     width: 80%;
+//     margin: 0 auto;
+//   }
+// }
+
+.home-card {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
-.items-container .row {
-  // background-color: #a0a1a3;
-  width: 100%;
+.home-card-img-top {
+  border-radius: 15px;
+  height: 220px;
+  width: 220px;
+  object-fit: cover;
 }
 
 .card-text {
@@ -92,27 +138,7 @@
   font-weight: bold;
 }
 
-.card-img-top {
-  border-radius: 15px;
-  height: 220px;
-  width: 220px;
-  object-fit: cover;
-}
-
-.card-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  width: 25%;
-  min-width: 25%;
-  margin: 0px 15px;
-}
-
-.card-row {
-  margin: 10px;
-}
+// ------------WHY RENT STORAGE---------------
 
 .why-storage-container {
   background-color: #F2F4F6;
@@ -129,35 +155,57 @@
   height: 100px;
 }
 
-.home-storages-near-container {
-  background-color: #eb591f;
-}
+// ------- DISCOVER STORAGES -----------
 
-.home-near-you-container {
+.discover-storages-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   padding: 25px;
 }
 
-.home-storages-near-cards {
+.discover-storages-cards {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 25px;
+  // margin-bottom: 25px;
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 20px;
 }
 
-.home-storage-near-card {
+@media(max-width: 992px) {
+  .discover-storages-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    width: 50%;
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .discover-storages-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    width: 25%;
+    margin: 10px auto;
+  }
+}
+
+.discover-storages-card {
   width: 250px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 25px;
 }
 
-.home-storage-near-img {
+
+.discover-storages-img {
   width: 250px;
   height: 180px;
-  // background-image: url("https://images.unsplash.com/photo-1426122402199-be02db90eb90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-  // background-size: cover;
   border-radius: 25px 25px 0 0;
   display: flex;
   align-items: flex-end;
@@ -165,7 +213,7 @@
   position: relative;
 }
 
-.home-storage-near-price {
+.discover-storages-price {
   background-color: #5a5b5c;
   color: white;
   font-size: 1.25em;
@@ -181,11 +229,11 @@
   right: 10px;
 }
 
-.home-storage-near-user {
+.discover-storages-user {
   margin: 0
 }
 
-.home-storage-near-details {
+.discover-storages-details {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -194,20 +242,20 @@
   border-radius: 0 0 25px 25px;
   background-color: #F2F4F6;
   text-align: left;
-  padding-left: 15px;
+  padding: 0 15px;
 }
 
-.home-storage-near-title {
+.discover-storages-title {
   margin: 0;
 }
 
-.home-storage-near-title a {
+.discover-storages-title a {
   text-decoration: none;
   color: black;
   font-weight: bold;
 }
 
-.home-storage-near-type {
+.discover-storages-type {
   margin: 0;
 }
 
@@ -217,9 +265,6 @@
 
 .home-see-more-btn {
   background-color: #059862;
-  width: 400px;
-  height: 60px;
-  border-radius: 50px;
   border: none;
   color: white;
   font-weight: bold;

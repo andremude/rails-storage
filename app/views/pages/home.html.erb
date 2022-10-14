@@ -3,8 +3,8 @@
   <div class="home-hero">
     <div class="hero-container">
       <div class="hero-header">
-        <h2>Find the perfect place</h2>
-        <h2>to store your <span class="typewriter"> </span></h2>
+        <h2 style="font-size:3rem">Find the perfect place</h2>
+        <h2 style="font-size:3rem">to store your <span class="typewriter"> </span></h2>
         <script>
           var typed = new Typed(".typewriter",{
           strings: ["car","boat","boxes", "inventory", "furniture", "RV"] ,
@@ -29,58 +29,40 @@
     </div>
   </div>
 
-
-
-<%# ---------- STORAGES ------------  %>
+<%# ---------- STORAGES TYPES ------------  %>
 <div class="home-storages-container">
-  <h2 class="storages-header">There is a storage for everything...</h2>
-  <div class="items-container">
-    <div class="row card-row d-flex justify-content-center align-items-center">
-      <div class="card-container col-lg-4 col-md-4 col-sm-12 p-4">
-        <img src="inventory.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Business Inventory</p>
-        </div>
+  <h2 class="storages-header mb-5 mt-5" style="font-size:3rem">There is a storage for everything...</h2>
+  <div class="home-cards-grid">
+      <div class="home-card">
+        <img src="inventory.jpg" class="home-card-img-top" alt="...">
+        <p class="card-text">Business Inventory</p>
       </div>
-      <div class="card-container col-lg-4 col-md-4 col-sm-12 p-4">
-        <img src="car-garage.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Car Parking</p>
-        </div>
+      <div class="home-card">
+        <img src="car-garage.jpg" class="home-card-img-top" alt="...">
+        <p class="card-text">Car Parking</p>
       </div>
-      <div class="card-container col-lg-4 col-md-4 col-sm-12 p-4">
-        <img src="kayaks.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Boats</p>
-        </div>
+      <div class="home-card">
+        <img src="kayaks.jpg" class="home-card-img-top" alt="...">
+        <p class="card-text">Boats</p>
       </div>
-    </div>
-    <div class="row card-row d-flex justify-content-center align-items-center">
-      <div class="card-container col-lg-4 col-md-4 col-sm-12 p-4">
-        <img src="rv.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">RV</p>
-        </div>
+      <div class="home-card">
+        <img src="rv.jpg" class="home-card-img-top" alt="...">
+        <p class="card-text">RV</p>
       </div>
-      <div class="card-container col-lg-4 col-md-4 col-sm-12 p-4">
-        <img src="personal.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Personal</p>
-        </div>
+      <div class="home-card">
+        <img src="personal.jpg" class="home-card-img-top" alt="...">
+        <p class="card-text">Personal</p>
       </div>
-      <div class="card-container col-lg-4 col-md-4 col-sm-12 p-4">
-        <img src="furniture.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Furniture</p>
-        </div>
+      <div class="home-card">
+        <img src="furniture.jpg" class="home-card-img-top" alt="...">
+        <p class="card-text">Furniture</p>
       </div>
-    </div>
   </div>
 </div>
 
-<%#--------WHY CHOOSE US----------%>
-  <div class="container mt-5 mb-4 text-center"  >
-    <p class="mb-5" style="font-size:3rem"> Why rent a storage with us? </p>
+<%#--------WHY RENT STORAGE----------%>
+  <div class="container text-center"  >
+    <h2 class="mb-5 mt-5" style="font-size:3rem"> Why rent a storage with us? </h2>
     <div class="row why-storage-container">
       <div class="col-6 col-md-3 why-storage">
         <img src="open-box.png" alt="" class="mb-2">
@@ -107,25 +89,25 @@
 
 <%#--------DISCOVER STORAGES-------------%>
 
-  <div class="home-near-you-container mt-5 mb-4 text-center">
-    <h2 class="home-near-you-header">Discover storages</h2>
-    <div class="home-storages-near-cards">
+  <div class="discover-storages-container text-center">
+    <h2 class="discover-storages-header mb-5 mt-5" style="font-size:3rem">Discover storages</h2>
+    <div class="discover-storages-cards">
       <% Storage.all.sample(4).each do |storage| %>
         <%= link_to storage_path(storage) do %>
-        <div class="home-storage-near-card" >
-          <div class="home-storage-near-img">
+        <div class="discover-storages-card" >
+          <div class="discover-storages-img">
             <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="show-storage-near-img ">
-            <p class="home-storage-near-price">$<%= storage.price.to_i %></p>
+            <p class="discover-storages-price">$<%= storage.price.to_i %></p>
           </div>
-          <div class="home-storage-near-details">
-            <p class="home-storage-near-title"><%= link_to storage.title.truncate(24).capitalize, storage_path(storage) %></p>
-            <p class="home-storage-near-type">Garage - <%=storage.meters%>m<sup>2</sup></p>
-            <p class="home-storage-near-user">
+          <div class="discover-storages-details">
+            <p class="discover-storages-title"><%= link_to storage.title.truncate(24).capitalize, storage_path(storage) %></p>
+            <p class="discover-storages-type">Garage - <%=storage.meters%>m<sup>2</sup></p>
+            <p class="discover-storages-user">
               <i class="fa-solid fa-user"></i>
               <%=storage.user.first_name%>
               <%=storage.user.last_name.first%>.
             </p>
-            <p class="home-storage-near-city">
+            <p class="discover-storages-city">
               <i class="fa-solid fa-location-dot"></i>
               <%= storage.city%>
             </p>
@@ -134,18 +116,18 @@
       <% end %>
     <% end %>
     </div>
-    <div class="home-see-more-container">
-      <%= link_to "See More", storages_path, :class => "btn btn-success py-2 px-3" %>
+    <div class="home-see-more-container mt-5">
+      <%= link_to "See More", storages_path, :class => "btn btn-success btn-lg btn-block py-2 px-3" %>
     </div>
   </div>
 
 
 <%#--------BECOME A HOST-----------%>
   <div class="become-host-container mt-5 mb-4 text-center">
-    <h2 class="become-host-header">Become a host</h2>
+    <h2 class="become-host-header mb-5 mt-5">Rent your space. Become a host!</h2>
     <div class="host-container">
       <%# <button class="host-btn", storages_path> Become Host </button> %>
-      <%= link_to "Become Host", new_storage_path, :class => "btn btn-success py-2 px-3" %>
+      <%= link_to "Become Host", new_storage_path, :class => "btn btn-success btn-lg btn-block py-2 px-3" %>
     </div>
   </div>
 
