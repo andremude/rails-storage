@@ -58,6 +58,12 @@
   border-radius: 5px;
 }
 
+@media (max-width: 768px) {
+.home-search-bar {
+  width: 300px;
+  }
+}
+
 .home-search-btn {
   background-color: #059862;
   color: white;
@@ -84,18 +90,6 @@
   margin: 0 auto;
 }
 
-// @media(max-width: 1200px) {
-//   .container {
-//     width: 700px;
-//   }
-// }
-
-// @media(max-width: 992px) {
-//   .container {
-//     width: 700px;
-//   }
-// }
-
 @media (max-width: 768px) {
   .home-cards-grid {
     display: grid;
@@ -106,17 +100,6 @@
     margin: 0 auto;
   }
 }
-
-// @media (max-width: 576px) {
-// .home-cards-grid {
-//     display: grid;
-//     grid-template-columns: repeat(2, 1fr);
-//     grid-gap: 10px;
-//     justify-content: center;
-//     width: 80%;
-//     margin: 0 auto;
-//   }
-// }
 
 .home-card {
   display: flex;
@@ -170,7 +153,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  // margin-bottom: 25px;
   width: 100%;
   margin: 0 auto;
   padding-right: 20px;
