@@ -24,6 +24,10 @@
   padding: 50px;
 }
 
+.hero-header > h2 {
+  flex-wrap: wrap;
+}
+
 .typewriter {
   position: absolute;
   margin-left: 8px;
@@ -183,7 +187,6 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 25px;
 }
-
 
 .discover-storages-img {
   width: 250px;

@@ -4,7 +4,13 @@ class StoragesController < ApplicationController
   # GET
   def index
     if params[:query].present?
-      @storages = Storage.where("city ILIKE ?", "%#{params[:query]}%")
+      sql_query = "\
+      city ILIKE :query\
+      OR country ILIKE :query\
+      OR storage_type ILIKE :query\
+      "
+      @storages = Storage.where(sql_query, query: "%#{params[:query]}%")
+      #@storages = Storage.where("city ILIKE ?", "%#{params[:query]}%")
         @markers = @storages.geocoded.map do |storage|
           {
             lat: storage.latitude,
