@@ -8,6 +8,7 @@ class StoragesController < ApplicationController
       city ILIKE :query\
       OR country ILIKE :query\
       OR storage_type ILIKE :query\
+      OR features ILIKE :query\
       "
       @storages = Storage.where(sql_query, query: "%#{params[:query]}%")
       #@storages = Storage.where("city ILIKE ?", "%#{params[:query]}%")
