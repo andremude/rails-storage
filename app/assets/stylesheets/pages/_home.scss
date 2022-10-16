@@ -112,6 +112,18 @@
   align-items: center;
 }
 
+.home-card a {
+  text-decoration: none;
+  color: black;
+}
+
+.home-card a:hover {
+  .home-card-img-top {
+    transform: scale(1.03);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}
+
 .home-card-img-top {
   border-radius: 15px;
   height: 220px;
@@ -123,6 +135,7 @@
   text-align: center;
   margin-top: 8px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 // ------------WHY RENT STORAGE---------------

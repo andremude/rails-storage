@@ -40,7 +40,7 @@
         </a>
       </div>
       <div class="home-card">
-        <a href="/storages?query=garage&commit=Search">
+        <a href="/storages?query=car+parking&commit=Search">
           <img src="car-garage.jpg" class="home-card-img-top" alt="...">
           <p class="card-text">Car Parking</p>
         </a>
@@ -106,27 +106,27 @@
     <div class="discover-storages-cards">
       <% Storage.all.sample(4).each do |storage| %>
         <%= link_to storage_path(storage) do %>
-        <div class="discover-storages-card" >
-          <div class="discover-storages-img">
-            <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="show-storage-near-img ">
-            <p class="discover-storages-price">$<%= storage.price.to_i %></p>
+          <div class="discover-storages-card" >
+            <div class="discover-storages-img">
+              <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="show-storage-near-img ">
+              <p class="discover-storages-price">$<%= storage.price.to_i %></p>
+            </div>
+            <div class="discover-storages-details">
+              <p class="discover-storages-title"><%= link_to storage.title.truncate(24).capitalize, storage_path(storage)%></p>
+              <p class="discover-storages-type"> <%=storage.storage_type%> - <%=storage.meters%>m<sup>2</sup></p>
+              <p class="discover-storages-user">
+                <i class="fa-solid fa-user"></i>
+                <%=storage.user.first_name%>
+                <%=storage.user.last_name.first%>.
+              </p>
+              <p class="discover-storages-city">
+                <i class="fa-solid fa-location-dot"></i>
+                <%= storage.city%>
+              </p>
+            </div>
           </div>
-          <div class="discover-storages-details">
-            <p class="discover-storages-title"><%= link_to storage.title.truncate(24).capitalize, storage_path(storage) %></p>
-            <p class="discover-storages-type">Garage - <%=storage.meters%>m<sup>2</sup></p>
-            <p class="discover-storages-user">
-              <i class="fa-solid fa-user"></i>
-              <%=storage.user.first_name%>
-              <%=storage.user.last_name.first%>.
-            </p>
-            <p class="discover-storages-city">
-              <i class="fa-solid fa-location-dot"></i>
-              <%= storage.city%>
-            </p>
-          </div>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
     </div>
     <div class="home-see-more-container mt-5">
       <%= link_to "See More", storages_path, :class => "btn btn-success btn-lg btn-block py-2 px-3" %>
