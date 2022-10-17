@@ -12,6 +12,11 @@
         </div>
       <% end %>
     </div>
+
+    <% if params[:query] %>
+      <h2 class="text-center mt-2">Search results for: <%= params[:query].capitalize %></h2>
+    <% end %>
+
     <div class="index-storages-cards">
       <% @storages.each do |storage| %>
         <div class="index-storage-card">

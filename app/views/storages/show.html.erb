@@ -199,7 +199,52 @@
                 </span>
               </li>
           </ul>
+
+          <ul class="list-group mb-3">
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div>
+                  <h6 class="my-0">Subtotal</h6>
+                </div>
+                <span class="text-muted d-flex align-items-center" id="dailyPrice"><%= @storage.price %></span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div class="service-fee">
+                  <h6 class="my-0">Service Fee</h6>
+                  <i class="fa-solid fa-circle-info" id="toolTip" title="Lorem Ipsum Lorem Ipsum Lorem Ipsum"></i>
+                </div>
+                <span class="text-muted d-flex align-items-center cant-traveres"> <%= (@storage.price*0.10) %> </span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between bg-light" >
+                <div class="text-success">
+                  <h6 class="my-0">Discount</h6>
+                  <small>First Month Discount (20%)</small>
+                </div>
+                <span class="text-success d-flex align-items-center">-<%= (@storage.price*0.20) %></span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between mt-2">
+                <span><b>Total $</b></span>
+                <span class="text-success d-flex align-items-center">
+                <b> <%#= (@storage.price-(@storage.price*0.20) + (@storage.price*0.10)).round(2) %> </b>
+                <span id="full-price"></span>
+                </span>
+              </li>
+          </ul>
+
       </div>
+
+    <%# <script>
+      $( "#reservation_start_date, #reservation_end_date" ).change(function() {
+        var d1=document.getElementById("reservation_start_date").value;
+        var d2=document.getElementById("reservation_end_date").value;
+        var start = new Date(d1);
+        var end = new Date(d2);
+        var daily_price=document.getElementById("dailyPrice").innerHTML;
+
+        var full_price = daily_price * (reservation_start_date) / (24*3600*1000); // from milliseconds to days.
+        $("#full-price").innerHTML=full_price;
+      });
+    </script> %>
+
       <div class="date-form-container" id="storages-reservation-dates" data-unavailable="<%= @storage.unavailable_dates.to_json %>">
         <%= form_for([@storage, @storage.reservations.new]) do |f| %>
         <div class="flatpickr-container">
