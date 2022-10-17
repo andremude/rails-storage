@@ -15,7 +15,8 @@ users = [{ email: "johng@example.com", first_name: "John", last_name: "Gibson", 
          { email: "claudiah@example.com", first_name: "Claudia", last_name: "Harrison", document_number: "7004789", password: "123456" },
          { email: "angusy@example.com", first_name: "Angus", last_name: "Young", document_number: "7004789", password: "123456" },
          { email: "mickj@example.com", first_name: "Mick", last_name: "Jagger", document_number: "7004789", password: "123456" },
-         { email: "pauld@example.com", first_name: "Paul", last_name: "Davis", document_number: "7004789", password: "123456" }
+         { email: "pauld@example.com", first_name: "Paul", last_name: "Davis", document_number: "7004789", password: "123456" },
+         { email: "dylanh@example.com", first_name: "Dylan", last_name: "Harris", document_number: "7004789", password: "123456" }
         ]
 
 storages = [{ title: "accessible storage in city center", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc arcu justo, tempus sed eros vel, suscipit sollicitudin libero. Morbi non elit vehicula massa feugiat laoreet a et sem. Fusce bibendum ligula nisl, sed gravida justo lobortis ac. Mauris rhoncus lacinia dui at finibus. Quisque in ligula vitae mauris aliquet iaculis. In consequat massa id velit feugiat pretium. Aenean ut ex quis mauris congue tristique. Praesent vitae tincidunt dui, ut auctor ex. Sed urna justo, iaculis non leo ac, luctus consequat purus. Vestibulum at finibus lorem, vitae varius magna. Praesent porta convallis metus vitae dapibus. Morbi sapien est, laoreet quis suscipit.", meters: '20', address: "133 Victoria St", city: "London", country: "United Kingdom", price: 20.00, storage_type: "Car Parking", user_id: 1 },
