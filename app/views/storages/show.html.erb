@@ -276,10 +276,14 @@
             </span>
           </div>
         </div>
-          <%#= f.submit "Reserve Storage", class: "btn btn-primary btn-lg btn-block btn-reservation" %>
 
         <!-- Button trigger modal -->
-        <% if current_user.id != @storage.user_id %>
+        <% if !current_user %>
+          <%# <button type="button" class="btn btn-primary btn-lg btn-block btn-reservation">
+            Reserve Storage
+          </button> %>
+          <%= link_to "Reserve Storage", new_user_session_path, class: "btn btn-primary btn-lg btn-block btn-reservation" %>
+        <% elsif current_user.id != @storage.user_id %>
           <button type="button" class="btn btn-primary btn-lg btn-block btn-reservation" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             Reserve Storage
           </button>
