@@ -9,50 +9,50 @@
         <%# current_user.reservations.each do |reservation| %>
         <% @reservations.each do |reservation| %>
 
-          <div class="my-storages-card">
+          <div class="my-reservations-card">
             <div>
-              <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="index-storage-img">
+              <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="my-reservations-img">
             </div>
-            <div class="my-storages-items">
-              <div class="my-storages-item">
+            <div class="my-reservations-items">
+              <div class="my-reservations-item">
                 <p>Title:</p>
                 <p class="item-input"><%= reservation.storage.title %></p>
               </div>
-              <div class="my-storages-item">
+              <div class="my-reservations-item">
                 <p>Address:</p>
                 <p class="item-input"><%= reservation.storage.address %></p>
               </div>
-              <div class="my-storages-item">
+              <div class="my-reservations-item">
                 <p>Type:</p>
                 <p class="item-input"><%= reservation.storage.storage_type %></p>
               </div>
-              <div class="my-storages-bottom">
-                <div class="my-storages-item">
+              <div class="my-reservations-bottom">
+                <div class="my-reservations-item">
                   <p>City:</p>
                   <p class="item-input"><%= reservation.storage.city %></p>
                 </div>
-                <div class="my-storages-item">
+                <div class="my-reservations-item">
                   <p>Country:</p>
                   <p class="item-input"><%= reservation.storage.country %></p>
                 </div>
-                <div class="my-storages-item">
+                <div class="my-reservations-item">
                   <p>Price:</p>
                   <p class="item-input">$<%= reservation.storage.price %></p>
                 </div>
-                <div class="my-storages-item">
+                <div class="my-reservations-item">
                   <p>Meters:</p>
                   <p class="item-input"><%= reservation.storage.meters %>m<sup>2</sup></p>
                 </div>
-              <div class="my-storages-item">
+              <div class="my-reservations-item">
                   <p>From:</p>
                   <p class="item-input"><%= reservation.start_date.to_formatted_s(:rfc822) %></p>
                 </div>
-                <div class="my-storages-item">
+                <div class="my-reservations-item">
                   <p>To:</p>
                   <p class="item-input"><%= reservation.end_date.to_formatted_s(:rfc822) %></p>
                 </div>
               </div>
-              <div class="my-storages-controls">
+              <div class="my-reservations-controls">
                 <p><%= link_to "See Storage", storage_path(reservation.storage) %></p>
               </div>
             </div>

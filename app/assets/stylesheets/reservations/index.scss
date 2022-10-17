@@ -1,0 +1,52 @@
+.user-right-container {
+  width: 85%;
+  padding: 80px;
+  overflow: auto;
+}
+
+.my-reservations-card {
+  display: flex;
+  margin: 20px 5px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.my-reservations-img {
+  border-radius: 25px;
+  height: 300px;
+}
+
+.my-reservations-items {
+  margin-left: 10px;
+  width: 100%;
+}
+
+.my-reservations-item {
+  display: flex;
+  width: 100%;
+}
+
+.item-input {
+  background-color: white;
+  border: 1px solid rgb(180, 178, 178);
+  width: 100%;
+  margin-left: 5px;
+  padding-left: 10px;
+  border-radius: 25px;
+}
+
+.my-reservations-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  width: 100%;
+}
+
+.my-reservations-controls {
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+}
