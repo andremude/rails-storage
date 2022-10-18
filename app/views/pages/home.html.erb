@@ -23,7 +23,7 @@
           placeholder: "Search for a city...",
           class: 'home-search-bar'
           %>
-          <%= submit_tag("Search", :class=>"home-search-btn") %>
+          <%= submit_tag("Search", :class=>"home-search-btn btn-primary") %>
         </div>
       <% end %>
     </div>
@@ -129,7 +129,7 @@
       <% end %>
     </div>
     <div class="home-see-more-container mt-5">
-      <%= link_to "See More", storages_path, :class => "btn btn-success btn-lg btn-block py-2 px-3" %>
+      <%= link_to "See More", storages_path, :class => "btn btn-primary btn-lg btn-block py-2 px-3" %>
     </div>
   </div>
 
@@ -139,7 +139,7 @@
     <h2 class="become-host-header mb-5 mt-5">Rent your space. Become a host!</h2>
     <div class="host-container">
       <%# <button class="host-btn", storages_path> Become Host </button> %>
-      <%= link_to "Become Host", new_storage_path, :class => "btn btn-success btn-lg btn-block py-2 px-3" %>
+      <%= link_to "Become Host", new_storage_path, :class => "btn btn-primary btn-lg btn-block py-2 px-3" %>
     </div>
   </div>
 
