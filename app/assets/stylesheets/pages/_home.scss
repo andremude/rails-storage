@@ -175,12 +175,21 @@
   padding-right: 20px;
 }
 
-@media(max-width: 992px) {
+.discover-storages-cards a {
+  text-decoration: none;
+  color: black;
+}
+
+.discover-storages-cards a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 1025px) {
   .discover-storages-cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
-    width: 50%;
     margin: 10px auto;
   }
 }
@@ -190,7 +199,6 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 10px;
-    width: 25%;
     margin: 10px auto;
   }
 }
@@ -199,6 +207,11 @@
   width: 250px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 25px;
+  margin: 10px auto;
+}
+
+.discover-storages-card:hover {
+  transform: scale(1.02);
 }
 
 .discover-storages-img {
@@ -245,6 +258,7 @@
 
 .discover-storages-title {
   margin: 0;
+  font-weight: bold;
 }
 
 .discover-storages-title a {

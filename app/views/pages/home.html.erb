@@ -93,7 +93,7 @@
       </div>
       <div class="col-6 col-md-3 why-storage">
         <img src="garage.png" alt="garage-icon" class="mb-2">
-        <h4 class="title">Car suitable</h4>
+        <h4 class="title">Car suitable spaces</h4>
         <p class="description">You can find the perfect parking space for your car.</p>
       </div>
     </div>
@@ -112,7 +112,7 @@
               <p class="discover-storages-price">$<%= storage.price.to_i %></p>
             </div>
             <div class="discover-storages-details">
-              <p class="discover-storages-title"><%= link_to storage.title.truncate(24).capitalize, storage_path(storage)%></p>
+              <p class="discover-storages-title"><%= storage.title.truncate(24).capitalize%></p>
               <p class="discover-storages-type"> <%=storage.storage_type%> - <%=storage.meters%>m<sup>2</sup></p>
               <p class="discover-storages-user">
                 <i class="fa-solid fa-user"></i>
