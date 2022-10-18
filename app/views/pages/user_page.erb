@@ -15,11 +15,11 @@
           <i class="fa-solid fa-pen-to-square"></i>
         <% end %>
       </div>
-      <div>First Name: <%= current_user.first_name %></div>
-      <div>Last Name: <%= current_user.last_name %></div>
-      <div>Email: <%= current_user.email %></div>
-      <div>Document Number: <%= current_user.document_number %></div>
-      <div>User since: <%= current_user.created_at.to_formatted_s(:long_ordinal) %></div>
+      <div><strong>First Name:</strong> <%= current_user.first_name %></div>
+      <div><strong>Last Name:</strong> <%= current_user.last_name %></div>
+      <div><strong>Email:</strong> <%= current_user.email %></div>
+      <div><strong>Document Number:</strong> <%= current_user.document_number %></div>
+      <div><strong>User since:</strong> <%= current_user.created_at.to_formatted_s(:long_ordinal) %></div>
       <div></div>
       <div></div>
       <div></div>
