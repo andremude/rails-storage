@@ -8,7 +8,7 @@
           placeholder: "Search for a city...",
           class: "search-bar-input"
           %>
-          <%= submit_tag "Search", class: "search-bar-btn" %>
+          <%= submit_tag "Search", class: "search-bar-btn btn-primary" %>
         </div>
       <% end %>
     </div>
@@ -28,7 +28,7 @@
               </p>
             </div>
             <div class = "index-storage-details">
-              <p class="index-storage-title"><%=link_to storage.title.truncate(30).capitalize, storage_path(storage)%></p>
+              <p class="index-storage-title"><%= storage.title.truncate(30).capitalize %></p>
               <p class="index-storage-type"> Garage -<%= storage.meters %>m<sup>2</sup></p>
               <p class="index-storage-user">
                 <i class="fa-solid fa-user"></i>
