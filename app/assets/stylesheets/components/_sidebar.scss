@@ -4,8 +4,15 @@
   display: flex;
   flex-direction: column;
   justify-items: center;
-  width: 15%;
-  // height: 100vh;
+  width: 20%;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+@media (max-width: 1025px) {
+  .user-left-container {
+    width: 25%;
+  }
 }
 
 .user-left-container ul {
@@ -15,10 +22,21 @@
 }
 
 .user-left-container li {
-  margin: 2px 8px;
+  margin: 20px 4px;
 }
 
 .dashboard-list li:hover {
   background-color: rgb(243, 63, 177);
   cursor: pointer;
+  color: white;
+}
+
+.dashboard-list a {
+  text-decoration: none;
+  color: white;
+}
+
+.dashboard-list a:hover {
+  text-decoration: none;
+  color: white;
 }
