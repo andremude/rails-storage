@@ -5,6 +5,10 @@
       <i class="fa-solid fa-location-dot"></i>
       <%= @storage.city%>
     </span>
+    <span class="tc-details type">
+      <i class="fa-solid fa-house"></i>
+      <%= @storage.storage_type%>
+    </span>
     <span class="tc-details user">
       <i class="fa-solid fa-user"></i>
       <%=@storage.user.first_name %>
@@ -23,12 +27,12 @@
   <div class="show-left">
     <div class="lightbox">
       <div class="lightbox-row row one">
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=150" onclick="openModal();currentSlide(1)" class="hover-shadow img-one">
-          <img src="https://lipsum.app/id/47/200x150" onclick="openModal();currentSlide(2)" class="hover-shadow img-two">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=150" onclick="openModal();currentSlide(1)" class="lightbox-img img-one">
+          <img src="https://lipsum.app/id/47/200x150" onclick="openModal();currentSlide(2)" class="lightbox-img img-two">
       </div>
       <div class="lightbox-row row two">
-          <img src="https://lipsum.app/id/48/200x150" onclick="openModal();currentSlide(3)" class="hover-shadow img-three">
-          <img src="https://lipsum.app/id/51/200x150" onclick="openModal();currentSlide(4)" class="hover-shadow img-four">
+          <img src="https://lipsum.app/id/48/200x150" onclick="openModal();currentSlide(3)" class="lightbox-img img-three">
+          <img src="https://lipsum.app/id/51/200x150" onclick="openModal();currentSlide(4)" class="lightbox-img img-four">
       </div>
     </div>
 
@@ -128,17 +132,6 @@
     <div class="show-details">
         <div class="show-about">
           <h1>About</h1>
-          <div class="about-items">
-            <%# <div class="about-item">Security Camera</div>
-            <div class="about-item">Smoke Detector</div>
-            <div class="about-item">Pet Free</div>
-            <div class="about-item">Locked Area</div>
-            <div class="about-item">Smoke Free</div>
-            <div class="about-item">Climate Controlled</div> %>
-              <%# <div class="feature-select-item"> %>
-                <%#= @storage.features %>
-              <%# </div> %>
-          </div>
           <div class="about-text">
             <p><%= @storage.description%></p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet nibh sapien, vel malesuada augue cursus vel. Pellentesque fermentum, turpis non hendrerit interdum, risus felis laoreet libero, vel rhoncus turpis ex molestie ligula. Proin volutpat mollis velit, sed maximus ligula eleifend ut. Fusce maximus laoreet nisi, sed convallis diam interdum in. Maecenas vel nisi id neque molestie consectetur nec bibendum urna. Proin ut lectus tortor. Vestibulum elementum aliquam mi, vel mattis nibh vehicula et. Pellentesque et ipsum vehicula, semper sapien quis, maximus leo. Morbi pellentesque convallis dui, sed faucibus ipsum tincidunt sit amet.
@@ -351,7 +344,7 @@
                 <p class="show-storage-near-price">$<%= nearby.price %></p>
               </div>
               <div class="show-storage-near-details">
-                <p class="show-storage-near-title"><%= link_to nearby.title.truncate(24).capitalize, storage_path(nearby) %></p>
+                <p class="show-storage-near-title"><%= nearby.title.truncate(24).capitalize %></p>
                 <p class="show-storage-near-type">Garage - <%=nearby.meters%>m<sup>2</sup></p>
                 <p class="show-storage-near-user">
                   <i class="fa-solid fa-user"></i>
@@ -369,7 +362,7 @@
       </div>
 
       <div class="show-see-more-container">
-        <%= link_to "See More", storages_path, :class => "btn btn-success py-2 px-3" %>
+        <%= link_to "See More", storages_path, :class => "btn btn-primary py-2 px-3" %>
       </div>
     </div>
   </div>
