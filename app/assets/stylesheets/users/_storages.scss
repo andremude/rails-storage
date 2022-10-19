@@ -1,5 +1,4 @@
 .user-right-container {
-  // background-color: yellow;
   width: 85%;
   padding: 80px;
   overflow: auto;
@@ -7,11 +6,9 @@
 
 .my-storages-card {
   display: flex;
-  // border: 1px solid black;
   margin: 20px 5px;
   width: 100%;
   padding: 10px;
-  // background-color: rgb(223, 222, 221);
   border-radius: 25px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
@@ -36,7 +33,8 @@ background-color: white;
 border: 1px solid rgb(180, 178, 178);
 width: 100%;
 margin-left: 5px;
-padding-left: 10px;
+// padding-left: 10px;
+padding: 0 10px;
 border-radius: 25px;
 }
 
@@ -52,4 +50,37 @@ border-radius: 25px;
   justify-content: space-around;
   justify-items:center;
   align-items: center;
+}
+
+// @media (max-width: 768px) {
+//   #map {
+//     display: none;
+//   }
+
+//   .left-container {
+//     width: 100%;
+//   }
+// }
+
+@media (max-width: 1025px) {
+  .my-storages-card {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+  }
+  .my-storages-bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  .my-storages-img {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .my-storages-items {
+    width: 300px;
+  }
+  .item-input {
+    padding: 0 10px;
+  }
 }
