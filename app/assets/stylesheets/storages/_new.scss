@@ -1,11 +1,54 @@
+.new-storage-form {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 .features-select-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
   align-items: center;
+  margin-bottom: 8px;
 }
 
-.feature-cb-item {
-  margin-top: 0px;
-  margin-bottom: 0px;
+#featureCheckbox label {
+  font-weight: normal;
+}
+
+.new-storage-form label {
+  font-weight: bold;
+}
+.new-storage-form input {
+  margin-bottom: 8px;
+}
+
+.country-input-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.type-input-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .price-meters {
+    display: flex;
+  }
+  .country-storage-type {
+    display: flex;
+    justify-content: space-around;
+  }
+  .country-input-form {
+    width: 100%;
+    padding-right: 2px;
+  }
+  .type-input-form {
+    width: 100%;
+    padding-left: 2px;
+  }
+  .price-meters input {
+    width: 98%;
+  }
 }
