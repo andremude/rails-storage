@@ -1,9 +1,9 @@
 <div class="container-fluid p-4">
-  <div class="container card-create-tour mt-5 mb-5 p-5">
+  <div class="container mt-5 mb-5 p-5">
     <div class="row">
       <div class="col-12 col-md-6 offset-lg-3">
         <div class="bg-white rounded p-3 new-storage-form">
-          <h2>Let's create a post for your storage:</h2>
+          <h2>CREATE Storage</h2>
           <%= simple_form_for(Storage.new) do |f| %>
           <%= f.error_notification %>
           <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -12,17 +12,14 @@
             <%= f.input :address, label: "Address", placeholder: "Address" %>
             <%= f.input :city, label: "City", placeholder: "City" %>
             <div class="country-storage-type">
-
-                <div class="country-input-form">
-                  <%= f.label :country %>
-                  <%= f.select :country, [["United States", "US"], ["United Kingdom", "GB"], ["Spain", "ES"],["Germany", "DE"], ["Netherlands", "NL"], ["Portugal", "PT"], ["Belgium", "BE"], ["France", "FR"]], include_blank: "Select Country" %>
-                </div>
-
-                <div class="type-input-form">
-                  <%= f.label :storage_type %>
-                  <%= f.select :storage_type, ["Business inventory", "Car parking", "Boats", "RV parking", "Personal storage", "Furniture"], include_blank: "Select Type" %>
-                </div>
-
+              <div class="country-input-form">
+                <%= f.label :country %>
+                <%= f.select :country, ["United States", "United Kingdom", "Spain","Germany", "Netherlands", "Portugal", "Belgium", "France"], include_blank: "Select Country" %>
+              </div>
+              <div class="type-input-form">
+                <%= f.label :storage_type %>
+                <%= f.select :storage_type, ["Business inventory", "Car parking", "Boats", "RV parking", "Personal storage", "Furniture"], include_blank: "Select Type" %>
+              </div>
             </div>
             <div class="price-meters">
               <%= f.input :price, label: "Price", placeholder: "Price", class:"price-input" %>
@@ -30,7 +27,6 @@
             </div>
             <%#= f.input :photos,label: 'Fotos', as: :file, input_html: { multiple: true } %>
             <%= f.label :features %>
-            <%#= f.select :features,  ["Pet Free","Security Camera","Smoke Detector","Climate Controlled","Locked Area","Easy Access","Independent Space"], :multiple => true, :size => 5, class: "selectpicker" %>
             <div class="features-select-container">
             <% FeaturesData::Features.each do |feature| %>
               <div class="feature-cb-item" id="featureCheckbox">

@@ -1,8 +1,17 @@
-.new-storage-form {
+.edit-storage-form {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.new-storage-form h2 {
+.edit-storage-form input.is-valid {
+  border-color: #ced4da;
+}
+
+.edit-storage-form input.is-valid:focus {
+  outline: none !important;
+  box-shadow: rgba(11, 94, 215, 0.25) 0px 0px 0px 4px;
+}
+
+.edit-storage-form h2 {
   text-align: center;
   text-decoration: underline;
 }
@@ -18,10 +27,11 @@
   font-weight: normal;
 }
 
-.new-storage-form label {
+.edit-storage-form label {
   font-weight: bold;
 }
-.new-storage-form input {
+
+.edit-storage-form input {
   margin-bottom: 8px;
 }
 
@@ -35,25 +45,4 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 8px;
-}
-
-@media (max-width: 768px) {
-  .price-meters {
-    display: flex;
-  }
-  .country-storage-type {
-    display: flex;
-    justify-content: space-around;
-  }
-  .country-input-form {
-    width: 100%;
-    padding-right: 2px;
-  }
-  .type-input-form {
-    width: 100%;
-    padding-left: 2px;
-  }
-  .price-meters input {
-    width: 98%;
-  }
 }
