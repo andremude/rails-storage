@@ -33,7 +33,7 @@
   border: 1px solid rgb(180, 178, 178);
   width: 100%;
   margin-left: 5px;
-  padding-left: 10px;
+  padding: 0 10px;
   border-radius: 25px;
 }
 
@@ -49,4 +49,31 @@
   justify-content: space-around;
   justify-items: center;
   align-items: center;
+}
+
+@media (max-width: 1025px) {
+  .my-reservations-card {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+  }
+
+  .my-reservations-bottom {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .my-reservations-img {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .my-reservations-items {
+    width: 300px;
+  }
+
+  .item-input {
+    padding: 0 10px;
+  }
 }
