@@ -23,7 +23,7 @@
             </div>
             <div class="price-meters">
               <%= f.input :price, label: "Price", placeholder: "Price", class:"price-input" %>
-              <%= f.input :meters, label: "Meters", placeholder: "Meters", class:"meters-input" %>
+              <%= f.input :meters, label: "Meters (m<sup>2</sup>)".html_safe, placeholder: "Meters", class:"meters-input" %>
             </div>
             <%#= f.input :photos,label: 'Fotos', as: :file, input_html: { multiple: true } %>
             <%= f.label :features %>
