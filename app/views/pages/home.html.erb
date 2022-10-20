@@ -112,7 +112,7 @@
               <p class="discover-storages-price">$<%= storage.price.to_i %></p>
             </div>
             <div class="discover-storages-details">
-              <p class="discover-storages-title"><%= storage.title.truncate(24).capitalize%></p>
+              <p class="discover-storages-title"><strong><%= storage.title.truncate(24).capitalize%></strong></p>
               <p class="discover-storages-type"> <%=storage.storage_type%> - <%=storage.meters%>m<sup>2</sup></p>
               <p class="discover-storages-user">
                 <i class="fa-solid fa-user"></i>
