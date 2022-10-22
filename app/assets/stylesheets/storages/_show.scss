@@ -16,7 +16,6 @@
 // ----------- DETAILS NAV ------------
 
 .show-top-container {
-  // padding: 0 20px;
   padding-left: 20px;
 }
 
@@ -57,19 +56,12 @@
   margin: 10px auto;
 }
 
-.lightbox-row > div {
-  display: flex;
-  justify-content: center;
-  margin: 5px auto;
-}
-
 img.lightbox-img {
   transition: 0.3s;
   cursor: pointer;
   width: 350px;
   height: 250px;
   object-fit: cover;
-
 }
 
 .lightbox-img:hover {
@@ -92,6 +84,30 @@ img.lightbox-img {
  border-radius: 0 0 25px 0;
 }
 
+@media (max-width: 1025px) {
+  .lightbox-img {
+    margin: 5px 0px;
+  }
+  .img-one, .img-two, .img-three, .img-four {
+    border-radius: 25px;
+  }
+  .lightbox-row {
+    margin: 0px;
+  }
+  .show-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .reserve-container {
+    margin: 10px auto;
+    width: 100%;
+    min-width: 400px;
+  }
+  .reserve-box {
+    width: 100%;
+  }
+}
+
 // -------- LIGHTBOX MODAL ------------
 .modal {
   display: none;
@@ -108,7 +124,6 @@ img.lightbox-img {
 
 .modal-content {
   position: relative;
-  // background-color: #fefefe;
   background-color: #5a5b5c;
   margin: auto;
   padding: 0;
@@ -137,7 +152,6 @@ img.lightbox-img {
   width: 100%;
   height: 60%;
   margin: 0 auto;
-  // background-color: #5a5b5c;
 }
 
 .mySlides img {
@@ -213,10 +227,26 @@ img.demo {
   object-fit: contain;
 }
 
+@media (max-width: 1025px) {
+  .modal {
+    width: 50%;
+  }
+  .mySlides {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .mySlides img {
+    width: 100%;
+    height: 100%;
+  }
+  .thumbnail-container img {
+    width: 60%;
+  }
+}
+
 // ---------- ABOUT CONTAINER ------------
 
 .show-about {
-  // background-color: lightblue;
   margin: 25px 0px;
 }
 
@@ -227,7 +257,6 @@ img.demo {
 // ----------- EXAMPLE CONTAINER ------------
 
 .show-example {
-  // background-color: red;
   margin-bottom: 10px;
 }
 
@@ -235,7 +264,6 @@ img.demo {
 
 .show-features {
   margin: 25px 0px;
-  // background-color: pink;
 }
 
 .features-items {
@@ -361,14 +389,14 @@ img.demo {
   padding-right: 20px;
 }
 
-.storages-near-container h1 {
-  margin-left: 0;
-}
-
 .show-near-you-container {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.storages-near-container h1 {
+  margin-left: 0;
 }
 
 .show-storages-near-cards {
