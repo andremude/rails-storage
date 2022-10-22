@@ -29,14 +29,10 @@
       <div class="lightbox-row row one">
         <%= cl_image_tag @storage.photos[0].key, onclick: "openModal();currentSlide(1)", class: "lightbox-img img-one", alt: "image 1" %>
         <%= cl_image_tag @storage.photos[1].key, onclick: "openModal();currentSlide(2)", class: "lightbox-img img-two", alt: "image 2" %>
-        <%# <img src="https://images.unsplash.com/photo-cover6905925346-21bda4d32df4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=150" onclick="openModal();currentSlide(1)" class="lightbox-img img-one">
-        <img src="https://lipsum.app/id/47/200x150" onclick="openModal();currentSlide(2)" class="lightbox-img img-two"> %>
       </div>
       <div class="lightbox-row row two">
         <%= cl_image_tag @storage.photos[2].key, onclick: "openModal();currentSlide(3)", class: "lightbox-img img-three", alt: "image 3" %>
         <%= cl_image_tag @storage.photos[3].key, onclick: "openModal();currentSlide(4)", class: "lightbox-img img-four", alt: "image 4" %>
-        <%# <img src="https://lipsum.app/id/48/200x150" onclick="openModal();currentSlide(3)" class="lightbox-img img-three">
-        <img src="https://lipsum.app/id/51/200x150" onclick="openModal();currentSlide(4)" class="lightbox-img img-four"> %>
       </div>
     </div>
 
@@ -47,25 +43,21 @@
         <div class="mySlides">
           <div class="numbertext">1 / 4</div>
           <%=cl_image_tag @storage.photos[0].key %>
-          <%# <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop" style="width:100%"> %>
         </div>
 
         <div class="mySlides">
           <div class="numbertext">2 / 4</div>
           <%=cl_image_tag @storage.photos[1].key %>
-          <%# <img src="https://lipsum.app/id/47/200x150" style="width:100%"> %>
         </div>
 
         <div class="mySlides">
           <div class="numbertext">3 / 4</div>
           <%=cl_image_tag @storage.photos[2].key %>
-          <%# <img src="https://lipsum.app/id/48/200x150" style="width:100%"> %>
         </div>
 
         <div class="mySlides">
           <div class="numbertext">4 / 4</div>
           <%=cl_image_tag @storage.photos[3].key %>
-          <%# <img src="https://lipsum.app/id/51/200x150" style="width:100%"> %>
         </div>
 
         <!-- Next/previous controls -->
@@ -80,19 +72,19 @@
         <!-- Thumbnail image controls -->
         <div class="thumbnail-container">
           <div class="column">
-            <img class="demo" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop" onclick="currentSlide(1)" alt="Nature">
+            <%=cl_image_tag @storage.photos[0].key, class:"demo", onclick:"currentSlide(1)" %>
           </div>
 
           <div class="column">
-            <img class="demo" src="https://lipsum.app/id/47/200x150" onclick="currentSlide(2)" alt="Snow">
+            <%=cl_image_tag @storage.photos[1].key, class:"demo", onclick:"currentSlide(2)" %>
           </div>
 
           <div class="column">
-            <img class="demo" src="https://lipsum.app/id/48/200x150" onclick="currentSlide(3)" alt="Mountains">
+            <%=cl_image_tag @storage.photos[2].key, class:"demo", onclick:"currentSlide(3)" %>
           </div>
 
           <div class="column">
-            <img class="demo" src="https://lipsum.app/id/51/200x150" onclick="currentSlide(4)" alt="Lights">
+            <%=cl_image_tag @storage.photos[3].key, class:"demo", onclick:"currentSlide(4)" %>
           </div>
         </div>
       </div>

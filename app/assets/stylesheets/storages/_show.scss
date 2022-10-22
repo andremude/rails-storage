@@ -209,6 +209,10 @@ img.demo {
   justify-content: space-around;
 }
 
+.thumbnail-container img {
+  object-fit: contain;
+}
+
 // ---------- ABOUT CONTAINER ------------
 
 .show-about {
