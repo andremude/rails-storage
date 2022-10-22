@@ -9,6 +9,8 @@ module FeaturesData
     "Independent Space",
     "Free Parking",
     "Building Staff",
-    "Private entrance"
+    "Private Entrance",
+    "Closed Space",
+    "Open Space"
   ]
 end
