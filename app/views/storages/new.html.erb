@@ -26,6 +26,8 @@
               <%= f.input :meters, label: "Meters (m<sup>2</sup>)".html_safe, placeholder: "Meters", class:"meters-input" %>
             </div>
             <%#= f.input :photos,label: 'Fotos', as: :file, input_html: { multiple: true } %>
+            <%= f.label :Photos %>
+            <%= f.input :photos, as: :file, label: false, input_html: { multiple: true } %>
             <%= f.label :features %>
             <div class="features-select-container">
             <% FeaturesData::Features.each do |feature| %>
