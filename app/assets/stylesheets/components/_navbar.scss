@@ -1,3 +1,7 @@
+.navbar-container {
+  color: white;
+}
+
 .navbar-collapse {
   display: flex;
   align-items: center;
@@ -24,4 +28,20 @@
 .avatar-nav {
   width: 25px;
   height: 25px;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: #0D6EFD;
+}
+
+.navbar-brand {
+  color: white
+}
+
+.navbar-brand:hover {
+  color: white;
 }
