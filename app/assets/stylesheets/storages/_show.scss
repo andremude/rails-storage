@@ -252,6 +252,9 @@ img.demo {
 
 .show-details {
   padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 // ----------- EXAMPLE CONTAINER ------------
@@ -278,6 +281,27 @@ img.demo {
   border-radius: 5px;
   padding: 5px;
   text-align: center;
+}
+
+@media (max-width: 1025px) {
+  .features-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// ----------- MAP -----------
+
+#staticMap {
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1025px) {
+  #staticMap {
+    width: 400px;
+  }
 }
 
 // -------- RESERVE CONTAINER ----------

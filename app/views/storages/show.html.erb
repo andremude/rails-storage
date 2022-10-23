@@ -138,17 +138,16 @@
             </p>
           </div>
         </div>
+
         <div class="show-example">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet nibh sapien, vel malesuada augue cursus vel. Pellentesque fermentum, turpis non hendrerit interdum, risus felis laoreet libero, vel rhoncus turpis ex molestie ligula. Proin volutpat mollis velit, sed maximus ligula eleifend ut. Fusce maximus laoreet nisi, sed convallis diam interdum in. Maecenas vel nisi id neque molestie consectetur nec bibendum urna. Proin ut lectus tortor. Vestibulum elementum aliquam mi, vel mattis nibh vehicula et. Pellentesque et ipsum vehicula, semper sapien quis, maximus leo. Morbi pellentesque convallis dui, sed faucibus ipsum tincidunt sit amet.
 
           Mauris consequat nec orci malesuada egestas. Suspendisse pellentesque id neque eget consequat. Mauris tincidunt rutrum placerat. Nulla rhoncus eleifend nulla, in gravida diam. Sed eu purus quis urna tempus lacinia id vel quam. Integer nec sem eget ex finibus interdum. Pellentesque eget lectus a mi lobortis interdum in vel diam. Fusce finibus, lectus bibendum aliquam commodo, metus mauris ultrices dolor, a malesuada ligula mauris quis nisi. In sit amet luctus purus. Etiam iaculis erat sit amet nunc placerat, eu feugiat augue ultrices.
         </div>
 
-        <%# <div class="show-features"> %>
         <div class="<%= @storage.features.nil? ? "d-none" : "show-features" %>">
             <h1>Features</h1>
             <div class="features-items">
-              <%# @storage.features.each do |feature| %>
               <% @storage.features.try(:each) do |feature| %>
                 <div class="feature-item">
                   <%= feature %>
@@ -157,6 +156,9 @@
             </div>
         </div>
 
+        <%#= image_tag "https://api.mapbox.com/styles/v1/mapbox/dark-v10/static/pin-l-embassy+f74e4e(#{@storage.longitude},#{@storage.latitude})/#{@storage.longitude},#{@storage.latitude},15/800x500?access_token=#{ENV['MAPBOX_API_KEY']}", id: "staticMap" %>
+
+        <%= image_tag "https://api.mapbox.com/styles/v1/mapbox/light-v10/static/pin-s-l+000(#{@storage.longitude},#{@storage.latitude})/#{@storage.longitude},#{@storage.latitude},15/800x500?access_token=#{ENV['MAPBOX_API_KEY']}", id: "staticMap" %>
 
     </div>
   </div>
