@@ -156,8 +156,6 @@
             </div>
         </div>
 
-        <%#= image_tag "https://api.mapbox.com/styles/v1/mapbox/dark-v10/static/pin-l-embassy+f74e4e(#{@storage.longitude},#{@storage.latitude})/#{@storage.longitude},#{@storage.latitude},15/800x500?access_token=#{ENV['MAPBOX_API_KEY']}", id: "staticMap" %>
-
         <%= image_tag "https://api.mapbox.com/styles/v1/mapbox/light-v10/static/pin-s-l+000(#{@storage.longitude},#{@storage.latitude})/#{@storage.longitude},#{@storage.latitude},15/800x500?access_token=#{ENV['MAPBOX_API_KEY']}", id: "staticMap" %>
 
     </div>
@@ -176,22 +174,21 @@
               <li class="list-group-item d-flex justify-content-between lh-condensed">
                 <div class="service-fee">
                   <h6 class="my-0">Service Fee</h6>
-                  <i class="fa-solid fa-circle-info" id="toolTip" title="Lorem Ipsum Lorem Ipsum Lorem Ipsum"></i>
+                  <i class="fa-solid fa-circle-info" id="toolTip" title="Fee given to host for cleaning and other arrangements"></i>
                 </div>
-                <span class="text-muted d-flex align-items-center"> <%= (@storage.price*0.10) %> </span>
+                <span class="text-muted d-flex align-items-center" id="serviceFee"> 15.00 </span>
               </li>
-              <li class="list-group-item d-flex justify-content-between bg-light" >
-                <div class="text-success">
+              <li class="list-group-item d-flex justify-content-between" >
+                <div>
                   <h6 class="my-0">Discount</h6>
-                  <small>First Month Discount (20%)</small>
+                  <small>Special Discount</small>
                 </div>
-                <span class="text-success d-flex align-items-center">-<%= (@storage.price*0.20) %></span>
+                <span class="text-muted d-flex align-items-center">-<%= (@storage.price*0.20).round(2) %></span>
               </li>
               <li class="list-group-item d-flex justify-content-between mt-2">
                 <span><b>Total $</b></span>
-                <span class="text-success d-flex align-items-center">
+                <span class="d-flex align-items-center">
                 <strong id="totalReservation"></strong>
-                <strong> <%= (@storage.price-(@storage.price*0.20) + (@storage.price*0.10)).round(2) %> </strong>
                 </span>
               </li>
           </ul>
@@ -204,7 +201,7 @@
             <%= f.text_field :start_date, as: :string, type: :text,
               data: {
                 controller: "flatpickr",
-                flatpickr_date_format: "d-m-Y",
+                # flatpickr_date_format: "d-m-Y",
                 flatpickr_min_date: Time.now},
               placeholder: "Start Date",
               class: "flatpickr-input",
@@ -217,7 +214,7 @@
             <%= f.text_field :end_date, as: :string, type: :text,
               data: {
                 controller: "flatpickr",
-                flatpickr_date_format: "d-m-Y",
+                # flatpickr_date_format: "d-m-Y",
                 flatpickr_min_date: Time.now + 1.day,
                 },
               placeholder: "End Date",
@@ -262,52 +259,19 @@
           </div>
         <% end %>
 
-    <%# <script>
-      $(document).ready(function() {
-      var startDate;
-      var endDate;
-      $( "#datepicker1" ).datepicker({
-      dateFormat: 'dd-mm-yy'
-      })
-      $( "#datepicker2" ).datepicker({
-      dateFormat: 'dd-mm-yy'
-      });
-      $('#datepicker1').change(function() {
-      startDate = $(this).datepicker('getDate');
-      $("#datepicker2").datepicker("option", "minDate", startDate );
-      })
-      $('#datepicker2').change(function() {
-      endDate = $(this).datepicker('getDate');
-      $("#datepicker1").datepicker("option", "maxDate", endDate );
-      })
-      })
-    </script> %>
-
-    <%# <script>
+    <script>
       $("#reservation_start_date, #reservation_end_date" ).change(function() {
         const d1=document.getElementById("reservation_start_date").value;
         const d2=document.getElementById("reservation_end_date").value;
         const start = new Date(d1);
         const end = new Date(d2);
         const daily_price=document.getElementById("dailyPrice").innerHTML;
+        const totalPrice = document.getElementById("totalReservation")
 
-        const full_price = daily_price * (end-start) / (24*3600*1000); // from milliseconds to days.
-        $("#totalReservation").innerHTML=full_price;
+        const full_price = ((daily_price * (end-start) / (24*3600*1000))+15-(daily_price*0.20)); // from milliseconds to days.
+
+        totalPrice.innerHTML=full_price.toFixed(2);
       });
-    </script> %>
-
-    <script>
-      const cantidadPersonas = document.getElementById("Cantidad-Personas")
-      const inputPersonas  = document.getElementById('booking_quantity')
-      const Total = document.getElementById('Totalbooking')
-      let precio = document.getElementById('PrecioUnitario')
-          inputPersonas.addEventListener("change", (event) => {
-          const cantidad = inputPersonas.value;
-          cantidadPersonas.innerHTML =`${cantidad} `
-          console.log(cantidad)
-          Total.innerHTML= cantidad*precio.innerText - 10;
-
-        })
     </script>
 
   </div>

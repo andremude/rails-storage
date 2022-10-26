@@ -15,7 +15,7 @@ const initFlatpickr = () => {
       mode: "range",
       minDate: "today",
       disable: unavailableDates,
-      dateFormat: "d-m-Y",
+      // dateFormat: "d-m-Y",
       plugins: [new rangePlugin({ input: endDateInput })]
     });
 
@@ -28,7 +28,7 @@ const initFlatpickr = () => {
       flatpickr(endDateInput, {
         minDate: e.target.value,
         disable: unavailableDates,
-        dateFormat: "d-m-Y"
+        // dateFormat: "d-m-Y"
       });
     })
   };
