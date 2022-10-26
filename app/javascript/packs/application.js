@@ -9,6 +9,7 @@ import { definitionsFromContext } from 'stimulus/webpack-helpers'
 import Flatpickr from 'stimulus-flatpickr'
 require("flatpickr/dist/flatpickr.css")
 import {initFlatpickr} from '../plugins/init_flatpickr'
+import {jquery} from 'jquery'
 
 Rails.start()
 Turbolinks.start()
