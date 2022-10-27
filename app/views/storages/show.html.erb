@@ -167,32 +167,35 @@
           <ul class="list-group mb-3">
               <li class="list-group-item d-flex justify-content-between lh-condensed">
                 <div>
-                  <h6 class="my-0">Subtotal</h6>
+                  <h6 class="my-0">Price</h6>
                 </div>
-                <span class="text-muted d-flex align-items-center" id="dailyPrice"><%= @storage.price %></span>
+                <span class="text-muted d-flex align-items-center"><%= humanized_money_with_symbol(@storage.price) %> per day</span>
+                <span id="dailyPrice" class="d-none"> <%= @storage.price %> </span>
               </li>
               <li class="list-group-item d-flex justify-content-between lh-condensed">
                 <div class="service-fee">
                   <h6 class="my-0">Service Fee</h6>
                   <i class="fa-solid fa-circle-info" id="toolTip" title="Fee given to host for cleaning and other arrangements"></i>
                 </div>
-                <span class="text-muted d-flex align-items-center" id="serviceFee"> 15.00 </span>
+                <span class="text-muted d-flex align-items-center" id="serviceFee"> <%= humanized_money_with_symbol(@storage.price*1.20)%> </span>
               </li>
               <li class="list-group-item d-flex justify-content-between" >
                 <div>
                   <h6 class="my-0">Discount</h6>
                   <small>Special Discount</small>
                 </div>
-                <span class="text-muted d-flex align-items-center">-<%= (@storage.price*0.20).round(2) %></span>
+                <span class="text-muted d-flex align-items-center">-<%= humanized_money_with_symbol(@storage.price*0.40) %></span>
               </li>
               <li class="list-group-item d-flex justify-content-between mt-2">
-                <span><b>Total $</b></span>
+                <span><b>Total</b></span>
                 <span class="d-flex align-items-center">
+                <strong>$</strong>
                 <strong id="totalReservation"></strong>
                 </span>
               </li>
           </ul>
       </div>
+
 
       <div class="date-form-container" id="storages-reservation-dates" data-unavailable="<%= @storage.unavailable_dates.to_json %>">
         <%= form_for([@storage, @storage.reservations.new]) do |f| %>
@@ -268,8 +271,10 @@
         const daily_price=document.getElementById("dailyPrice").innerHTML;
         const totalPrice = document.getElementById("totalReservation")
 
-        const full_price = ((daily_price * (end-start) / (24*3600*1000))+15-(daily_price*0.20)); // from milliseconds to days.
-
+        const full_price = ((daily_price * (end-start) / (24*3600*1000))+(daily_price*1.20)-(daily_price*0.40)); // from milliseconds to days.
+        if(isNaN(full_price)){
+            full_price=0;
+        }
         totalPrice.innerHTML=full_price.toFixed(2);
       });
     </script>

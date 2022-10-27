@@ -9,7 +9,7 @@ class CreateStorages < ActiveRecord::Migration[6.1]
       t.string :country
       t.float :latitude
       t.float :longitude
-      t.integer :price
+      t.integer :price_cents
       t.string :storage_type
       t.string :features
       t.references :user, null: false, foreign_key: true

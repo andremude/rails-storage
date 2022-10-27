@@ -8,7 +8,6 @@ class Storage < ApplicationRecord
   validates :city, presence: true
   validates :country, presence: true
   validates :storage_type, presence: true
-  # validates :features, presence: true
   has_many_attached :photos
   has_many :reservations
   accepts_nested_attributes_for :reservations
