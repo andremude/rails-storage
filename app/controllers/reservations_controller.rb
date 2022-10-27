@@ -12,8 +12,7 @@ class ReservationsController < ApplicationController
     @reservation.storage = Storage.find(params[:storage_id])
 
     if @reservation.save
-      # redirect_to reservations_path
-      redirect_to new_storage_reservation_path(@storage)
+      redirect_to reservations_path
     else
       render :new
     end
