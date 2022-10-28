@@ -319,7 +319,7 @@
               </div>
               <div class="show-storage-near-details">
                 <p class="show-storage-near-title"><strong><%= nearby.title.truncate(24).capitalize %></strong></p>
-                <p class="show-storage-near-type">Garage - <%=nearby.meters%>m<sup>2</sup></p>
+                <p class="show-storage-near-type"><%= nearby.storage_type %> - <%=nearby.meters%>m<sup>2</sup></p>
                 <p class="show-storage-near-user">
                   <i class="fa-solid fa-user"></i>
                   <%=nearby.user.first_name%>
