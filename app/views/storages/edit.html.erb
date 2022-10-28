@@ -4,7 +4,6 @@
       <div class="col-12 col-md-6 offset-lg-3">
         <div class="bg-white rounded p-3 edit-storage-form">
           <h2>EDIT Storage</h2>
-          <%#= simple_form_for(Storage.update) do |f| %>
           <%= simple_form_for([@user, @storage]) do |f| %>
           <%= f.error_notification %>
           <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -26,7 +25,8 @@
               <%= f.input :price, label: "Price", placeholder: "Price", class:"price-input" %>
               <%= f.input :meters, label: "Meters (m<sup>2</sup>)".html_safe, placeholder: "Meters", class:"meters-input" %>
             </div>
-            <%#= f.input :photos,label: 'Fotos', as: :file, input_html: { multiple: true } %>
+            <%= f.label :photos, "Photos (Select 4 photos)(*)" %>
+            <%= f.input :photos, as: :file, label: false, input_html: { multiple: true } %>
             <%= f.label :features %>
             <div class="features-select-container">
             <% FeaturesData::Features.each do |feature| %>
