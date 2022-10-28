@@ -309,8 +309,8 @@
           <%= link_to storage_path(nearby) do %>
             <div class="show-storage-near-card">
               <div class="show-storage-near-img">
-                <% if @storage.photos.attached? %>
-                  <%= cl_image_tag @storage.photos[0].key, onclick: "openModal();currentSlide(4)", class:"show-storage-near-img" %>
+                <% if nearby.photos.attached? %>
+                  <%= cl_image_tag nearby.photos[0].key, onclick: "openModal();currentSlide(4)", class:"show-storage-near-img" %>
                 <% else %>
                   <img src="/noimage.png" alt="no-image" class= "show-storage-near-img">
                 <% end %>
