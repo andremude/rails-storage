@@ -11,7 +11,11 @@
 
           <div class="my-reservations-card">
             <div>
-              <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="my-reservations-img">
+              <% if reservation.storage.photos.attached? %>
+                <%= cl_image_tag reservation.storage.photos[0].key, class: "my-reservations-img" %>
+              <% else %>
+                <img src="/noimage.png" alt="no-image" class= "my-reservations-img">
+              <% end %>
             </div>
             <div class="my-reservations-items">
               <div class="my-reservations-item">
