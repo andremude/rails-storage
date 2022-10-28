@@ -22,7 +22,11 @@
         <div class="index-storage-card">
           <%= link_to storage_path(storage) do %>
             <div class="index-storage-card-top">
-              <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="index-storage-img">
+              <% if storage.photos.attached? %>
+                <%= cl_image_tag storage.photos[0].key, class:"index-storage-img" %>
+              <% else %>
+                <img src="/noimage.png" alt="no-image" class="index-storage-img no-image">
+              <% end %>
               <p class="index-storage-price">
                 $<%= storage.price.to_i%>
               </p>
