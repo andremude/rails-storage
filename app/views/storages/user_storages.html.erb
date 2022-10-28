@@ -22,7 +22,7 @@
                 </div>
                 <div class="my-storages-item">
                   <p><strong>Description:</strong></p>
-                  <p class="item-input"><%= storage.description.truncate(60).capitalize %></p>
+                  <p class="item-input"><%= storage.description.truncate(56).capitalize %></p>
                 </div>
                 <div class="my-storages-item">
                   <p><strong>Address:</strong></p>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="my-storages-controls">
                   <p><%= link_to "See Storage", storage_path(storage) %></p>
-                  <p><%= link_to "Edit", edit_storage_path %></p>
+                  <p><%= link_to "Edit", edit_storage_path(storage) %></p>
                   <p><%= link_to 'Delete', storage_path(storage),style:"font-size:15px;", method: :delete, data: {confirm: "Are you sure you want to delete this storage?"}%></p>
                 </div>
               </div>
