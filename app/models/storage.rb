@@ -9,7 +9,7 @@ class Storage < ApplicationRecord
   validates :city, presence: true
   validates :country, presence: true
   validates :storage_type, presence: true
-  validate :validate_photos
+  # validate :validate_photos
   has_many_attached :photos
   has_many :reservations
   accepts_nested_attributes_for :reservations
@@ -22,8 +22,8 @@ class Storage < ApplicationRecord
     end
   end
 
-  def validate_photos
-    errors.add(:photos, "You need to upload 4 photos") if photos.length != 4
-  end
+  # def validate_photos
+  #   errors.add(:photos, "You need to upload 4 photos") if photos.length != 4
+  # end
 
 end

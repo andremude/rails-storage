@@ -27,12 +27,30 @@
   <div class="show-left">
     <div class="lightbox">
       <div class="lightbox-row row">
-        <%= cl_image_tag @storage.photos[0].key, onclick: "openModal();currentSlide(1)", class: "lightbox-img img-one", alt: "image 1" %>
-        <%= cl_image_tag @storage.photos[1].key, onclick: "openModal();currentSlide(2)", class: "lightbox-img img-two", alt: "image 2" %>
+        <% if @storage.photos.attached? %>
+          <%= cl_image_tag @storage.photos[0].key, onclick: "openModal();currentSlide(1)", class: "lightbox-img img-one", alt: "image 1" %>
+        <% else %>
+          <img src="/noimage.png" alt="no-image" class= "lightbox-img img-one">
+        <% end %>
+
+        <% if @storage.photos.attached? %>
+          <%= cl_image_tag @storage.photos[1].key, onclick: "openModal();currentSlide(2)", class: "lightbox-img img-two", alt: "image 2" %>
+        <% else %>
+          <img src="/noimage.png" alt="no-image" class= "lightbox-img img-two">
+        <% end %>
       </div>
       <div class="lightbox-row row">
-        <%= cl_image_tag @storage.photos[2].key, onclick: "openModal();currentSlide(3)", class: "lightbox-img img-three", alt: "image 3" %>
-        <%= cl_image_tag @storage.photos[3].key, onclick: "openModal();currentSlide(4)", class: "lightbox-img img-four", alt: "image 4" %>
+        <% if @storage.photos.attached? %>
+          <%= cl_image_tag @storage.photos[2].key, onclick: "openModal();currentSlide(3)", class: "lightbox-img img-three", alt: "image 3" %>
+        <% else %>
+          <img src="/noimage.png" alt="no-image" class= "lightbox-img img-three">
+        <% end %>
+
+        <% if @storage.photos.attached? %>
+          <%= cl_image_tag @storage.photos[3].key, onclick: "openModal();currentSlide(4)", class: "lightbox-img img-four", alt: "image 4" %>
+        <% else %>
+          <img src="/noimage.png" alt="no-image" class= "lightbox-img img-four">
+        <% end %>
       </div>
     </div>
 
@@ -42,22 +60,22 @@
 
         <div class="mySlides">
           <div class="numbertext">1 / 4</div>
-          <%=cl_image_tag @storage.photos[0].key %>
+          <%#=cl_image_tag @storage.photos[0].key %>
         </div>
 
         <div class="mySlides">
           <div class="numbertext">2 / 4</div>
-          <%=cl_image_tag @storage.photos[1].key %>
+          <%#=cl_image_tag @storage.photos[1].key %>
         </div>
 
         <div class="mySlides">
           <div class="numbertext">3 / 4</div>
-          <%=cl_image_tag @storage.photos[2].key %>
+          <%#=cl_image_tag @storage.photos[2].key %>
         </div>
 
         <div class="mySlides">
           <div class="numbertext">4 / 4</div>
-          <%=cl_image_tag @storage.photos[3].key %>
+          <%#=cl_image_tag @storage.photos[3].key %>
         </div>
 
         <!-- Next/previous controls -->
@@ -72,19 +90,19 @@
         <!-- Thumbnail image controls -->
         <div class="thumbnail-container">
           <div class="column">
-            <%=cl_image_tag @storage.photos[0].key, class:"demo", onclick:"currentSlide(1)" %>
+            <%#=cl_image_tag @storage.photos[0].key, class:"demo", onclick:"currentSlide(1)" %>
           </div>
 
           <div class="column">
-            <%=cl_image_tag @storage.photos[1].key, class:"demo", onclick:"currentSlide(2)" %>
+            <%#=cl_image_tag @storage.photos[1].key, class:"demo", onclick:"currentSlide(2)" %>
           </div>
 
           <div class="column">
-            <%=cl_image_tag @storage.photos[2].key, class:"demo", onclick:"currentSlide(3)" %>
+            <%#=cl_image_tag @storage.photos[2].key, class:"demo", onclick:"currentSlide(3)" %>
           </div>
 
           <div class="column">
-            <%=cl_image_tag @storage.photos[3].key, class:"demo", onclick:"currentSlide(4)" %>
+            <%#=cl_image_tag @storage.photos[3].key, class:"demo", onclick:"currentSlide(4)" %>
           </div>
         </div>
       </div>
