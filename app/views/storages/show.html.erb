@@ -60,22 +60,22 @@
 
         <div class="mySlides">
           <div class="numbertext">1 / 4</div>
-          <%#=cl_image_tag @storage.photos[0].key %>
+          <%=cl_image_tag @storage.photos[0].key %>
         </div>
 
         <div class="mySlides">
           <div class="numbertext">2 / 4</div>
-          <%#=cl_image_tag @storage.photos[1].key %>
+          <%=cl_image_tag @storage.photos[1].key %>
         </div>
 
         <div class="mySlides">
           <div class="numbertext">3 / 4</div>
-          <%#=cl_image_tag @storage.photos[2].key %>
+          <%=cl_image_tag @storage.photos[2].key %>
         </div>
 
         <div class="mySlides">
           <div class="numbertext">4 / 4</div>
-          <%#=cl_image_tag @storage.photos[3].key %>
+          <%=cl_image_tag @storage.photos[3].key %>
         </div>
 
         <!-- Next/previous controls -->
@@ -90,19 +90,19 @@
         <!-- Thumbnail image controls -->
         <div class="thumbnail-container">
           <div class="column">
-            <%#=cl_image_tag @storage.photos[0].key, class:"demo", onclick:"currentSlide(1)" %>
+            <%=cl_image_tag @storage.photos[0].key, class:"demo", onclick:"currentSlide(1)" %>
           </div>
 
           <div class="column">
-            <%#=cl_image_tag @storage.photos[1].key, class:"demo", onclick:"currentSlide(2)" %>
+            <%=cl_image_tag @storage.photos[1].key, class:"demo", onclick:"currentSlide(2)" %>
           </div>
 
           <div class="column">
-            <%#=cl_image_tag @storage.photos[2].key, class:"demo", onclick:"currentSlide(3)" %>
+            <%=cl_image_tag @storage.photos[2].key, class:"demo", onclick:"currentSlide(3)" %>
           </div>
 
           <div class="column">
-            <%#=cl_image_tag @storage.photos[3].key, class:"demo", onclick:"currentSlide(4)" %>
+            <%=cl_image_tag @storage.photos[3].key, class:"demo", onclick:"currentSlide(4)" %>
           </div>
         </div>
       </div>
@@ -309,7 +309,12 @@
           <%= link_to storage_path(nearby) do %>
             <div class="show-storage-near-card">
               <div class="show-storage-near-img">
-                <img src="https://images.unsplash.com/photo-1522050212171-61b01dd24579?ixlib=rb-1.2.1ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=formatfit=crop&w=880&q=80" alt="storage" class="show-storage-near-img ">
+                <% if @storage.photos.attached? %>
+                  <%= cl_image_tag @storage.photos[0].key, onclick: "openModal();currentSlide(4)", class:"show-storage-near-img" %>
+                <% else %>
+                  <img src="/noimage.png" alt="no-image" class= "show-storage-near-img">
+                <% end %>
+
                 <p class="show-storage-near-price">$<%= nearby.price %></p>
               </div>
               <div class="show-storage-near-details">
