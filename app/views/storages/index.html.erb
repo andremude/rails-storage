@@ -33,7 +33,7 @@
             </div>
             <div class = "index-storage-details">
               <p class="index-storage-title"><strong><%= storage.title.truncate(30).capitalize %></strong></p>
-              <p class="index-storage-type"> Garage -<%= storage.meters %>m<sup>2</sup></p>
+              <p class="index-storage-type"> <%= storage.storage_type %> -<%= storage.meters %>m<sup>2</sup></p>
               <p class="index-storage-user">
                 <i class="fa-solid fa-user"></i>
                 <%=storage.user.first_name%>
