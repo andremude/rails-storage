@@ -23,7 +23,7 @@ class Storage < ApplicationRecord
   end
 
   def validate_photos
-    errors.add(:photos, "You need to upload 4 photos") if photos.length != 4
+    errors.add(:photos, "Upload 4 photos maximum") if photos.length > 4
   end
 
 end
