@@ -56,12 +56,19 @@
   margin: 10px auto;
 }
 
+.lightbox-img-container {
+  width: 350px;
+  height: 250px;
+  margin: 0px 5px;
+}
+
 img.lightbox-img {
   transition: 0.3s;
   cursor: pointer;
   width: 350px;
   height: 250px;
   object-fit: cover;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 
 .lightbox-img:hover {
@@ -81,7 +88,7 @@ img.lightbox-img {
 }
 
 .img-four {
- border-radius: 0 0 25px 0;
+  border-radius: 0 0 25px 0;
 }
 
 @media (max-width: 1025px) {
@@ -93,6 +100,11 @@ img.lightbox-img {
   }
   .lightbox-row {
     margin: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+  .lightbox-img-container {
+    margin: 10px 0px;
   }
   .show-body {
     display: flex;
@@ -255,6 +267,7 @@ img.demo {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 
 // ----------- EXAMPLE CONTAINER ------------
