@@ -25,7 +25,7 @@
               <%= f.input :price, label: "Price", placeholder: "Price", class:"price-input" %>
               <%= f.input :meters, label: "Meters (m<sup>2</sup>)".html_safe, placeholder: "Meters", class:"meters-input" %>
             </div>
-            <%= f.label :photos, "Photos (Select 4 photos)(*)" %>
+            <%= f.label :photos, "Photos (4 Max.)" %>
             <%= f.input :photos, as: :file, label: false, input_html: { multiple: true } %>
             <%= f.label :features %>
             <div class="features-select-container">
