@@ -8,10 +8,11 @@ const initMapbox = () => {
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v10',
-      center: [45.67, 1.77],
-      zoom: 10,
-      boxZoom: true
+      center: [48.63, 6.13],
+      zoom: 7
     });
+
+    map.addControl(new mapboxgl.NavigationControl());
 
     const markers = JSON.parse(mapElement.dataset.markers);
       addMarkersToMap(map, markers);
