@@ -5,7 +5,7 @@ class Storage < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :address, presence: true
-  validates :meters, presence: true
+  validates :meters, presence: true, numericality: { only_integer: true }
   validates :city, presence: true
   validates :country, presence: true
   validates :storage_type, presence: true
