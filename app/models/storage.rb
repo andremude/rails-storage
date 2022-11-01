@@ -1,6 +1,7 @@
 class Storage < ApplicationRecord
   serialize :features
   belongs_to :user
+  validates :user, presence: true
   validates :price, presence: true
   validates :title, presence: true
   validates :description, presence: true
