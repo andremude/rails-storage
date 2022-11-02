@@ -72,33 +72,35 @@ RSpec.describe '/storages', type: :request do
     end
   end
 
-  # describe 'PATCH /update' do
-  #   context 'with valid parameters' do
-  #     let(:new_attributes) do
-  #       {
-  #         'id' => '1',
-  #         'title' => 'Lorem Ipsum 2',
-  #         'description' => 'Lorem Ipsum 2',
-  #         'meters' => '45',
-  #         'address' => 'Rue du Béguinage 28, Brussels',
-  #         'city'=> 'Brussels',
-  #         'country' => 'Belgium',
-  #         'price' => '50.00',
-  #         'storage_type' => 'Car Parking',
-  #         'features' => ["Pet Free", "Security Camera", "Smoke Detector", "Climate Controlled"],
-  #         'user' => current_user,
-  #       }
-  #     end
+  describe 'PATCH /update' do
+    context 'with valid parameters' do
+      let(:new_attributes) do
+        {
+          # 'id' => '1',
+          'title' => 'Lorem Ipsum 2',
+          # 'description' => 'Lorem Ipsum 2',
+          # 'meters' => '45',
+          # 'address' => 'Rue du Béguinage 28, Brussels',
+          # 'city'=> 'Brussels',
+          # 'country' => 'Belgium',
+          # 'price' => '50.00',
+          # 'storage_type' => 'Car Parking',
+          # 'features' => ["Pet Free", "Security Camera", "Smoke Detector", "Climate Controlled"],
+          # 'user' => current_user
+        }
+      end
 
-  #     it 'updates the requested storage' do
-  #       storage = Storage.new(valid_attributes)
-  #       storage.user = current_user
-  #       storage.save
-  #       patch storage_path(storage), params: { storage: new_attributes }
-  #       storage.reload
-  #     end
-  #   end
-  # end
+      it 'updates the requested storage' do
+        storage = Storage.new(valid_attributes)
+        storage.user = current_user
+        storage.save
+        expect do
+          patch storage_path(storage), params: { storage: new_attributes }
+          storage.reload
+        end
+      end
+    end
+  end
 
   describe 'DELETE /destroy' do
     it 'destroys the requested storage' do
