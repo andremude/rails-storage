@@ -76,17 +76,7 @@ RSpec.describe '/storages', type: :request do
     context 'with valid parameters' do
       let(:new_attributes) do
         {
-          # 'id' => '1',
           'title' => 'Lorem Ipsum 2',
-          # 'description' => 'Lorem Ipsum 2',
-          # 'meters' => '45',
-          # 'address' => 'Rue du Béguinage 28, Brussels',
-          # 'city'=> 'Brussels',
-          # 'country' => 'Belgium',
-          # 'price' => '50.00',
-          # 'storage_type' => 'Car Parking',
-          # 'features' => ["Pet Free", "Security Camera", "Smoke Detector", "Climate Controlled"],
-          # 'user' => current_user
         }
       end
 
