@@ -929,10 +929,10 @@
   "resolved" "https://registry.npmjs.org/@hotwired/stimulus-webpack-helpers/-/stimulus-webpack-helpers-1.0.1.tgz"
   "version" "1.0.1"
 
-"@hotwired/stimulus@^3.1.0", "@hotwired/stimulus@>= 3.0":
-  "integrity" "sha512-iDMHUhiEJ1xFeicyHcZQQgBzhtk5mPR0QZO3L6wtqzMsJEk2TKECuCQTGKjm+KJTHVY0dKq1dOOAWvODjpd2Mg=="
-  "resolved" "https://registry.npmjs.org/@hotwired/stimulus/-/stimulus-3.1.0.tgz"
-  "version" "3.1.0"
+"@hotwired/stimulus@^3.1.0", "@hotwired/stimulus@^3.1.1", "@hotwired/stimulus@>= 3.0":
+  "integrity" "sha512-e0JpzIaYLsRRXevRDVs0yevabiCvieIWWCwh7VqVXjXM5AOHdjb7AjaKIj34zYFmY1N6HIRRfk915WVMYlHnDA=="
+  "resolved" "https://registry.npmjs.org/@hotwired/stimulus/-/stimulus-3.1.1.tgz"
+  "version" "3.1.1"
 
 "@jridgewell/gen-mapping@^0.1.0":
   "integrity" "sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w=="
@@ -6581,12 +6581,12 @@
   "resolved" "https://registry.npmjs.org/stimulus-flatpickr/-/stimulus-flatpickr-1.4.0.tgz"
   "version" "1.4.0"
 
-"stimulus@>=1.1.1":
-  "integrity" "sha512-ln+BtLkhemwJozr5N3I5q0kGlSv6fmcPi3JtDjBo7gnnz2tAYhK2WBhyY/EN/4+CWIwqp3qPm3Pc+i9CjIXrtg=="
-  "resolved" "https://registry.npmjs.org/stimulus/-/stimulus-3.1.0.tgz"
-  "version" "3.1.0"
+"stimulus@^3.1.1", "stimulus@>=1.1.1":
+  "integrity" "sha512-eFOPFB6tJXJ6wFpUVjpi0/tYSiY4LPwdZa/1S6bzhhEt5cSIfmtndrHpaUo76uElpWnfmEEOB4ezMXtGnG9HBQ=="
+  "resolved" "https://registry.npmjs.org/stimulus/-/stimulus-3.1.1.tgz"
+  "version" "3.1.1"
   dependencies:
-    "@hotwired/stimulus" "^3.1.0"
+    "@hotwired/stimulus" "^3.1.1"
     "@hotwired/stimulus-webpack-helpers" "^1.0.0"
 
 "stream-browserify@^2.0.1":
