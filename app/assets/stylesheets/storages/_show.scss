@@ -2,6 +2,7 @@
 
 .show-body {
   display: flex;
+  padding: 0px 4px;
 }
 
 .show-left {
@@ -15,7 +16,11 @@
 
 // ----------- DETAILS NAV ------------
 
-.show-top-container {
+// .show-top-container {
+//   padding-left: 20px;
+// }
+
+.show-storage-title {
   padding-left: 20px;
 }
 
@@ -27,6 +32,7 @@
   width: 100%;
   margin-bottom: 10px;
 }
+
 
 .tc-details {
   background-color: white;
