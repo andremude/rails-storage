@@ -189,16 +189,8 @@
         <div class="show-about">
           <h1>About</h1>
           <div class="about-text">
-            <p><%= @storage.description%></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet nibh sapien, vel malesuada augue cursus vel. Pellentesque fermentum, turpis non hendrerit interdum, risus felis laoreet libero, vel rhoncus turpis ex molestie ligula. Proin volutpat mollis velit, sed maximus ligula eleifend ut. Fusce maximus laoreet nisi, sed convallis diam interdum in. Maecenas vel nisi id neque molestie consectetur nec bibendum urna. Proin ut lectus tortor. Vestibulum elementum aliquam mi, vel mattis nibh vehicula et. Pellentesque et ipsum vehicula, semper sapien quis, maximus leo. Morbi pellentesque convallis dui, sed faucibus ipsum tincidunt sit amet.
-            </p>
+            <p class="show-storage-description"><%= @storage.description%></p>
           </div>
-        </div>
-
-        <div class="show-example">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet nibh sapien, vel malesuada augue cursus vel. Pellentesque fermentum, turpis non hendrerit interdum, risus felis laoreet libero, vel rhoncus turpis ex molestie ligula. Proin volutpat mollis velit, sed maximus ligula eleifend ut. Fusce maximus laoreet nisi, sed convallis diam interdum in. Maecenas vel nisi id neque molestie consectetur nec bibendum urna. Proin ut lectus tortor. Vestibulum elementum aliquam mi, vel mattis nibh vehicula et. Pellentesque et ipsum vehicula, semper sapien quis, maximus leo. Morbi pellentesque convallis dui, sed faucibus ipsum tincidunt sit amet.
-
-          Mauris consequat nec orci malesuada egestas. Suspendisse pellentesque id neque eget consequat. Mauris tincidunt rutrum placerat. Nulla rhoncus eleifend nulla, in gravida diam. Sed eu purus quis urna tempus lacinia id vel quam. Integer nec sem eget ex finibus interdum. Pellentesque eget lectus a mi lobortis interdum in vel diam. Fusce finibus, lectus bibendum aliquam commodo, metus mauris ultrices dolor, a malesuada ligula mauris quis nisi. In sit amet luctus purus. Etiam iaculis erat sit amet nunc placerat, eu feugiat augue ultrices.
         </div>
 
         <div class="<%= @storage.features.nil? ? "d-none" : "show-features" %>">
