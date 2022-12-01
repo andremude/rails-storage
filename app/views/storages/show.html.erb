@@ -345,7 +345,10 @@
                   <img src="/noimage.png" alt="no-image" class= "show-storage-near-img">
                 <% end %>
 
-                <p class="show-storage-near-price">$<%= nearby.price %></p>
+                <p class="show-storage-near-price">
+                  $<%= nearby.price %>
+                  <b style="font-size: 12px">/day</b>
+                </p>
               </div>
               <div class="show-storage-near-details">
                 <p class="show-storage-near-title"><strong><%= nearby.title.truncate(24).capitalize %></strong></p>

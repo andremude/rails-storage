@@ -113,7 +113,7 @@
               <% else %>
                 <img src="/noimage.png" alt="no-image" class="show-storage-near-img">
               <% end %>
-              <p class="discover-storages-price">$<%= storage.price.to_i %></p>
+              <p class="discover-storages-price">$<%= storage.price.to_i %><b style="font-size: 12px">/day</b></p>
             </div>
             <div class="discover-storages-details">
               <p class="discover-storages-title"><strong><%= storage.title.truncate(24).capitalize%></strong></p>
