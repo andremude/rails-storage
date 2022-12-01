@@ -113,5 +113,4 @@ class StoragesController < ApplicationController
   #     { from: range[0], to: range[1] }
   #   end
   # end
-
 end

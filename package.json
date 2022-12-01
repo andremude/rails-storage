@@ -14,7 +14,6 @@
     "jquery": "^3.6.1",
     "mapbox-gl": "^2.10.0",
     "stimulus": "^3.1.1",
-    "stimulus-flatpickr": "^1.4.0",
     "turbolinks": "^5.2.0",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
