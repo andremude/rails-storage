@@ -2,7 +2,7 @@
 
 ---
 options:
-  bin-cd: false
+  bin-cd: true
   cache: false
   ci: false
   compose: false
