@@ -91,6 +91,7 @@ GEM
       rest-client
     concurrent-ruby (1.1.10)
     crass (1.0.6)
+    date (3.3.3)
     devise (4.8.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -98,6 +99,8 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
+    dockerfile-rails (1.2.3)
+      rails
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.7.6)
@@ -146,6 +149,15 @@ GEM
       money (~> 6.13)
       railties (>= 3.0)
     msgpack (1.5.4)
+    net-imap (0.3.4)
+      date
+      net-protocol
+    net-pop (0.1.2)
+      net-protocol
+    net-protocol (0.2.1)
+      timeout
+    net-smtp (0.3.3)
+      net-protocol
     netrc (0.11.0)
     nio4r (2.5.8)
     nokogiri (1.13.8-x86_64-linux)
@@ -252,6 +264,7 @@ GEM
       railties (>= 6.0.0)
     thor (1.2.1)
     tilt (2.0.11)
+    timeout (0.3.2)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -294,12 +307,16 @@ DEPENDENCIES
   capybara (>= 3.26)
   cloudinary
   devise
+  dockerfile-rails (~> 1.2, >= 1.2.3)
   dotenv-rails
   font-awesome-rails
   geocoder
   jbuilder (~> 2.7)
   listen (~> 3.3)
   money-rails (~> 1.12)
+  net-imap (~> 0.3.4)
+  net-pop (~> 0.1.2)
+  net-smtp (~> 0.3.3)
   pg (~> 1.1)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
