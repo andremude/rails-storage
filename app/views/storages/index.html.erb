@@ -18,7 +18,8 @@
     <% end %>
 
     <div class="index-storages-cards">
-      <% @storages.each do |storage| %>
+      <%# @storages.each do |storage| %>
+      <% @sorted_storages.each do |storage| %>
         <div class="index-storage-card">
           <%= link_to storage_path(storage) do %>
             <div class="index-storage-card-top">

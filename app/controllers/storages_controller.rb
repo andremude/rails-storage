@@ -1,7 +1,6 @@
 class StoragesController < ApplicationController
   before_action :set_storage, only: [:update, :destroy]
 
-  # GET
   def index
     if params[:query].present?
       sql_query = "\
@@ -11,7 +10,6 @@ class StoragesController < ApplicationController
       OR features ILIKE :query\
       "
       @storages = Storage.where(sql_query, query: "%#{params[:query]}%")
-      #@storages = Storage.where("city ILIKE ?", "%#{params[:query]}%")
         @markers = @storages.geocoded.map do |storage|
           {
             lat: storage.latitude,
@@ -21,6 +19,8 @@ class StoragesController < ApplicationController
         end
     else
       @storages = Storage.all
+      @sorted_storages = @storages.sort_by(&:created_at).reverse
+
 
       @markers = @storages.geocoded.map do |storage|
         {
@@ -32,12 +32,10 @@ class StoragesController < ApplicationController
     end
   end
 
-  # GET
   def show
     @storage = Storage.find(params[:id])
   end
 
-  # POST
   def create
     @storage = Storage.new(storage_params)
     @storage.user = current_user
@@ -50,13 +48,10 @@ class StoragesController < ApplicationController
   end
 
   def edit
-    # @storage.user = current_user
     @storage = Storage.find(params[:id])
   end
 
-  # PATCH/PUT
   def update
-    # @storage.user = current_user
     @storage = Storage.find(params[:id])
     if @storage.update(storage_params)
       redirect_to user_storages_path(current_user)
@@ -65,7 +60,6 @@ class StoragesController < ApplicationController
     end
   end
 
-  # DELETE
   def destroy
     if current_user == @storage.user
       @storage.reservations.empty?
@@ -107,10 +101,4 @@ class StoragesController < ApplicationController
       photos: []
     )
   end
-
-  # def unavailable_dates
-  #   reservations.pluck(:start_date, :end_date).map do |range|
-  #     { from: range[0], to: range[1] }
-  #   end
-  # end
 end
