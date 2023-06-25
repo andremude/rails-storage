@@ -53,9 +53,11 @@ Run server
 
 ## Screenshots
 
+![storages-home](https://github.com/andremude/rails-storage/assets/71613801/5b88f356-134d-4ce1-bc7a-527f2a58695f)
+
 ![Storage-show](https://github.com/andremude/rails-storage/assets/71613801/8966a31c-1a94-4756-8067-a59b326fc3ed)
 
-![storages-home](https://github.com/andremude/rails-storage/assets/71613801/5b88f356-134d-4ce1-bc7a-527f2a58695f)
+
 
 
 
